@@ -39,8 +39,6 @@ export default function Nav() {
     };
   }, [lastScrollY, scrollingDown]);
 
-  console.log("scrollingDown", scrollingDown);
-
   return (
     <Disclosure
       as="nav"
