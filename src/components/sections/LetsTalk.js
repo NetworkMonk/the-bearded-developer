@@ -1,13 +1,40 @@
+"use client";
+
 import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
 import { lexend } from "@/app/fonts";
 import InView from "../animated/InView";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { useEffect, useState } from "react";
 
 export default function LetsTalk() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    status: "idle",
+  });
+
+  useEffect(() => {
+    console.log(formData);
+  }, [formData]);
+
+  const submitForm = async () => {
+    setFormData({ ...formData, status: "pending" });
+    await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    setFormData({ ...formData, status: "success" });
+  };
+
   return (
     <Section>
       <Container>
@@ -89,34 +116,67 @@ export default function LetsTalk() {
                   className="p-5 py-8 mt-5 md:mt-10 md:p-10 bg-gradient-to-br from-brand-blue to-brand-light-blue text-white rounded-xl shadow-xl in-up"
                   style={{ animationDelay: "0.25s" }}
                 >
-                  <p className="font-bold text-sm">Name</p>
-                  <input
-                    type="text"
-                    className="w-full rounded mb-5 text-black p-2"
-                    placeholder="Your name"
-                  />
-                  <p className="font-bold text-sm">Email Address</p>
-                  <input
-                    type="email"
-                    className="w-full rounded mb-5 text-black p-2"
-                    placeholder="Your email address"
-                  />
-                  <p className="font-bold text-sm">Phone Number</p>
-                  <input
-                    type="tel"
-                    className="w-full rounded mb-5 text-black p-2"
-                    placeholder="Your phone number"
-                  />
-                  <p className="font-bold text-sm">
-                    What would you like to talk about?
-                  </p>
-                  <textarea
-                    className="w-full min-h-48 rounded mb-5 text-black p-2"
-                    placeholder="Write about your requirements, anything you might need help with or "
-                  ></textarea>
-                  <button className="outline outline-2 outline-white bg-transparent text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold block mx-auto">
-                    Send Message
-                  </button>
+                  {formData.status !== "success" && (
+                    <>
+                      <p className="font-bold text-sm">Name</p>
+                      <input
+                        type="text"
+                        className="w-full rounded mb-5 text-black p-2"
+                        placeholder="Your name"
+                        onChange={(e) =>
+                          setFormData({ ...formData, name: e.target.value })
+                        }
+                        disabled={formData.status === "pending"}
+                      />
+                      <p className="font-bold text-sm">Email Address</p>
+                      <input
+                        type="email"
+                        className="w-full rounded mb-5 text-black p-2"
+                        placeholder="Your email address"
+                        onChange={(e) =>
+                          setFormData({ ...formData, email: e.target.value })
+                        }
+                      />
+                      <p className="font-bold text-sm">Phone Number</p>
+                      <input
+                        type="tel"
+                        className="w-full rounded mb-5 text-black p-2"
+                        placeholder="Your phone number"
+                        onChange={(e) =>
+                          setFormData({ ...formData, phone: e.target.value })
+                        }
+                      />
+                      <p className="font-bold text-sm">
+                        What would you like to talk about?
+                      </p>
+                      <textarea
+                        className="w-full min-h-48 rounded mb-5 text-black p-2"
+                        placeholder="Write about your requirements, anything you might need help with or what your favourite sandwich filling is..."
+                        onChange={(e) =>
+                          setFormData({ ...formData, message: e.target.value })
+                        }
+                      ></textarea>
+                      {formData.status === "idle" && (
+                        <button
+                          className="outline outline-2 outline-white bg-transparent text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold block mx-auto"
+                          onClick={() => submitForm()}
+                        >
+                          Send Message
+                        </button>
+                      )}
+                      {formData.status === "pending" && (
+                        <button className="animate-pulse outline outline-2 outline-white bg-white text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold block mx-auto cursor-default">
+                          Sending Message...
+                        </button>
+                      )}
+                    </>
+                  )}
+                  {formData.status === "success" && (
+                    <p className="text-center font-semibold text-lg my-20">
+                      Thanks, your message has been sent, we will get back to
+                      you as soon as possible.
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

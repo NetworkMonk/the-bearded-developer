@@ -42,9 +42,10 @@ export default function Nav() {
   return (
     <Disclosure
       as="nav"
-      className={`bg-white fixed w-full top-0 backdrop-blur-lg z-50 shadow-md overflow-hidden transition-all duration-500 ${
+      className={`bg-white fixed w-screen top-0 backdrop-blur-lg z-50 shadow-md overflow-hidden ${
         scrollingDown ? "-mt-32" : ""
       }`}
+      style={{ transition: "margin-top 0.5s" }}
     >
       {({ open }) => (
         <>
