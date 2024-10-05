@@ -24,7 +24,7 @@ export default function Bespoke() {
           </p>
         </div>
         <div className="md:order-1">
-          <p className="my-2">TESTING</p>
+          <p className="my-2"></p>
         </div>
       </div>
     </div>
