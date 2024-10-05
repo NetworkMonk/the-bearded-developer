@@ -1,0 +1,212 @@
+$icon-size: 60px;
+$border-radius: 0.5; //15% = 0.15, 50% = 0.50 etc.
+
+$background: #2d2c3e;
+$background-b: #2d2c3e;
+
+// Icon Colors
+$green: #7de2d1;
+$red: #c82647;
+$green-l: #8cc63f;
+$orange: #eb9532;
+$purple: #7e3661;
+
+// Text
+$white: #ffffff;
+
+@keyframes pulseAnimation {
+  0% {
+    -webkit-box-shadow: 0px 2.5px 70px 3px rgba(125, 226, 209, 0.3);
+    -moz-box-shadow: 0px 2.5px 70px 3px rgba(125, 226, 209, 0.3);
+    box-shadow: 0px 2.5px 70px 3px rgba(125, 226, 209, 0.3);
+    }
+  25% {
+    -webkit-box-shadow: 0px 2.5px 30px 3px rgba(125, 226, 209, 0.2);
+    -moz-box-shadow: 0px 2.5px 30px 3px rgba(125, 226, 209, 0.2);
+    box-shadow: 0px 2.5px 30px 3px rgba(125, 226, 209, 0.2);
+    }
+  50% {
+    -webkit-box-shadow: 0px 2.5px 60px 3px rgba(125, 226, 209, 0.3);
+    -moz-box-shadow: 0px 2.5px 60px 3px rgba(125, 226, 209, 0.3);
+    box-shadow: 0px 2.5px 60px 3px rgba(125, 226, 209, 0.3);
+    }
+  75% {
+    -webkit-box-shadow: 0px 2.5px 25px 3px rgba(125, 226, 209, 0.2);
+    -moz-box-shadow: 0px 2.5px 25px 3px rgba(125, 226, 209, 0.2);
+    box-shadow: 0px 2.5px 25px 3px rgba(125, 226, 209, 0.2);
+    }
+  100% {
+    -webkit-box-shadow: 0px 2.5px 70px 3px rgba(125, 226, 209, 0.3);
+    -moz-box-shadow: 0px 2.5px 70px 3px rgba(125, 226, 209, 0.3);
+    box-shadow: 0px 2.5px 70px 3px rgba(125, 226, 209, 0.3);
+    }
+}
+
+.container {
+  display: table;
+  height: 95vh;
+  width: 90%;
+  padding-bottom: 5vh;
+  margin: auto auto;
+  @media (max-width: 900px) {
+  }
+  background: $background;
+  z-index: -1;
+}
+
+.content {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.animated-button-container {
+  margin-top: 30px;
+  width: 100%;
+  height: $icon-size;
+}
+
+.animated-button {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: $icon-size;
+  margin-left: $icon-size/5;
+  margin-right: $icon-size/5;
+  border-radius: $icon-size * $border-radius;
+  overflow: hidden;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.25s ease;
+    border-radius: $icon-size * $border-radius;
+  }
+  i {
+    position: relative;
+    color: $white;
+    font-size: $icon-size/2;
+    margin-top: $icon-size/4;
+    transition: all 0.25s ease;
+  }
+
+  -webkit-box-shadow: 0px 2.5px 50px 3px rgba(125, 226, 209, 0.25);
+  -moz-box-shadow: 0px 2.5px 50px 3px rgba(125, 226, 209, 0.25);
+  box-shadow: 0px 2.5px 50px 3px rgba(125, 226, 209, 0.25);
+
+  animation: pulseAnimation 4s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.animated-button-small {
+  width: 60px;
+  height: 40px;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  animation: none;
+  animation-iteration-count: unset;
+  animation-play-state: unset;
+
+  background-color: $green;
+}
+
+.animated-button-small:hover {
+  width: 60px;
+  height: 40px;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  animation: none;
+  animation-iteration-count: unset;
+  animation-play-state: unset;
+
+  background-color: #131515;
+}
+
+.animated-button-fill {
+  &::before {
+    transition-duration: 0.5s;
+    box-shadow: inset 0 0 0 3px $green;
+    z-index: -1;
+  }
+  &:hover::before {
+    box-shadow: inset 0 0 0 $icon-size $green;
+    z-index: -1;
+  }
+}
+
+.animated-button-enter {
+  &::after {
+    box-shadow: inset 0 0 0 1px $orange;
+  }
+  &::before {
+    border-radius: 0;
+    margin-left: -100%;
+    box-shadow: inset 0 0 0 $icon-size $orange;
+  }
+  &:hover::before {
+    margin-left: 0;
+  }
+}
+
+.animated-button-expand {
+  &::after {
+    box-shadow: inset 0 0 0 1px $red;
+  }
+  &::before {
+    background: $red;
+    box-shadow: inset 0 0 0 $icon-size $background;
+  }
+  &:hover::before {
+    box-shadow: inset 0 0 0 1px $background;
+  }
+}
+
+.animated-button-collapse {
+  &::before {
+    border-radius: 0;
+  }
+  &:hover::before {
+    box-shadow: inset 0 $icon-size/2 0 0 $green-l,
+      inset 0 $icon-size/-2 0 0 $green-l;
+  }
+  &::after {
+    box-shadow: inset 0 0 0 1px $green-l;
+  }
+}
+
+.animated-button-rotate {
+  box-shadow: inset 0 0 0 1px $purple;
+  &::after,
+  &::before {
+    border: 0px solid transparent;
+  }
+  &:hover::before {
+    transition: border-top-width 0.3s ease, border-top-color 0.3s ease;
+    border-width: $icon-size;
+    border-top-color: $purple;
+  }
+  &:hover::after {
+    transition: border-left-width 0.3s ease, border-left-color 0.3s ease;
+    border-width: $icon-size;
+    border-left-color: $purple;
+  }
+  &:hover {
+    transition: background 0.001s ease 0.3s;
+    background: $purple;
+  }
+  i {
+    z-index: 1;
+  }
+}
