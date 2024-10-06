@@ -19,10 +19,6 @@ export default function LetsTalk() {
     status: "idle",
   });
 
-  useEffect(() => {
-    console.log(formData);
-  }, [formData]);
-
   const submitForm = async () => {
     setFormData({ ...formData, status: "pending" });
     await fetch("/api/contact", {
