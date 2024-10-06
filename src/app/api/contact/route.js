@@ -16,7 +16,8 @@ export async function POST(req, res) {
       console.log("Email sent");
     })
     .catch((error) => {
-      console.error(error);
+      return Response.json({ message: "Email not sent", error: error.message });
+      // console.error(error);
     });
 
   return Response.json({ message: "Email sent" });
