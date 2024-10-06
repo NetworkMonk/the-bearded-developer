@@ -33,6 +33,8 @@ export default async function Technologies() {
       logo: "/img/tech-logos/wordpress-icon-1.svg",
     },
     { name: "Shopify", displayOrder: 10, logo: "/img/tech-logos/shopify.svg" },
+    { name: "Go", displayOrder: 11, logo: "/img/tech-logos/go-6.svg" },
+    { name: "Celigo", displayOrder: 12, logo: "/img/tech-logos/celigo.png" },
   ];
 
   return (
