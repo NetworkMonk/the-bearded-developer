@@ -10,9 +10,8 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     name: "The Bearded Developer | Web Development and Technology Partner",
-    image: "https://jamesplant.me/img/james-plant.png",
-    description:
-      "",
+    image: "https://www.thebeardeddeveloper.co.uk/images/beard-black.png",
+    description: "Your Web Application Development and Technology Partner.",
   };
 
   return (
