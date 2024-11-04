@@ -13,12 +13,9 @@ export async function POST(req, res) {
   sgMail
     .send(msg)
     .then(() => {
-      console.log("Email sent");
+      return Response.json({ message: "Email sent" });
     })
     .catch((error) => {
       return Response.json({ message: "Email not sent", error: error.message });
-      // console.error(error);
     });
-
-  return Response.json({ message: "Email sent" });
 }
