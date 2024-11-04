@@ -11,17 +11,12 @@ export async function POST(req, res) {
       text: JSON.stringify(formData, null, 2),
       html: JSON.stringify(formData, null, 2),
     };
-    sgMail
-      .send(msg)
-      .then(() => {
-        return Response.json({ message: "Email sent" });
-      })
-      .catch((error) => {
-        return Response.json({
-          message: "Email not sent",
-          error: error.message,
-        });
-      });
+    try {
+      await sgMail.send(msg);
+      return Response.json({ message: "Email sent" });
+    } catch (e) {
+      return Response.json({ message: "Email not sent", error: e.message });
+    }
   } catch (e) {
     return Response.json({ message: "Email not sent", error: e.message });
   }
