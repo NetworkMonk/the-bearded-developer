@@ -27,9 +27,8 @@ export default async function Achievements() {
     {
       name: "Coder Cave",
       logo: "/img/client-logos/coder-cave.png",
-      background: "#4e5054"
+      background: "#4e5054",
     },
-
   ];
 
   return (
@@ -55,9 +54,10 @@ export default async function Achievements() {
                 className={`mt-5 in-up max-w-xl`}
                 style={{ animationDelay: ".75s" }}
               >
-                Want to get on this list? Get in touch with us today to discuss your project.
+                Want to get on this list? Get in touch with us today to discuss
+                your project.
               </p>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-14 mt-10">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14 mt-10">
                 {clients.map((client, cIndex) => {
                   const background = client.background || "transparent";
                   return (
@@ -67,17 +67,19 @@ export default async function Achievements() {
                       style={{ animationDelay: `${cIndex / 4 + 1}s` }}
                     >
                       <div
-                        className="h-32 p-10 opacity-60 hover:opacity-100 transition-all duration-300"
+                        className="max-w-80 sm:max-w-none mx-auto sm:mx-0 h-full p-10 opacity-60 hover:opacity-100 transition-all duration-300 flex justify-center items-center"
                         style={{ backgroundColor: background }}
                       >
-                        <Image
-                          src={client.logo}
-                          alt={client.name}
-                          title={client.name}
-                          className="mx-auto mb-2 filter max-w-64"
-                          layout="fill"
-                          objectFit="contain"
-                        />
+                        <div>
+                          <Image
+                            src={client.logo}
+                            alt={client.name}
+                            title={client.name}
+                            className="max-h-full w-auto mx-auto"
+                            width={500}
+                            height={500}
+                          />
+                        </div>
                       </div>
                     </div>
                   );
