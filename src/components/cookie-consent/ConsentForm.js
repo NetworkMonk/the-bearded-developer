@@ -16,6 +16,7 @@ export function ConsentForm() {
 
   const sendConsent = useCallback((consent) => {
     gtag("consent", "update", consent);
+    gtag("event", "cookie_consent_update");
   }, []);
 
   useEffect(() => {
