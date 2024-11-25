@@ -40,7 +40,7 @@ export function Customise({ onSet }) {
       style={{ zIndex: "2000" }}
     >
       <div className="max-w-2xl mx-auto">
-        <div className="bg-white shadow-lg h-screen sm:h-auto sm:border-2 border-black flex flex-col gap-4 p-4">
+        <div className="bg-white shadow-lg h-screen sm:h-auto max-h-screen sm:border-2 border-black flex flex-col gap-4 p-4">
           <div className="flex w-full items-center">
             <div className="flex-col flex gap-2">
               <div className="font-bold text-xl text-gray-900">
@@ -64,7 +64,7 @@ export function Customise({ onSet }) {
               <div key={categoryIndex}>
                 <div className="flex items-center justify-center mb-3">
                   <p className="font-bold text-lg">{category.title}</p>
-                  <div className="ml-auto pr-1">
+                  <div className="ml-auto">
                     <Toggle
                       disabled={category.mandatory}
                       checked={formData[category.id]}
