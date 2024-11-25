@@ -22,6 +22,7 @@ export function ConsentForm() {
   useEffect(() => {
     if (cookies.get("cookie_consent") !== undefined) {
       setDecisionMade(true);
+      gtag("event", "cookie_consent_update");
     } else {
       setDecisionMade(false);
     }
