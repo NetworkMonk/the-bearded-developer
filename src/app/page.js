@@ -5,6 +5,7 @@ import Technologies from "@/components/sections/Technologies";
 import Clients from "@/components/sections/Clients";
 import Title from "@/components/sections/Title";
 import Services from "@/components/sections/Services";
+import MessageUs from "@/components/sections/MessageUs";
 
 export default function Home() {
   const jsonLd = {
@@ -30,6 +31,7 @@ export default function Home() {
       <Nav />
       <Title />
       <Services />
+      <MessageUs />
       <Clients />
       <Technologies />
       <LetsTalk />
