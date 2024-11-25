@@ -3,11 +3,11 @@
 import React, { useState } from "react";
 import Toggle from "./Toggle";
 
-export function Customise({ onSet }) {
+export function Customise({ onSet, defaultValues }) {
   const [formData, setFormData] = useState({
     necessary: true,
-    analytics: false,
-    advertising: false,
+    analytics: defaultValues?.analytics_storage === "granted" ? true : false,
+    advertising: defaultValues?.ad_storage === "granted" ? true : false,
   });
 
   const cookieCategories = [

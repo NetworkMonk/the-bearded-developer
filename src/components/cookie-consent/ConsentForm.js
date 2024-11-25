@@ -4,6 +4,8 @@ import React, { useEffect, useState, useMemo, useCallback } from "react";
 import { FloatingBanner } from "./FloatingBanner";
 import Cookies from "universal-cookie";
 import { Customise } from "./Customise";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCookie, faCookieBite } from "@fortawesome/free-solid-svg-icons";
 
 export function ConsentForm() {
   const [decisionMade, setDecisionMade] = useState(true); // start with true to avoid flashing
@@ -71,8 +73,20 @@ export function ConsentForm() {
             handleDecision(settings);
             setShowCustomise(false);
           }}
+          defaultValues={cookies.get("cookie_consent")}
         />
       )}
+      {/* {decisionMade && !showCustomise && (
+        <div className="fixed bottom-0 left-0 z-20 p-2">
+          <button
+            className="bg-white text-brand-black hover:bg-gray-200 cursor-pointer rounded-lg p-1 border-2 border-brand-black border-opacity-90 shadow-md h-10 w-10 flex items-center justify-center"
+            title="Customise cookie settings"
+            onClick={() => setShowCustomise(true)}
+          >
+            <FontAwesomeIcon icon={faCookieBite} className="w-7 h-7 inline" />
+          </button>
+        </div>
+      )} */}
     </>
   );
 }
