@@ -37,7 +37,7 @@ export function ConsentForm() {
     cookies.set("cookie_consent", consent, {
       expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)),
       path: "/",
-      domain: "www.thebeardeddeveloper.co.uk",
+      domain: process.env.NEXT_PUBLIC_COOKIE_DOMAIN,
     });
 
     sendConsent(consent);
