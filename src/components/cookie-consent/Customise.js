@@ -111,10 +111,12 @@ export function Customise({ onSet }) {
               className="flex-1 text-base font-semibold border-2 border-gray-800 text-white p-3 cursor-pointer bg-black hover:bg-gray-800 transition-colors duration-300"
               onClick={() => {
                 onSet({
-                  analytics_storage: formData.analytics,
-                  ad_storage: formData.advertising,
-                  ad_user_data: formData.advertising,
-                  ad_personalization: formData.advertising,
+                  analytics_storage: formData.analytics ? "granted" : "denied",
+                  ad_storage: formData.advertising ? "granted" : "denied",
+                  ad_user_data: formData.advertising ? "granted" : "denied",
+                  ad_personalization: formData.advertising
+                    ? "granted"
+                    : "denied",
                 });
               }}
             >
