@@ -78,7 +78,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="md:px-10 md:grid grid-cols-2 py-3 mt-10 z-20">
+            <div className="md:px-10 md:grid grid-cols-2 py-3 mt-10 z-20 mb-10 md:mb-auto">
               <div className="text-xs mt-auto">
                 © 2024 The Bearded Developer Ltd
               </div>
