@@ -3,10 +3,11 @@
 import React, { useEffect, useState, useMemo, useCallback } from "react";
 import { FloatingBanner } from "./FloatingBanner";
 import Cookies from "universal-cookie";
-import PropTypes from "prop-types";
+import { Customise } from "./Customise";
 
 export function ConsentForm() {
   const [decisionMade, setDecisionMade] = useState(true); // start with true to avoid flashing
+  const [showCustomise, setShowCustomise] = useState(false);
   const cookies = useMemo(() => new Cookies(), []);
 
   function gtag() {
@@ -30,10 +31,13 @@ export function ConsentForm() {
 
   const handleDecision = (outcome) => {
     const consent = {
-      ad_storage: outcome,
-      analytics_storage: outcome,
-      ad_user_data: outcome,
-      ad_personalization: outcome,
+      ad_storage: typeof outcome === "string" ? outcome : outcome.ad_storage,
+      analytics_storage:
+        typeof outcome === "string" ? outcome : outcome.analytics_storage,
+      ad_user_data:
+        typeof outcome === "string" ? outcome : outcome.ad_user_data,
+      ad_personalization:
+        typeof outcome === "string" ? outcome : outcome.ad_personalization,
     };
 
     cookies.set("cookie_consent", consent, {
@@ -46,20 +50,29 @@ export function ConsentForm() {
     setDecisionMade(true);
   };
 
-  return decisionMade ? (
-    <></>
-  ) : (
-    <FloatingBanner
-      header="Consent Header"
-      message="Consent message"
-      acceptText="Yes"
-      denyText="No"
-      onAccept={() => {
-        handleDecision("granted");
-      }}
-      onDeny={() => {
-        handleDecision("denied");
-      }}
-    />
+  return (
+    <>
+      {!decisionMade && !showCustomise && (
+        <FloatingBanner
+          onAccept={() => {
+            handleDecision("granted");
+          }}
+          onDeny={() => {
+            handleDecision("denied");
+          }}
+          onCustomise={() => {
+            setShowCustomise(true);
+          }}
+        />
+      )}
+      {showCustomise && (
+        <Customise
+          onSet={(settings) => {
+            handleDecision(settings);
+            setShowCustomise(false);
+          }}
+        />
+      )}
+    </>
   );
 }
