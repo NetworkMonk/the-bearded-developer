@@ -5,6 +5,7 @@ import Technologies from "@/components/sections/Technologies";
 import Clients from "@/components/sections/Clients";
 import Title from "@/components/sections/Title";
 import Services from "@/components/sections/Services";
+import Projects from "@/components/sections/Projects";
 import MessageUs from "@/components/sections/MessageUs";
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
       <Services />
       <MessageUs />
       <Clients />
+      <Projects />
       <Technologies />
       <LetsTalk />
       <Footer />

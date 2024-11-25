@@ -116,6 +116,19 @@ export default function Nav() {
                   >
                     Clients
                   </a>
+
+                  <a
+                    className={`text-base inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document
+                        .getElementById("projects")
+                        .scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
+                    Projects
+                  </a>
+
                   <a
                     className={`text-base inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
                     onClick={(e) => {
@@ -202,6 +215,20 @@ export default function Nav() {
                     }}
                   >
                     Clients
+                  </DisclosureButton>
+                  <DisclosureButton
+                    as="a"
+                    href="#"
+                    className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document
+                        .getElementById("projects")
+                        .scrollIntoView({ behavior: "smooth" });
+                      close();
+                    }}
+                  >
+                    Projects
                   </DisclosureButton>
                   <DisclosureButton
                     as="a"
