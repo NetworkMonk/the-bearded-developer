@@ -21,7 +21,7 @@ export default function Nav() {
       if (currentScrollY === lastScrollY) {
         return;
       }
-      if (currentScrollY >= lastScrollY) {
+      if (currentScrollY >= lastScrollY && currentScrollY > 20) {
         if (!scrollingDown) {
           setScrollingDown(true);
         }
