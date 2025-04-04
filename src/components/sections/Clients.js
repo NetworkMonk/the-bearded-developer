@@ -29,6 +29,22 @@ export default async function Achievements() {
       logo: "/img/client-logos/coder-cave.png",
       background: "#4e5054",
     },
+    {
+      name: "RC Boat Engines Ltd.",
+      logo: "/img/client-logos/rc_boat_engines.png",
+    },
+    {
+      name: "Cortex Now Ltd.",
+      logo: "/img/client-logos/cortex_now_logo.png",
+    },
+    // {
+    //   name: "Lightwork Electrical Services Ltd",
+    //   logo: "/img/client-logos/lightwork_electrical_logo.png",
+    // },
+    // {
+    //   name: "Cotton and Twigg",
+    //   logo: "/img/client-logos/Cotton-and-Twigg.png",
+    // },
   ];
 
   return (
