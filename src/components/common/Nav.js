@@ -127,6 +127,17 @@ export default function Nav() {
                   >
                     Technology
                   </a>
+                  <a
+                    className={`text-base inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document
+                        .getElementById("reviews")
+                        .scrollIntoView({ behavior: "smooth" });
+                    }}
+                  >
+                    Reviews
+                  </a>
                 </div>
               </div>
               <div className="flex items-center">
@@ -215,6 +226,19 @@ export default function Nav() {
                     }}
                   >
                     Technology
+                  </DisclosureButton>
+                  <DisclosureButton
+                    as="a"
+                    className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document
+                        .getElementById("reviews")
+                        .scrollIntoView({ behavior: "smooth" });
+                      close();
+                    }}
+                  >
+                    Reviews
                   </DisclosureButton>
                 </div>
               );
