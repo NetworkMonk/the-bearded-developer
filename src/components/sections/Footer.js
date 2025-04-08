@@ -80,7 +80,7 @@ export default function Footer() {
             </div>
             <div className="md:px-10 md:grid grid-cols-2 py-3 mt-10 z-20 mb-10 md:mb-auto">
               <div className="text-xs mt-auto">
-                © 2024 The Bearded Developer Ltd
+                © 2025 The Bearded Developer Ltd
               </div>
               <div className="md:text-right mt-5 md:mt-0 text-xs">
                 <p>Company Registration No. 15975190</p>
