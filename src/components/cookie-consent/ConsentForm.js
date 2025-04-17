@@ -7,6 +7,14 @@ import { Customise } from "./Customise";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCookie, faCookieBite } from "@fortawesome/free-solid-svg-icons";
 
+let triggerConsentFuncRef = false;
+
+export function displayCookieBanner() {
+  if (typeof triggerConsentFuncRef === "function") {
+    triggerConsentFuncRef();
+  }
+}
+
 export function ConsentForm() {
   const [decisionMade, setDecisionMade] = useState(true); // start with true to avoid flashing
   const [showCustomise, setShowCustomise] = useState(false);
@@ -51,6 +59,11 @@ export function ConsentForm() {
     sendConsent(consent);
     setDecisionMade(true);
   };
+
+  const triggerCookieBanner = () => {
+    setShowCustomise(true);
+  };
+  triggerConsentFuncRef = triggerCookieBanner;
 
   return (
     <>

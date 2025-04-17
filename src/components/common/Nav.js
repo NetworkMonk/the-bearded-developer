@@ -75,15 +75,7 @@ export default function Nav() {
                 <div
                   className={`hidden md:flex flex-shrink-0 text-xl mt-1 mr-5 items-center text-white ${lexend.className}`}
                 >
-                  <a
-                    className="cursor-pointer"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document
-                        .getElementById("home")
-                        .scrollIntoView({ behavior: "smooth" });
-                    }}
-                  >
+                  <a className="cursor-pointer" href="/#home">
                     <Image
                       src="/img/beard-black.png"
                       alt="The Bearded Developer"
@@ -95,46 +87,26 @@ export default function Nav() {
                 <div className="hidden md:ml-6 md:flex md:space-x-8">
                   <a
                     className={`text-base inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document
-                        .getElementById("services")
-                        .scrollIntoView({ behavior: "smooth" });
-                    }}
+                    href="/#services"
                   >
                     Services
                   </a>
 
                   <a
                     className={`text-base inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document
-                        .getElementById("clients")
-                        .scrollIntoView({ behavior: "smooth" });
-                    }}
+                    href="/#clients"
                   >
                     Clients
                   </a>
                   <a
                     className={`text-base inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document
-                        .getElementById("technology")
-                        .scrollIntoView({ behavior: "smooth" });
-                    }}
+                    href="/#technology"
                   >
                     Technology
                   </a>
                   <a
                     className={`text-base inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document
-                        .getElementById("reviews")
-                        .scrollIntoView({ behavior: "smooth" });
-                    }}
+                    href="/#reviews"
                   >
                     Reviews
                   </a>
@@ -142,17 +114,14 @@ export default function Nav() {
               </div>
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                  <button
-                    className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document
-                        .getElementById("lets-talk")
-                        .scrollIntoView({ behavior: "smooth" });
-                    }}
-                  >
-                    Let&apos;s talk
-                  </button>
+                  <a href="/#lets-talk">
+                    <button
+                      className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500"
+                      href="/#contact"
+                    >
+                      Let&apos;s talk
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -167,15 +136,8 @@ export default function Nav() {
                 <div className="space-y-1 pb-3 pt-2">
                   <DisclosureButton
                     as="a"
-                    href="#"
+                    href="/#home"
                     className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document
-                        .getElementById("home")
-                        .scrollIntoView({ behavior: "smooth" });
-                      close();
-                    }}
                   >
                     <Image
                       src="/img/beard-black.png"
@@ -188,55 +150,29 @@ export default function Nav() {
                   </DisclosureButton>
                   <DisclosureButton
                     as="a"
-                    href="#"
+                    href="/#services"
                     className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document
-                        .getElementById("services")
-                        .scrollIntoView({ behavior: "smooth" });
-                      close();
-                    }}
                   >
                     Services
                   </DisclosureButton>
                   <DisclosureButton
                     as="a"
-                    href="#"
+                    href="/#clients"
                     className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document
-                        .getElementById("clients")
-                        .scrollIntoView({ behavior: "smooth" });
-                      close();
-                    }}
                   >
                     Clients
                   </DisclosureButton>
                   <DisclosureButton
                     as="a"
+                    href="/#technology"
                     className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document
-                        .getElementById("technology")
-                        .scrollIntoView({ behavior: "smooth" });
-                      close();
-                    }}
                   >
                     Technology
                   </DisclosureButton>
                   <DisclosureButton
                     as="a"
+                    href="/#reviews"
                     className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      document
-                        .getElementById("reviews")
-                        .scrollIntoView({ behavior: "smooth" });
-                      close();
-                    }}
                   >
                     Reviews
                   </DisclosureButton>

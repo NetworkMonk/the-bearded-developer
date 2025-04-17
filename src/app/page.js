@@ -1,5 +1,3 @@
-import Nav from "@/components/common/Nav";
-import Footer from "@/components/sections/Footer";
 import LetsTalk from "@/components/sections/LetsTalk";
 import Technologies from "@/components/sections/Technologies";
 import Clients from "@/components/sections/Clients";
@@ -29,7 +27,6 @@ export default function Home() {
         </linearGradient>
       </svg>
 
-      <Nav />
       <Title />
       <Services />
       <MessageUs />
@@ -37,7 +34,6 @@ export default function Home() {
       <Technologies />
       <Reviews />
       <LetsTalk />
-      <Footer />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -35,6 +35,24 @@ export default function Footer() {
                 >
                   Your Web Application Development and Technology Partner.
                 </h4>
+                <div className="mt-8">
+                  <p>
+                    <a
+                      href="/privacy"
+                      className="text-brand-light-blue hover:text-white transition-all duration-300 text-sm uppercase font-semibold"
+                    >
+                      Privacy Policy
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="/cookies"
+                      className="text-brand-light-blue hover:text-white transition-all duration-300 text-sm uppercase font-semibold"
+                    >
+                      Cookies
+                    </a>
+                  </p>
+                </div>
               </div>
               <div className="md:text-right">
                 <h3 className={`text-xl font-semibold ${lexend.className}`}>
