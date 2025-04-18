@@ -48,7 +48,10 @@ export default async function Reviews() {
               >
                 Some of our reviews and testimonials from our clients.
               </p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14 mt-10">
+              <div
+                className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14 mt-10 in-up"
+                style={{ animationDelay: "0.75s" }}
+              >
                 {reviews.map((review, rIndex) => {
                   return (
                     <div className="bg-gray-50 p-5 rounded-lg" key={rIndex}>
@@ -60,7 +63,9 @@ export default async function Reviews() {
                         ))}
                       </div>{" "}
                       <p className="text-lg font-semibold">{review.author}</p>
-                      <p className="text-sm font-bold uppercase text-gray-500">{review.company}</p>
+                      <p className="text-sm font-bold uppercase text-gray-500">
+                        {review.company}
+                      </p>
                       <p className="mt-2">{review.content}</p>
                     </div>
                   );

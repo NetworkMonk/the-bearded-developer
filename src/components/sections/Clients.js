@@ -80,7 +80,7 @@ export default async function Achievements() {
                     <div
                       key={cIndex}
                       className="in-up"
-                      style={{ animationDelay: `${cIndex / 4 + 1}s` }}
+                      style={{ animationDelay: `${cIndex / 6 + 1}s` }}
                     >
                       <div
                         className="max-w-80 sm:max-w-none mx-auto sm:mx-0 h-full p-10 opacity-60 hover:opacity-100 transition-all duration-300 flex justify-center items-center"
