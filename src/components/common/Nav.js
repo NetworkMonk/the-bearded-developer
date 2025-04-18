@@ -316,34 +316,6 @@ export default function Nav() {
                       </DisclosureButton>
                     );
                   })}
-                  {/* <DisclosureButton
-                    as="a"
-                    href="/#services"
-                    className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
-                  >
-                    Services
-                  </DisclosureButton>
-                  <DisclosureButton
-                    as="a"
-                    href="/#clients"
-                    className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
-                  >
-                    Clients
-                  </DisclosureButton>
-                  <DisclosureButton
-                    as="a"
-                    href="/#technology"
-                    className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
-                  >
-                    Technology
-                  </DisclosureButton>
-                  <DisclosureButton
-                    as="a"
-                    href="/#reviews"
-                    className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
-                  >
-                    Reviews
-                  </DisclosureButton> */}
                 </div>
               );
             }}
