@@ -69,7 +69,7 @@ export default async function Reviews() {
             </div>
           </InView>
         </Container>
-        <div className="max-w-7xl mx-auto relative">
+        {/* <div className="max-w-7xl mx-auto relative">
           <div className="absolute right-0 bottom-32 max-w-full w-[500px] h-[500px] xl:w-[600px] xl:h-[600px] z-10 overflow-y-visible pointer-events-none">
             <Image
               priority
@@ -78,7 +78,7 @@ export default async function Reviews() {
               className="absolute h-[500px] w-[500px] xl:h-[600px] xl:w-[600px] transform rotate-90 opacity-15 pointer-events-none"
             />
           </div>
-        </div>
+        </div> */}
       </Section>
     </div>
   );
