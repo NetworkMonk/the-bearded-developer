@@ -239,7 +239,7 @@ export default function Nav() {
                 <div
                   className={`hidden md:flex flex-shrink-0 text-xl mt-1 mr-5 items-center text-white ${lexend.className}`}
                 >
-                  <a className="cursor-pointer" href="/#home">
+                  <a className="cursor-pointer" href="/">
                     <Image
                       src="/img/beard-black.png"
                       alt="The Bearded Developer"
@@ -289,7 +289,7 @@ export default function Nav() {
                 <div className="space-y-1 pb-3 pt-2 mx-3">
                   <DisclosureButton
                     as="a"
-                    href="/#home"
+                    href="/"
                     className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
                   >
                     <Image
