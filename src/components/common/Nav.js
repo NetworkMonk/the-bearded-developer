@@ -94,18 +94,18 @@ function DropDownMenu({ item }) {
       <PopoverPanel
         transition
         anchor="bottom"
-        className=" mt-1 rounded-xl bg-white text-sm/6 transition duration-200 ease-in-out [--anchor-gap:var(--spacing-5)] data-[closed]:-translate-y-1 data-[closed]:opacity-0 z-50 shadow-lg"
+        className="mt-1 rounded-xl bg-white text-sm/6 transition duration-200 ease-in-out [--anchor-gap:var(--spacing-5)] data-[closed]:-translate-y-1 data-[closed]:opacity-0 z-50 shadow-lg"
       >
         {({ close }) => {
           if (scrollingDown && close) {
             close();
           }
           return (
-            <div className="p-3">
+            <div className="p-3 flex flex-col">
               {item.children.map((child) => (
                 <a
                   key={child.name}
-                  className={`text-base block my-3 mr-5 items-center border-b-2 border-transparent px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
+                  className={`text-base block my-2 mr-5 items-center border-b-2 border-transparent px-3 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
                   href={child.href}
                   onClick={close}
                 >
