@@ -10,7 +10,6 @@ import {
 } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faArrowDown,
   faBars,
   faChevronDown,
   faX,
