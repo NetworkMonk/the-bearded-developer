@@ -9,11 +9,7 @@ import {
   PopoverPanel,
 } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faChevronDown,
-  faX,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faChevronDown, faX } from "@fortawesome/free-solid-svg-icons";
 import { lexend } from "@/app/fonts";
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -50,7 +46,7 @@ const mobileMenu = [
   { name: "Projects", href: "/projects" },
   // { name: "Resources", href: "/resources" },
   { name: "Blog", href: "/blog" },
-  { name: "Contact Us", href: "/#lets-talk" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 function DropDownMenu({ item }) {
@@ -266,11 +262,8 @@ export default function Nav() {
               </div>
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                  <a href="/#lets-talk">
-                    <button
-                      className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500"
-                      href="/#contact"
-                    >
+                  <a href="/contact">
+                    <button className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500">
                       Let&apos;s talk
                     </button>
                   </a>

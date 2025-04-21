@@ -1,10 +1,8 @@
 import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
-import Link from "next/link";
 import { lexend } from "@/app/fonts";
 import InView from "@/components/animated/InView";
-import MessageUs from "@/components/sections/MessageUs";
-import LetsTalk from "@/components/sections/LetsTalk";
+import Project from "@/components/Project";
 
 export const metadata = {
   title: "Projects | The Bearded Developer",
@@ -14,51 +12,71 @@ export const metadata = {
 
 const projects = [
   {
-    title: "Coder Cave - Shopify Store for UK Retailer",
-    description:
-      "A custom Shopify store with integrations for print-on-demand services, optimized for mobile and SEO.",
-    image: "/images/shopify-project-placeholder.jpg",
-    alt: "Shopify Store for UK Retailer",
-    client: "Coder Cave",
-    challenge:
-      "Needed a scalable, user-friendly online store with seamless inventory management.",
-    solution:
-      "Built a custom Shopify store with Celigo integrations for real-time inventory sync, optimized for mobile and SEO.",
-    technologies: "Shopify, Celigo, Next.js, Tailwind CSS",
-    results:
-      "Reduced cart abandonment by 15% and improved page load time by 30%.",
+    title: "RC Boat Engines",
+    subtitle: "Shopify Store for UK and Worldwide Retailer",
+    description: [
+      "A new business venture selling RC boat engines and accessories. " +
+        "The client needed an e-commerce store that could handle international shipping and multiple currencies. " +
+        "The store also required a theme to match the brand's identity.",
+      "We recommended the Shopify platform for its ease of use and scalability, along with its strong integration capabilities and reliability. ",
+      "We delivered a custom Shopify store that launched successfully and we continue to work alongside RC Boat Engines.",
+    ],
+    images: [
+      "/img/projects/rcboatengines_01.png",
+      "/img/projects/rcboatengines_02.png",
+      "/img/projects/rcboatengines_03.png",
+      "/img/projects/rcboatengines_04.png",
+      "/img/projects/rcboatengines_05.png",
+    ],
+    alt: "Shopify Store for UK and Worldwide Retailer",
+    review:
+      "James was very attentive to my project needs and asked the right questions along with bringing his tenure with Shopify and eCommerce stores " +
+      "we are absolutely thrilled at what James has built for us. I have another project in the future and will be coming back to him and " +
+      "I am already looking forward to it.",
+    technologies: ["Shopify", "UI/UX", "Theme Design"],
   },
 
   {
-    title: "RC Boat Engines - Shopify Store for UK Retailer",
-    description:
-      "A custom Shopify store with integrations for print-on-demand services, optimized for mobile and SEO.",
-    image: "/images/shopify-project-placeholder.jpg",
+    title: "Coder Cave",
+    subtitle: "Shopify Store for UK Retailer",
+    description: [
+      "Tasked with creating a new Shopify store for this UK based retailer of clothing and coding accessories. " +
+        "The store needed to be user-friendly, mobile-optimized, and capable of handling high traffic volumes. " +
+        "The client also required seamless integration with their existing inventory management system.",
+      "We developed a custom Shopify store that not only met these requirements but also provided a scalable solution for future growth. " +
+        "The store was designed with a focus on user experience, ensuring that customers could easily navigate and find products. " +
+        "We integrated with the supplier providers to allow automated order processing and inventory management.",
+    ],
+    images: [
+      "/img/projects/codercave_01.png",
+      "/img/projects/codercave_02.png",
+      "/img/projects/codercave_03.png",
+      "/img/projects/codercave_04.png",
+      "/img/projects/codercave_05.png",
+    ],
     alt: "Shopify Store for UK Retailer",
-    client: "Coder Cave",
-    challenge:
-      "Needed a scalable, user-friendly online store with seamless inventory management.",
-    solution:
-      "Built a custom Shopify store with Celigo integrations for real-time inventory sync, optimized for mobile and SEO.",
-    technologies: "Shopify, Celigo, Next.js, Tailwind CSS",
-    results:
-      "Reduced cart abandonment by 15% and improved page load time by 30%.",
+    review:
+      "We are incredibly happy with the work that The Bearded Developer has done for us. Our store is easy to use and matches our brand perfectly.",
+    technologies: ["Shopify", "Integrations", "UI/UX", "Theme Design"],
   },
 
   {
-    title: "Shipping Estimating Service - Bespoke Business Web Application",
-    description:
-      "A custom Shopify store with integrations for print-on-demand services, optimized for mobile and SEO.",
-    image: "/images/shopify-project-placeholder.jpg",
-    alt: "Shopify Store for UK Retailer",
-    client: "Coder Cave",
-    challenge:
-      "Needed a scalable, user-friendly online store with seamless inventory management.",
-    solution:
-      "Built a custom Shopify store with Celigo integrations for real-time inventory sync, optimized for mobile and SEO.",
-    technologies: "Shopify, Celigo, Next.js, Tailwind CSS",
-    results:
-      "Reduced cart abandonment by 15% and improved page load time by 30%.",
+    title: "Shipping Estimating Service",
+    subtitle: "Bespoke Web Application Service",
+    description: [
+      "I was asked to extend the existing functionality of existing services within the business. This started with building out a costing " +
+        "estimating service for all consignment being shipped through their warehouse.",
+      "Previously the business was unaware of what the estimated costs of consignment were, this was due to complexity with the stock profile " +
+        "and the number of carriers and complex rate cards. ",
+      "We have built and delivered new service endpoints that allow the business to estimate the costs of shipping all their consignments. " +
+        "The service is fully customisable with all rate cards configurations stored in the customers ERP NetSuite.",
+    ],
+    images: [],
+    alt: "Bespoke Web Application Service",
+    review:
+      "The work completed was excellent and the communication was great. We are very happy with the performance of the changes. " +
+      "We are looking forward to working with The Bearded Developer again in the future.",
+    technologies: ["Laravel", "NetSuite", "Integrations", "API Design"],
   },
 ];
 
@@ -69,16 +87,15 @@ export default function ProjectsPage() {
         <Container>
           <InView>
             {/* Hero Section */}
-            <section className="md:p-10 relative ">
+            <section className="md:p-10 relative">
               <h2
                 className={`text-5xl md:text-6xl font-bold in-up ${lexend.className}`}
-                style={{ animationDelay: "0.25s" }}
               >
                 Some of our Projects
               </h2>
               <p
                 className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up max-w-xl`}
-                style={{ animationDelay: ".5s" }}
+                style={{ animationDelay: ".25s" }}
               >
                 Discover how The Bearded Developer delivers high-performance web
                 solutions for UK businesses.
@@ -86,173 +103,35 @@ export default function ProjectsPage() {
             </section>
 
             {/* Case Studies */}
-            <section className="flex flex-col gap-12">
-              {projects.map((project, index) => {
-                return (
-                  <div key={index} className="grid md:grid-cols-5 gap-10">
-                    <div className="text-black md:col-span-3">
-                      <h2
-                        className={`text-2xl font-semibold mb-2 ${lexend.className}`}
-                      >
-                        {project.title}
-                      </h2>
-                      <p className="text-sm mb-2">
-                        <strong>Client</strong>: {project.client}
-                      </p>
-                      <p className="text-sm mb-2">
-                        <strong>Challenge</strong>: {project.challenge}
-                      </p>
-                      <p className="text-sm mb-2">
-                        <strong>Solution</strong>: {project.solution}
-                      </p>
-                      <p className="text-sm mb-2">
-                        <strong>Technologies</strong>: {project.technologies}
-                      </p>
-                      <p className="text-sm mb-4">
-                        <strong>Results</strong>: {project.results}
-                      </p>
-                    </div>
-                    <div className="md:col-span-2">
-                      <p className="text-sm italic">images</p>
-                      <img
-                        src={project.image}
-                        alt={project.alt}
-                        className="w-full h-48 object-cover rounded-md mb-4"
-                      />
-                    </div>
-                  </div>
-                );
-              })}
-
-              {/* Project 1: Shopify Store */}
-              <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <img
-                  src="/images/shopify-project-placeholder.jpg"
-                  alt="Shopify Store for UK Retailer"
-                  className="w-full h-48 object-cover rounded-md mb-4"
-                />
-                <h2 className="text-2xl font-semibold mb-2">
-                  Shopify Store for UK Retailer
-                </h2>
-                <p className="text-sm mb-2">
-                  <strong>Client</strong>: UK-based e-commerce retailer
-                </p>
-                <p className="text-sm mb-2">
-                  <strong>Challenge</strong>: Needed a scalable, user-friendly
-                  online store with seamless inventory management.
-                </p>
-                <p className="text-sm mb-2">
-                  <strong>Solution</strong>: Built a custom Shopify store with
-                  Celigo integrations for real-time inventory sync, optimized
-                  for mobile and SEO.
-                </p>
-                <p className="text-sm mb-2">
-                  <strong>Technologies</strong>: Shopify, Celigo, Next.js,
-                  Tailwind CSS
-                </p>
-                <p className="text-sm mb-4">
-                  <strong>Results</strong>: Reduced cart abandonment by 15% and
-                  improved page load time by 30%.
-                </p>
-                <p className="text-sm italic">
-                  “James delivered a flawless store that transformed our online
-                  presence.” - [Client Name, replace with real testimonial]
-                </p>
-              </div>
-
-              {/* Project 2: Next.js E-commerce App */}
-              <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <img
-                  src="/images/nextjs-project-placeholder.jpg"
-                  alt="Next.js E-commerce Application"
-                  className="w-full h-48 object-cover rounded-md mb-4"
-                />
-                <h2 className="text-2xl font-semibold mb-2">
-                  Next.js E-commerce Application
-                </h2>
-                <p className="text-sm mb-2">
-                  <strong>Client</strong>: UK startup
-                </p>
-                <p className="text-sm mb-2">
-                  <strong>Challenge</strong>: Required a fast, headless
-                  e-commerce platform to compete with larger retailers.
-                </p>
-                <p className="text-sm mb-2">
-                  <strong>Solution</strong>: Developed a headless Next.js
-                  application with Shopify API integration, featuring
-                  server-side rendering and dynamic product pages.
-                </p>
-                <p className="text-sm mb-2">
-                  <strong>Technologies</strong>: Next.js, Shopify API, Node.js,
-                  Vercel
-                </p>
-                <p className="text-sm mb-4">
-                  <strong>Results</strong>: Achieved 2-second load times and
-                  increased conversions by 20%.
-                </p>
-                <p className="text-sm italic">
-                  “The Bearded Developer exceeded our expectations with a
-                  lightning-fast app.” – [Client Name, replace with real
-                  testimonial]
-                </p>
-              </div>
-
-              {/* Project 3: Web Consultancy */}
-              <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-                <img
-                  src="/images/consultancy-project-placeholder.jpg"
-                  alt="Web Consultancy for SME"
-                  className="w-full h-48 object-cover rounded-md mb-4"
-                />
-                <h2 className="text-2xl font-semibold mb-2">
-                  Web Consultancy for SME
-                </h2>
-                <p className="text-sm mb-2">
-                  <strong>Client</strong>: UK small business
-                </p>
-                <p className="text-sm mb-2">
-                  <strong>Challenge</strong>: Struggled with outdated website
-                  and poor user engagement.
-                </p>
-                <p className="text-sm mb-2">
-                  <strong>Solution</strong>: Conducted a website audit,
-                  implemented performance optimizations, and provided a roadmap
-                  for digital transformation using modern frameworks.
-                </p>
-                <p className="text-sm mb-2">
-                  <strong>Technologies</strong>: Next.js, Google Analytics,
-                  Hotjar
-                </p>
-                <p className="text-sm mb-4">
-                  <strong>Results</strong>: Improved user retention by 25% and
-                  reduced bounce rate by 10%.
-                </p>
-                <p className="text-sm italic">
-                  “James’ expertise turned our website into a powerful tool.” –
-                  [Client Name, replace with real testimonial]
-                </p>
-              </div>
+            <section className="flex flex-col gap-12 md:p-12 mt-16 divide-slate-200 divide-y-2">
+              {projects.map((project, index) => (
+                <Project key={index} project={project} />
+              ))}
             </section>
 
             {/* CTA Section */}
-            <section className="text-center mt-12">
-              <h2 className="text-2xl font-semibold mb-4">
+            <section className="md:p-10 relative">
+              <h2
+                className={`text-5xl md:text-6xl font-bold in-up ${lexend.className}`}
+              >
                 Ready to Start Your Project?
               </h2>
-              <p className="text-lg mb-6">
+              <p
+                className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up max-w-xl`}
+                style={{ animationDelay: ".25s" }}
+              >
                 Let&apos;s build a web solution that drives your business
                 forward. Contact us today.
               </p>
-              <Link
-                as="a"
-                href="/#lets-talk"
-                className="inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition"
-              >
-                Contact Us
-              </Link>
+              <p className="mt-5 in-up" style={{ animationDelay: ".25s" }}>
+                <a href="/contact">
+                  <button className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500 mx-0 md:ml-auto md:mr-0 text-center">
+                    Let&apos;s talk
+                  </button>
+                </a>
+              </p>
             </section>
           </InView>
-          <LetsTalk />
         </Container>
       </Section>
     </div>

@@ -18,7 +18,7 @@ export default function MessageUs() {
                 Don&apos;t forget to message us for a free consultation!
               </p>
               <a
-                href="/#lets-talk"
+                href="/contact"
                 className="w-48 outline outline-2 outline-white bg-transparent text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold mx-auto md:ml-auto md:mr-0 text-center"
               >
                 Let&apos;s talk
