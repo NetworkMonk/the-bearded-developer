@@ -55,10 +55,18 @@ export function Customise({ onSet, defaultValues }) {
               &quot;Accept All&quot;, you consent to our use of cookies.
             </div>
             <div className="font-medium text-black text-sm mb-5">
-              You will find more information about all the cookies we use under
-              each consent category below. You can choose to enable or disable
-              some or all of these categories, but this may affect your browsing
-              experience.
+              You can choose to enable or disable some or all of these
+              categories, but this may affect your browsing experience.
+            </div>
+            <div className="font-medium text-black text-sm mb-5">
+              Full details of the cookies we use can be found in our{" "}
+              <a
+                href="/cookies"
+                className="font-semibold text-brand-blue hover:opacity-60 transition-opacity duration-200"
+              >
+                Cookie Policy
+              </a>
+              .
             </div>
             {cookieCategories.map((category, categoryIndex) => (
               <div key={categoryIndex}>

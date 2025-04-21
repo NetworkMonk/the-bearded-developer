@@ -35,6 +35,24 @@ export default function Footer() {
                 >
                   Your Web Application Development and Technology Partner.
                 </h4>
+                <div className="mt-8">
+                  <p>
+                    <a
+                      href="/privacy"
+                      className="text-brand-light-blue hover:text-white transition-all duration-300 text-sm uppercase font-semibold"
+                    >
+                      Privacy Policy
+                    </a>
+                  </p>
+                  <p>
+                    <a
+                      href="/cookies"
+                      className="text-brand-light-blue hover:text-white transition-all duration-300 text-sm uppercase font-semibold"
+                    >
+                      Cookies
+                    </a>
+                  </p>
+                </div>
               </div>
               <div className="md:text-right">
                 <h3 className={`text-xl font-semibold ${lexend.className}`}>
@@ -88,48 +106,6 @@ export default function Footer() {
                   Registered Address: 47 York Gardens, Braintree, Essex, CM7 9NF
                 </p>
               </div>
-              {/* <div className="ml-auto flex gap-4">
-              <a
-                href="https://www.linkedin.com/in/james-plant-7ab317b/"
-                rel="noreferrer"
-                title="Linkedin"
-              >
-                <FontAwesomeIcon
-                  icon={faLinkedin}
-                  className="inline-block w-6 h-6"
-                />
-              </a>
-              <a
-                href="https://www.github.com/NetworkMonk/"
-                rel="noreferrer"
-                title="Linkedin"
-              >
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className="inline-block w-6 h-6"
-                />
-              </a>
-              <a
-                href="https://www.instagram.com/networkmonkey/"
-                rel="noreferrer"
-                title="Linkedin"
-              >
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  className="inline-block w-6 h-6"
-                />
-              </a>
-              <a
-                href="https://www.facebook.com/james.plant.31/"
-                rel="noreferrer"
-                title="Linkedin"
-              >
-                <FontAwesomeIcon
-                  icon={faFacebook}
-                  className="inline-block w-6 h-6"
-                />
-              </a>
-            </div> */}
             </div>
           </Container>
         </div>

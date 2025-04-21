@@ -12,13 +12,14 @@ export default function Ecommerce() {
             Helping you to manage your online stores
           </p>
           <p className="my-2">
-            If you have an existing online store or are looking to start selling
-            online then we can help you with your ecommerce needs.
+            We are certified partners with Shopify and can work on many other
+            platforms. If you have an existing online store or are looking to
+            start selling online then we can help you with your e-commerce
+            needs.
           </p>
           <p className="my-2">
-            Whatever the platform or technical requirements we can work with
-            your internal and external teams to deliver the best solution for
-            your business.
+            We can work with your internal and external teams to deliver the
+            best solution for your business.
           </p>
         </div>
         <div className="md:order-2"></div>

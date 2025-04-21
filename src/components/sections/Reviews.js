@@ -48,7 +48,10 @@ export default async function Reviews() {
               >
                 Some of our reviews and testimonials from our clients.
               </p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14 mt-10">
+              <div
+                className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14 mt-10 in-up"
+                style={{ animationDelay: "0.75s" }}
+              >
                 {reviews.map((review, rIndex) => {
                   return (
                     <div className="bg-gray-50 p-5 rounded-lg" key={rIndex}>
@@ -60,7 +63,9 @@ export default async function Reviews() {
                         ))}
                       </div>{" "}
                       <p className="text-lg font-semibold">{review.author}</p>
-                      <p className="text-sm font-bold uppercase text-gray-500">{review.company}</p>
+                      <p className="text-sm font-bold uppercase text-gray-500">
+                        {review.company}
+                      </p>
                       <p className="mt-2">{review.content}</p>
                     </div>
                   );
@@ -69,16 +74,6 @@ export default async function Reviews() {
             </div>
           </InView>
         </Container>
-        <div className="max-w-7xl mx-auto relative">
-          <div className="absolute right-0 bottom-32 max-w-full w-[500px] h-[500px] xl:w-[600px] xl:h-[600px] z-10 overflow-y-visible pointer-events-none">
-            <Image
-              priority
-              src={blob1}
-              alt="A Blob"
-              className="absolute h-[500px] w-[500px] xl:h-[600px] xl:w-[600px] transform rotate-90 opacity-15 pointer-events-none"
-            />
-          </div>
-        </div>
       </Section>
     </div>
   );

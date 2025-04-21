@@ -1,5 +1,3 @@
-import Nav from "@/components/common/Nav";
-import Footer from "@/components/sections/Footer";
 import LetsTalk from "@/components/sections/LetsTalk";
 import Technologies from "@/components/sections/Technologies";
 import Clients from "@/components/sections/Clients";
@@ -7,6 +5,7 @@ import Title from "@/components/sections/Title";
 import Services from "@/components/sections/Services";
 import MessageUs from "@/components/sections/MessageUs";
 import Reviews from "@/components/sections/Reviews";
+import About from "@/components/sections/About";
 
 export default function Home() {
   const jsonLd = {
@@ -29,15 +28,14 @@ export default function Home() {
         </linearGradient>
       </svg>
 
-      <Nav />
       <Title />
+      <About />
       <Services />
       <MessageUs />
       <Clients />
       <Technologies />
       <Reviews />
       <LetsTalk />
-      <Footer />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

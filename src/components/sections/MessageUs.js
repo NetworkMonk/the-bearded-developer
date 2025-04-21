@@ -17,17 +17,12 @@ export default function MessageUs() {
               <p className="text-xl font-semibold text-center md:text-left">
                 Don&apos;t forget to message us for a free consultation!
               </p>
-              <button
-                className="w-48 outline outline-2 outline-white bg-transparent text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold mx-auto md:ml-auto md:mr-0"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .getElementById("lets-talk")
-                    .scrollIntoView({ behavior: "smooth" });
-                }}
+              <a
+                href="/contact"
+                className="w-48 outline outline-2 outline-white bg-transparent text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold mx-auto md:ml-auto md:mr-0 text-center"
               >
                 Let&apos;s talk
-              </button>
+              </a>
             </div>
           </InView>
         </div>
