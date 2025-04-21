@@ -5,6 +5,7 @@ import Title from "@/components/sections/Title";
 import Services from "@/components/sections/Services";
 import MessageUs from "@/components/sections/MessageUs";
 import Reviews from "@/components/sections/Reviews";
+import About from "@/components/sections/About";
 
 export default function Home() {
   const jsonLd = {
@@ -28,6 +29,7 @@ export default function Home() {
       </svg>
 
       <Title />
+      <About />
       <Services />
       <MessageUs />
       <Clients />

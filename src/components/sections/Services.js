@@ -31,13 +31,13 @@ export default async function Services() {
                 So, what can we do for you? Here are some of the things we can
                 help you with.
               </p>
-              <div className="in-up" style={{animationDelay: ".75s"}}>
+              <div className="in-up" style={{ animationDelay: ".75s" }}>
+                <Ecommerce />
+                <Bespoke />
                 <Integrations />
                 <NetSuite />
                 <API />
                 <Agency />
-                <Ecommerce />
-                <Bespoke />
               </div>
               {/* <p
                 className={`mt-5 in-up max-w-xl`}
