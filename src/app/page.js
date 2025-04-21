@@ -7,12 +7,19 @@ import MessageUs from "@/components/sections/MessageUs";
 import Reviews from "@/components/sections/Reviews";
 import About from "@/components/sections/About";
 
+export const metadata = {
+  title: "The Bearded Developer",
+  description:
+    "Your Web Application Development and Technology Partner. Experts in Shopify, Celigo and NetSuite, along with a wide range of other technologies.",
+};
+
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     name: "The Bearded Developer | Web Development and Technology Partner",
     image: "https://www.thebeardeddeveloper.co.uk/images/beard-black.png",
-    description: "Your Web Application Development and Technology Partner.",
+    description:
+      "Your Web Application Development and Technology Partner. Experts in Shopify, Celigo and NetSuite, along with a wide range of other technologies.",
   };
 
   return (
