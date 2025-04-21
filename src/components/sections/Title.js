@@ -28,7 +28,9 @@ export default function Title() {
                             The Bearded Developer
                           </h1>
                           <Image
-                            src={beard} alt="The Bearded Developer Logo" className="mx-auto w-24 lg:w-64 my-10 in-up"
+                            src={beard}
+                            alt="The Bearded Developer Logo"
+                            className="mx-auto w-24 lg:w-64 my-10 in-up"
                             style={{ animationDelay: "0.5s" }}
                           />
                           <h2
@@ -42,17 +44,11 @@ export default function Title() {
                             className="mt-20 in-up text-center"
                             style={{ animationDelay: "1.5s" }}
                           >
-                            <button
-                              className="animated-button animated-button-fill min-w-48 text-white hover:text-brand-black uppercase font-semibold transition-all duration-500 transform lg:scale-125"
-                              onClick={(e) => {
-                                e.preventDefault();
-                                document
-                                  .getElementById("lets-talk")
-                                  .scrollIntoView({ behavior: "smooth" });
-                              }}
-                            >
-                              Let&apos;s talk
-                            </button>
+                            <a href="/contact">
+                              <button className="animated-button animated-button-fill min-w-48 text-white hover:text-brand-black uppercase font-semibold transition-all duration-500 transform lg:scale-125">
+                                Let&apos;s talk
+                              </button>
+                            </a>
                           </div>
                         </div>
                       </div>
