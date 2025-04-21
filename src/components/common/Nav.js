@@ -28,7 +28,7 @@ const desktopMenu = [
   },
   { name: "Projects", href: "/projects" },
   // { name: "Resources", href: "/resources" },
-  { name: "Blog", href: "/blog" },
+  // { name: "Blog", href: "/blog" },
 ];
 
 const mobileMenu = [
@@ -45,7 +45,7 @@ const mobileMenu = [
   },
   { name: "Projects", href: "/projects" },
   // { name: "Resources", href: "/resources" },
-  { name: "Blog", href: "/blog" },
+  // { name: "Blog", href: "/blog" },
   { name: "Contact Us", href: "/contact" },
 ];
 
