@@ -8,18 +8,19 @@ import Reviews from "@/components/sections/Reviews";
 import About from "@/components/sections/About";
 
 export const metadata = {
-  title: "The Bearded Developer",
+  title:
+    "The Bearded Developer | Shopify, Web Development, and Technology Solutions",
   description:
-    "Your Web Application Development and Technology Partner. Experts in Shopify, Celigo and NetSuite, along with a wide range of other technologies.",
+    "Your friendly web development and technology partner. Offering Shopify solutions, web development services, and tech insights. Let's build something great together!",
 };
 
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
-    name: "The Bearded Developer | Web Development and Technology Partner",
+    name: "The Bearded Developer | Shopify, Web Development, and Technology Solutions",
     image: "https://www.thebeardeddeveloper.co.uk/images/beard-black.png",
     description:
-      "Your Web Application Development and Technology Partner. Experts in Shopify, Celigo and NetSuite, along with a wide range of other technologies.",
+      "Your friendly web development and technology partner. Offering Shopify solutions, web development services, and tech insights. Let's build something great together!",
   };
 
   return (

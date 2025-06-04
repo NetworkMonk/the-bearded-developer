@@ -5,7 +5,8 @@ import InView from "@/components/animated/InView";
 import Project from "@/components/Project";
 
 export const metadata = {
-  title: "Projects | The Bearded Developer",
+  title:
+    "Projects | The Bearded Developer | Shopify, Web Development, and Technology Solutions",
   description:
     "Explore our portfolio of Shopify stores, bespoke web applications, and web consultancy projects, built with Next.js and Celigo for UK e-commerce businesses.",
 };

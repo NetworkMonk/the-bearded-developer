@@ -6,8 +6,10 @@ import Nav from "@/components/common/Nav";
 import Footer from "@/components/sections/Footer";
 
 export const metadata = {
-  title: "The Bearded Developer",
-  description: "Your friendly web development and technology partner.",
+  title:
+    "The Bearded Developer | Shopify, Web Development, and Technology Solutions",
+  description:
+    "Your friendly web development and technology partner. Offering Shopify solutions, web development services, and tech insights. Let's build something great together!",
 };
 
 export default function RootLayout({ children }) {
