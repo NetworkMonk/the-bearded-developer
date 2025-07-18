@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function LetsTalk() {
   const [formData, setFormData] = useState({
@@ -21,13 +21,19 @@ export default function LetsTalk() {
 
   const submitForm = async () => {
     setFormData({ ...formData, status: "pending" });
-    await fetch("/api/contact", {
+    const result = await fetch("/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     });
+    if (!result.ok) {
+      const errorData = await result.json();
+      console.error("Error sending email:", errorData);
+      setFormData({ ...formData, status: "error" });
+      return;
+    }
     setFormData({ ...formData, status: "success" });
   };
 
@@ -112,7 +118,7 @@ export default function LetsTalk() {
                   className="p-5 py-8 mt-5 md:mt-10 md:p-10 bg-gradient-to-br from-brand-blue to-brand-light-blue text-white rounded-xl shadow-xl in-up"
                   style={{ animationDelay: "0.25s" }}
                 >
-                  {formData.status !== "success" && (
+                  {formData.status !== "success" && formData.status !== "error" && (
                     <>
                       <p className="font-bold text-sm">Name</p>
                       <input
@@ -171,6 +177,11 @@ export default function LetsTalk() {
                     <p className="text-center font-semibold text-lg my-20">
                       Thanks, your message has been sent, we will get back to
                       you as soon as possible.
+                    </p>
+                  )}
+                  {formData.status === "error" && (
+                    <p className="text-center font-semibold text-lg my-20">
+                      Oops! Something went wrong. Please try again later.
                     </p>
                   )}
                 </div>
