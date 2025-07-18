@@ -5,6 +5,9 @@ export async function POST(req, res) {
       return Response.json({ message: "Invalid form data" }, { status: 400 });
     }
 
+    // Extract all key value pairs from the form data
+    const formEntries = Object.entries(formData);
+
     // Send email using SMTP2GO
     const smtp2goUrl = `https://api.smtp2go.com/v3/email/send`;
     const smtp2goHeaders = {
@@ -16,7 +19,12 @@ export async function POST(req, res) {
       sender: "info@thebeardeddeveloper.co.uk",
       to: ["info@thebeardeddeveloper.co.uk"],
       subject: "Website Submission",
-      text_body: JSON.stringify(formData, null, 2),
+      text_body: formEntries
+        .map((entry) => `${entry[0]}: ${entry[1]}`)
+        .join("\n"),
+      html_body: `<p>${formEntries
+        .map((entry) => `<strong>${entry[0]}:</strong> ${entry[1]}`)
+        .join("<br>")}</p>`,
     };
     const result = await fetch(smtp2goUrl, {
       method: "POST",
