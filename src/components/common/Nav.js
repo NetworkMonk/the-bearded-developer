@@ -27,8 +27,14 @@ const desktopMenu = [
     ],
   },
   { name: "Projects", href: "/projects" },
-  // { name: "Resources", href: "/resources" },
-  // { name: "Blog", href: "/blog" },
+  {
+    name: "Resources",
+    children: [
+      { name: "All Resources", href: "/resources" },
+      { name: "Components", href: "/resources/components" },
+      { name: "Articles", href: "/resources/articles" },
+    ],
+  },
 ];
 
 const mobileMenu = [
@@ -44,8 +50,14 @@ const mobileMenu = [
     ],
   },
   { name: "Projects", href: "/projects" },
-  // { name: "Resources", href: "/resources" },
-  // { name: "Blog", href: "/blog" },
+  {
+    name: "Resources",
+    children: [
+      { name: "All Resources", href: "/resources" },
+      { name: "Components", href: "/resources/components" },
+      { name: "Articles", href: "/resources/articles" },
+    ],
+  },
   { name: "Contact Us", href: "/contact" },
 ];
 
@@ -79,7 +91,7 @@ function DropDownMenu({ item }) {
 
   return (
     <Popover className="flex">
-      <PopoverButton className="outline-0 text-base inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer">
+      <PopoverButton className="outline-0 text-base inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue transition-all duration-300 cursor-pointer">
         {item.name}
         <FontAwesomeIcon
           icon={faChevronDown}
@@ -100,7 +112,7 @@ function DropDownMenu({ item }) {
               {item.children.map((child) => (
                 <a
                   key={child.name}
-                  className={`text-base block my-2 mr-5 items-center border-b-2 border-transparent px-3 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
+                  className={`text-base block my-2 mr-5 items-center border-b-2 border-transparent px-3 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue transition-all duration-300 cursor-pointer`}
                   href={child.href}
                   onClick={close}
                 >
@@ -145,7 +157,7 @@ function MobileDropDownMenu({ item }) {
 
   return (
     <Disclosure as="div" className="px-3 pb-2">
-      <DisclosureButton className="flex w-full items-center justify-between outline-0 text-base border-b-2 border-transparent px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer">
+      <DisclosureButton className="flex w-full items-center justify-between outline-0 text-base border-b-2 border-transparent px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue transition-all duration-300 cursor-pointer">
         <span className="flex items-center">
           {item.name}
           <FontAwesomeIcon
@@ -158,7 +170,7 @@ function MobileDropDownMenu({ item }) {
         {item.children.map((child) => (
           <a
             key={child.name}
-            className={`text-base block my-3 mr-5 items-center border-b-2 border-transparent px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
+            className={`text-base block my-3 mr-5 items-center border-b-2 border-transparent px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue transition-all duration-300 cursor-pointer`}
             href={child.href}
             onClick={close}
           >
@@ -251,7 +263,7 @@ export default function Nav() {
                     return (
                       <a
                         key={item.name}
-                        className={`text-base inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
+                        className={`text-base inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue transition-all duration-300 cursor-pointer`}
                         href={item.href}
                       >
                         {item.name}
@@ -263,7 +275,7 @@ export default function Nav() {
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <a href="/contact">
-                    <button className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500">
+                    <button className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum font-semibold transition-all duration-500">
                       Let&apos;s talk
                     </button>
                   </a>
@@ -282,7 +294,7 @@ export default function Nav() {
                   <DisclosureButton
                     as="a"
                     href="/"
-                    className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
+                    className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue transition-all duration-300 cursor-pointer`}
                   >
                     <Image
                       src="/img/beard-black.png"
@@ -302,7 +314,7 @@ export default function Nav() {
                         key={item.name}
                         as="a"
                         href={item.href}
-                        className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue uppercase transition-all duration-300 cursor-pointer`}
+                        className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue transition-all duration-300 cursor-pointer`}
                       >
                         {item.name}
                       </DisclosureButton>
