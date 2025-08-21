@@ -18,10 +18,10 @@ export default function FullScreenImage(props) {
   });
 
   return (
-    <div className="fixed z-[100] top-0 left-0 right-0 bottom-0 max-h-100vh flex flex-col bg-black bg-opacity-90 select-none">
+    <div className="fixed z-[100] top-0 left-0 right-0 bottom-0 max-h-100vh flex flex-col bg-black/90 select-none">
       <div>
         <div className="max-w-xl mx-auto flex p-4">
-          <div className="flex-grow text-left">
+          <div className="grow text-left">
             <a
               className="w-6 h-6 cursor-pointer inline-block mr-5 text-white"
               onClick={() => setSelectedImage(allImages[previousIndex])}
@@ -45,7 +45,7 @@ export default function FullScreenImage(props) {
           </div>
         </div>
       </div>
-      <div className="flex-grow max-h-full">
+      <div className="grow max-h-full">
         <Image
           alt=""
           width={1920}

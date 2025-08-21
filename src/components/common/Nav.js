@@ -225,7 +225,7 @@ export default function Nav() {
               <div className="flex">
                 <div className="-ml-2 mr-2 flex items-center md:hidden">
                   {/* Mobile menu button */}
-                  <DisclosureButton className="relative inline-flex ml-2 items-center justify-center rounded-md p-2 mr-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none transition-all duration-300">
+                  <DisclosureButton className="relative inline-flex ml-2 items-center justify-center rounded-md p-2 mr-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-hidden transition-all duration-300">
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Open main menu</span>
                     {open ? (
@@ -244,7 +244,7 @@ export default function Nav() {
                   </DisclosureButton>
                 </div>
                 <div
-                  className={`hidden md:flex flex-shrink-0 text-xl mt-1 mr-5 items-center text-white ${lexend.className}`}
+                  className={`hidden md:flex shrink-0 text-xl mt-1 mr-5 items-center text-white ${lexend.className}`}
                 >
                   <a className="cursor-pointer" href="/">
                     <Image
@@ -273,7 +273,7 @@ export default function Nav() {
                 </div>
               </div>
               <div className="flex items-center">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <a href="/contact">
                     <button className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum font-semibold transition-all duration-500">
                       Let&apos;s talk

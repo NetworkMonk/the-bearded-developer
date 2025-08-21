@@ -16,7 +16,7 @@ export default function Gallery({ images }) {
                 width={480}
                 height={480}
                 src={galleryImage}
-                className="object-cover w-full cursor-pointer shadow-sm hover:scale-105 hover:shadow-xl transition-all duration-200"
+                className="object-cover w-full cursor-pointer shadow-xs hover:scale-105 hover:shadow-xl transition-all duration-200"
                 onClick={() => {
                   setSelectedImage(galleryImage);
                 }}

@@ -8,7 +8,7 @@ export default function PreviewPanel({ children }) {
 
   return (
     <div className={`${theme === "dark" ? "dark" : ""}`}>
-      <div className="bg-white border border-dashed border-gray-300 rounded-lg p-5">
+      <div className="bg-white dark:bg-brand-black border border-dashed border-gray-300 rounded-lg p-5">
         {children}
       </div>
     </div>

@@ -62,7 +62,7 @@ export default async function Testimonials() {
                   return (
                     <div key={reviewIndex} className="lg:w-1/3 p-3">
                       <figure
-                        className="bg-brand-platinum rounded-lg p-5 bg-opacity-5 h-full flex flex-col in-up"
+                        className="bg-brand-platinum/5 rounded-lg p-5 h-full flex flex-col in-up"
                         style={{ animationDelay: `${reviewIndex / 3 + 2}s` }}
                       >
                         <blockquote className="flex-1">

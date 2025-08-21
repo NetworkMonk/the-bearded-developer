@@ -32,6 +32,7 @@ export default function Title() {
                             alt="The Bearded Developer Logo"
                             className="mx-auto w-24 lg:w-64 my-10 in-up"
                             style={{ animationDelay: "0.5s" }}
+                            priority={true}
                           />
                           <h2
                             className={`text-2xl md:text-4xl font-medium mt-10 in-up text-center mx-auto max-w-2xl`}
