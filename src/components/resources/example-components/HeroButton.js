@@ -89,8 +89,8 @@ export default function HeroButton() {
     <Card>
       <h3 className="text-2xl font-semibold">Hero Button</h3>
       <p className="mt-2">
-        A customizable button component for your application, includes a
-        animated pulsing background effect, this works well on dark backgrounds.
+        A hero button component for your application, includes a animated
+        pulsing background effect, this works well on dark backgrounds.
       </p>
       <div className="my-4">
         <PreviewPanel markup={exampleMarkup} style={exampleStyle}>

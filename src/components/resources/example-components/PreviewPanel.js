@@ -15,38 +15,40 @@ export default function PreviewPanel({ children, markup, style }) {
 
   return (
     <div className={`${theme === "dark" ? "dark" : ""}`}>
+      <div className="flex">
+        {!isCodeVisible && (
+          <div className="border border-brand-black/15 bg-brand-black/5 rounded-md inline-block mb-2 inset-shadow-sm inset-shadow-brand-black/15 p-[2px] overflow-hidden">
+            <button
+              className={`w-9 h-9 rounded-sm ${
+                theme === "light" ? enabledButtonTheme : disabledButtonTheme
+              }`}
+              onClick={() => setTheme("light")}
+              title="Switch to light mode"
+            >
+              <FontAwesomeIcon icon={faSun} />
+            </button>
+            <button
+              className={`w-9 h-9 rounded-sm ${
+                theme === "dark" ? enabledButtonTheme : disabledButtonTheme
+              }`}
+              onClick={() => setTheme("dark")}
+              title="Switch to dark mode"
+            >
+              <FontAwesomeIcon icon={faMoon} />
+            </button>
+          </div>
+        )}
+        <div className="ml-auto">
+          <button
+            onClick={() => setIsCodeVisible(!isCodeVisible)}
+            className="outline outline-2 outline-white hover:outline-brand-blue bg-brand-blue text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold cursor-pointer"
+          >
+            {isCodeVisible ? "View Preview" : "View Code"}
+          </button>
+        </div>
+      </div>{" "}
       {!isCodeVisible && (
         <>
-          <div className="flex">
-            <div className="border border-brand-black/15 bg-brand-black/5 rounded-md inline-block mb-2 inset-shadow-sm inset-shadow-brand-black/15 p-[2px] overflow-hidden">
-              <button
-                className={`w-9 h-9 rounded-sm ${
-                  theme === "light" ? enabledButtonTheme : disabledButtonTheme
-                }`}
-                onClick={() => setTheme("light")}
-                title="Switch to light mode"
-              >
-                <FontAwesomeIcon icon={faSun} />
-              </button>
-              <button
-                className={`w-9 h-9 rounded-sm ${
-                  theme === "dark" ? enabledButtonTheme : disabledButtonTheme
-                }`}
-                onClick={() => setTheme("dark")}
-                title="Switch to dark mode"
-              >
-                <FontAwesomeIcon icon={faMoon} />
-              </button>
-            </div>
-            <div className="ml-auto">
-              <button
-                onClick={() => setIsCodeVisible(true)}
-                className="outline outline-2 outline-white hover:outline-brand-blue bg-brand-blue text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold cursor-pointer"
-              >
-                View Code
-              </button>
-            </div>
-          </div>
           <div className="bg-white dark:bg-brand-black border border-dashed border-gray-300 rounded-lg p-5">
             {children}
           </div>
@@ -54,17 +56,6 @@ export default function PreviewPanel({ children, markup, style }) {
       )}
       {isCodeVisible && (
         <>
-          <div className="flex">
-            <div className="ml-auto">
-              <button
-                onClick={() => setIsCodeVisible(false)}
-                className="outline outline-2 outline-white hover:outline-brand-blue bg-brand-blue text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold cursor-pointer"
-              >
-                View Preview
-              </button>
-            </div>
-          </div>
-
           <p className="text-sm font-semibold text-gray-600">JSX</p>
           <CodeBlock code={markup} language="jsx" />
           {style && (
