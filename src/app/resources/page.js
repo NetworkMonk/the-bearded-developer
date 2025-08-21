@@ -36,11 +36,11 @@ export default function ProjectsPage() {
       <Section>
         <Container>
           <section className="md:p-10 relative">
-            <h2
+            <h1
               className={`text-5xl md:text-6xl font-bold ${lexend.className}`}
             >
               Resources
-            </h2>
+            </h1>
             <p className="text-lg md:text-xl font-semibold mt-5 md:mt-10 max-w-xl">
               You can find a variety of resources here to help you with your
               projects.

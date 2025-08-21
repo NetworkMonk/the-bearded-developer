@@ -4,7 +4,7 @@ import { ConsentForm } from "@/components/cookie-consent/ConsentForm";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Nav from "@/components/common/Nav";
 import Footer from "@/components/sections/Footer";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title:
@@ -14,6 +14,8 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+
   return (
     <html lang="en">
       <body className={`${montserrat.className} min-h-screen`}>
@@ -21,7 +23,7 @@ export default function RootLayout({ children }) {
         <Nav />
         {children}
         <Footer />
-        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+        {gtmId && <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />}
         <Analytics />
       </body>
     </html>

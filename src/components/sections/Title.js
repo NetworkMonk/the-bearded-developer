@@ -45,7 +45,7 @@ export default function Title() {
                             style={{ animationDelay: "1.5s" }}
                           >
                             <a href="/contact">
-                              <button className="animated-button animated-button-fill min-w-48 text-white hover:text-brand-black uppercase font-semibold transition-all duration-500 transform lg:scale-125">
+                              <button className="animated-button animated-button-fill min-w-48 hover:text-brand-black uppercase font-semibold transition-all duration-500 transform lg:scale-125">
                                 Let&apos;s talk
                               </button>
                             </a>
