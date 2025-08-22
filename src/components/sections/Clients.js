@@ -13,6 +13,23 @@ export default async function Achievements() {
       background: "#232142",
     },
     {
+      name: "RC Boat Engines Ltd.",
+      logo: "/img/client-logos/rc_boat_engines.png",
+    },
+    {
+      name: "Ruroc Ltd",
+      logo: "/img/client-logos/ruroc_logo.png",
+      background: "#000000",
+    },
+    {
+      name: "Cortex Now Ltd.",
+      logo: "/img/client-logos/cortex_now_logo.png",
+    },
+    {
+      name: "Lightwork Electrical Services Ltd",
+      logo: "/img/client-logos/lightwork_electrical_logo.png",
+    },
+    {
       name: "White Stores",
       logo: "/img/client-logos/Whitestores-Living-Logo-Green.png",
     },
@@ -29,18 +46,6 @@ export default async function Achievements() {
       logo: "/img/client-logos/coder-cave.png",
       background: "#4e5054",
     },
-    {
-      name: "RC Boat Engines Ltd.",
-      logo: "/img/client-logos/rc_boat_engines.png",
-    },
-    {
-      name: "Cortex Now Ltd.",
-      logo: "/img/client-logos/cortex_now_logo.png",
-    },
-    // {
-    //   name: "Lightwork Electrical Services Ltd",
-    //   logo: "/img/client-logos/lightwork_electrical_logo.png",
-    // },
     // {
     //   name: "Cotton and Twigg",
     //   logo: "/img/client-logos/Cotton-and-Twigg.png",
@@ -80,7 +85,7 @@ export default async function Achievements() {
                     <div
                       key={cIndex}
                       className="in-up"
-                      style={{ animationDelay: `${cIndex / 6 + 1}s` }}
+                      style={{ animationDelay: `${cIndex / 9 + 1}s` }}
                     >
                       <div
                         className="max-w-80 sm:max-w-none mx-auto sm:mx-0 h-full p-10 opacity-60 hover:opacity-100 transition-all duration-300 flex justify-center items-center"

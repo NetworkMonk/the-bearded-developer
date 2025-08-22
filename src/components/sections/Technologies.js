@@ -7,6 +7,11 @@ import blob2 from "@/components/blobs/blob2.svg";
 
 export default async function Technologies() {
   const technologies = [
+    {
+      name: "Microsoft Entra",
+      displayOrder: 0,
+      logo: "/img/tech-logos/microsoft_entra_logo.svg",
+    },
     { name: "React", displayOrder: 1, logo: "/img/tech-logos/react-2.svg" },
     { name: "Next.js", displayOrder: 2, logo: "/img/tech-logos/next.svg" },
     {
@@ -35,7 +40,11 @@ export default async function Technologies() {
     { name: "Shopify", displayOrder: 10, logo: "/img/tech-logos/shopify.svg" },
     { name: "Go", displayOrder: 11, logo: "/img/tech-logos/go-6.svg" },
     { name: "Celigo", displayOrder: 12, logo: "/img/tech-logos/celigo.png" },
-    { name: "Squarespace", displayOrder: 13, logo: "/img/tech-logos/squarespace-logo.png"}
+    {
+      name: "Squarespace",
+      displayOrder: 13,
+      logo: "/img/tech-logos/squarespace-logo.png",
+    },
   ];
 
   return (
@@ -74,7 +83,7 @@ export default async function Technologies() {
                       <div
                         key={index}
                         className="p-3 cursor-default transition-colors duration-300 in-up"
-                        style={{ animationDelay: `${index / 6 + 1}s` }}
+                        style={{ animationDelay: `${index / 9 + 1}s` }}
                       >
                         <Image
                           src={skill.logo}

@@ -252,6 +252,7 @@ export default function Nav() {
                       alt="The Bearded Developer"
                       width={40}
                       height={40}
+                      priority
                     />
                   </a>
                 </div>
@@ -302,6 +303,7 @@ export default function Nav() {
                       width={24}
                       height={24}
                       className="inline-block mr-2"
+                      priority
                     />
                     The Bearded Developer
                   </DisclosureButton>
