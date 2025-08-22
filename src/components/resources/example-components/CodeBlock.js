@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Highlight, themes, defaultProps } from "prism-react-renderer";
+import { Highlight, themes } from "prism-react-renderer";
 
 export default function CodeBlock({ code, language = "jsx" }) {
   const [copied, setCopied] = useState(false);
@@ -24,7 +24,6 @@ export default function CodeBlock({ code, language = "jsx" }) {
         {copied ? "Copied!" : "Copy"}
       </button>
       <Highlight
-        {...defaultProps}
         code={code.trim()}
         language={language}
         theme={themes.shadesOfPurple}
