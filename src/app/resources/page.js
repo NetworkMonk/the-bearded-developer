@@ -28,6 +28,14 @@ const links = [
     img: "https://placehold.co/600x400/png",
     buttonTitle: "Explore Articles",
   },
+  {
+    title: "Templates",
+    href: false,
+    description:
+      "View some of our full site and single page templates, get a head start on your project.",
+    img: "https://placehold.co/600x400/png",
+    buttonTitle: "Coming Soon",
+  },
 ];
 
 export default function ProjectsPage() {
@@ -62,18 +70,44 @@ export default function ProjectsPage() {
                     height={400}
                   />
                   <div>
-                    <Link
-                      href={link.href}
-                      as={<button />}
-                      className="outline outline-2 outline-white hover:outline-brand-blue bg-brand-blue text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold"
-                    >
-                      {link.buttonTitle}
-                    </Link>
+                    {link.href ? (
+                      <Link
+                        href={link.href}
+                        as={<button />}
+                        className="outline outline-2 outline-white hover:outline-brand-blue bg-brand-blue text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold"
+                      >
+                        {link.buttonTitle}
+                      </Link>
+                    ) : (
+                      <button className="outline outline-2 outline-white hover:outline-brand-blue bg-brand-blue text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold">
+                        {link.buttonTitle}
+                      </button>
+                    )}
                   </div>
                 </div>
               ))}
             </div>
           </section>
+          <section className="md:p-10 relative">
+            <h2
+              className={`text-5xl md:text-6xl font-bold ${lexend.className}`}
+            >
+              Need Something Custom?
+            </h2>
+            <p
+              className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 max-w-xl`}
+            >
+              Let&apos;s work together to create a custom solution that meets
+              your needs. Contact us today.
+            </p>
+            <p className="mt-5">
+              <a href="/contact">
+                <button className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500 text-center">
+                  Let&apos;s talk
+                </button>
+              </a>
+            </p>
+          </section>{" "}
         </Container>
       </Section>
     </div>
