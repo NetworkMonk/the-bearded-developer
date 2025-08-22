@@ -79,7 +79,7 @@ export default function ProjectsPage() {
                         {link.buttonTitle}
                       </Link>
                     ) : (
-                      <button className="outline outline-2 outline-white hover:outline-brand-blue bg-brand-blue text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold">
+                      <button className="outline outline-2 outline-white bg-brand-blue text-white px-6 py-2 rounded-full uppercase font-semibold opacity-50">
                         {link.buttonTitle}
                       </button>
                     )}
