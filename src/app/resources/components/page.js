@@ -6,8 +6,6 @@ import ContactForm from "@/components/resources/example-components/ContactForm";
 import CookieBanner from "@/components/resources/example-components/CookieBanner";
 import CookiePreferences from "@/components/resources/example-components/CookiePreferences";
 import HeroButton from "@/components/resources/example-components/HeroButton";
-import PreviewPanel from "@/components/resources/example-components/PreviewPanel";
-// import CollapsibleCode from "./CollapsibleCode";
 
 export const metadata = {
   title:
