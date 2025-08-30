@@ -1,0 +1,19 @@
+{
+  "articles": [
+    {
+      "title": "Mail Migration in Batches",
+      "subTitle": "A Comprehensive Guide to Migrating Mail in Batches",
+      "description": "Learn how to efficiently migrate mail in batches with our comprehensive guide.",
+      "date": "2025-08-29",
+      "author": "James Plant",
+      "image": "/img/articles/mail-migration-batches/philip-oroni-7rMD7zh5SKo-unsplash.jpg",
+      "tags": [
+        "Mail",
+        "Migration",
+        "Batches",
+        "Infrastructure"
+      ],
+      "path": "/resources/articles/mail-migration-in-batches"
+    }
+  ]
+}
