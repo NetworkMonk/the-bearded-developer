@@ -2,6 +2,7 @@ import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
 import { lexend } from "@/app/fonts";
 import ArticleList from "@/components/articles/ArticleList";
+import { Suspense } from "react"; // <-- Add this import
 
 export const metadata = {
   title:
@@ -30,7 +31,10 @@ export default function ArticlesPage() {
             </p>
           </section>
 
-          <ArticleList />
+          {/* Wrap ArticleList in Suspense */}
+          <Suspense fallback={<div>Loading articles...</div>}>
+            <ArticleList />
+          </Suspense>
 
           <section className="md:p-10 relative">
             <h2
