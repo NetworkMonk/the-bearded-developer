@@ -1,7 +1,6 @@
 import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
 import { lexend } from "@/app/fonts";
-import InView from "@/components/animated/InView";
 import ArticleList from "@/components/articles/ArticleList";
 
 export const metadata = {
