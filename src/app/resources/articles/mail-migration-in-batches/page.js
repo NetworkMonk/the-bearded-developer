@@ -1,13 +1,9 @@
-import { lexend } from "@/app/fonts";
-
 import article from "./meta.json";
 import ArticleContainer from "@/components/articles/ArticleContainer";
 
 export const metadata = {
-  title:
-    "Components | The Bearded Developer | Shopify, Web Development, and Technology Solutions",
-  description:
-    "See some of our pre built components and templates for web development that you can use in your applications",
+  title: article.metadata.title,
+  description: article.metadata.description,
 };
 
 export default function ArticlePage() {

@@ -8,7 +8,9 @@ import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import Pagination from "./Pagination";
 
-const articles = articleIndex.articles;
+const articles = articleIndex.articles.sort((a, b) => {
+  return new Date(b.date) - new Date(a.date);
+});
 
 const popularSearches = [
   "Shopify",

@@ -5,5 +5,10 @@
   "date": "2025-08-29",
   "author": "James Plant",
   "image": "/img/articles/mail-migration-batches/philip-oroni-7rMD7zh5SKo-unsplash.jpg",
-  "tags": ["Mail", "Migration", "Batches", "Infrastructure"]
+  "tags": ["Mail", "Migration", "Batches", "Infrastructure"],
+  "metadata": {
+    "title": "Mail Migration in Batches | The Bearded Developer | Shopify, Web Development, and Technology Solutions",
+    "description": "A Comprehensive Guide to Migrating Mail in Batches, Learn how to efficiently migrate mail in batches with our comprehensive guide.",
+    "robots": "index, follow"
+  }
 }

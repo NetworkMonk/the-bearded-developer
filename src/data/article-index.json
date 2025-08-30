@@ -13,7 +13,32 @@
         "Batches",
         "Infrastructure"
       ],
+      "metadata": {
+        "title": "Mail Migration in Batches | The Bearded Developer | Shopify, Web Development, and Technology Solutions",
+        "description": "A Comprehensive Guide to Migrating Mail in Batches, Learn how to efficiently migrate mail in batches with our comprehensive guide.",
+        "robots": "index, follow"
+      },
       "path": "/resources/articles/mail-migration-in-batches"
+    },
+    {
+      "title": "Google Cookie Consent Mode with Shopify",
+      "subTitle": "A Comprehensive Guide to Google Cookie Consent Mode with Shopify",
+      "description": "Learn how to implement Google Cookie Consent Mode with Shopify in this comprehensive guide.",
+      "date": "2025-08-30",
+      "author": "James Plant",
+      "image": "/img/articles/google-consent-mode-shopify/swiss-educational-college-c6ZL-qNhFYA-unsplash.jpg",
+      "tags": [
+        "Google",
+        "Cookie",
+        "Consent",
+        "Shopify"
+      ],
+      "metadata": {
+        "title": "Google Cookie Consent Mode with Shopify | The Bearded Developer | Shopify, Web Development, and Technology Solutions",
+        "description": "A Comprehensive Guide to Google Cookie Consent Mode with Shopify, Learn how to implement Google Cookie Consent Mode with Shopify in this comprehensive guide.",
+        "robots": "index, follow"
+      },
+      "path": "/resources/articles/using-google-cookie-consent-mode-with-shopify"
     }
   ]
 }
