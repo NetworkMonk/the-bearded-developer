@@ -8,13 +8,13 @@ import blob1 from "@/components/blobs/blob1.svg";
 export default async function Achievements() {
   const clients = [
     {
-      name: "036",
+      name: "036 Group Company",
       logo: "/img/client-logos/036_Logo_White_RGB.png",
       background: "#232142",
     },
     {
-      name: "RC Boat Engines Ltd.",
-      logo: "/img/client-logos/rc_boat_engines.png",
+      name: "Sealey Group",
+      logo: "/img/client-logos/sealey-logo.png",
     },
     {
       name: "Ruroc Ltd",
@@ -22,12 +22,8 @@ export default async function Achievements() {
       background: "#000000",
     },
     {
-      name: "Cortex Now Ltd.",
-      logo: "/img/client-logos/cortex_now_logo.png",
-    },
-    {
-      name: "Lightwork Electrical Services Ltd",
-      logo: "/img/client-logos/lightwork_electrical_logo.png",
+      name: "RC Boat Engines Ltd.",
+      logo: "/img/client-logos/rc_boat_engines.png",
     },
     {
       name: "White Stores",
@@ -40,6 +36,14 @@ export default async function Achievements() {
     {
       name: "HWC Logistics",
       logo: "/img/client-logos/HWC-Logistics-Logo-Colour-Pantone.png",
+    },
+    {
+      name: "Cortex Now Ltd.",
+      logo: "/img/client-logos/cortex_now_logo.png",
+    },
+    {
+      name: "Lightwork Electrical Services Ltd",
+      logo: "/img/client-logos/lightwork_electrical_logo.png",
     },
     {
       name: "Coder Cave",
