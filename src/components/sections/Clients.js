@@ -13,17 +13,12 @@ export default async function Achievements() {
       background: "#232142",
     },
     {
-      name: "Sealey Group",
-      logo: "/img/client-logos/sealey-logo.png",
-    },
-    {
-      name: "Ruroc Ltd",
-      logo: "/img/client-logos/ruroc_logo.png",
-      background: "#000000",
-    },
-    {
       name: "RC Boat Engines Ltd.",
       logo: "/img/client-logos/rc_boat_engines.png",
+    },
+    {
+      name: "Sealey Group",
+      logo: "/img/client-logos/sealey-logo.png",
     },
     {
       name: "White Stores",
@@ -32,6 +27,11 @@ export default async function Achievements() {
     {
       name: "Nova Outdoor Living",
       logo: "/img/client-logos/Nova_Logo_Horizontal_B&W_RGB-Green.png",
+    },
+    {
+      name: "Coder Cave",
+      logo: "/img/client-logos/coder-cave.png",
+      background: "#4e5054",
     },
     {
       name: "HWC Logistics",
@@ -44,11 +44,6 @@ export default async function Achievements() {
     {
       name: "Lightwork Electrical Services Ltd",
       logo: "/img/client-logos/lightwork_electrical_logo.png",
-    },
-    {
-      name: "Coder Cave",
-      logo: "/img/client-logos/coder-cave.png",
-      background: "#4e5054",
     },
     // {
     //   name: "Cotton and Twigg",
