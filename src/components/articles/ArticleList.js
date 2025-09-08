@@ -12,13 +12,7 @@ const articles = articleIndex.articles.sort((a, b) => {
   return new Date(b.date) - new Date(a.date);
 });
 
-const popularSearches = [
-  "Shopify",
-  "Web Development",
-  "API Integration",
-  "Infrastructure",
-  "Next.js",
-];
+const popularSearches = ["Shopify", "Infrastructure", "Next.js", "Cookie"];
 
 export default function ArticleList() {
   const searchParams = useSearchParams();
