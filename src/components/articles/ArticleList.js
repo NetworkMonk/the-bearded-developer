@@ -13,6 +13,7 @@ const articles = articleIndex.articles.sort((a, b) => {
 });
 
 const popularSearches = [
+  "Automation",
   "Shopify",
   "Infrastructure",
   "Security",
