@@ -123,7 +123,7 @@ export default function LetsTalk() {
                       <p className="font-bold text-sm">Name</p>
                       <input
                         type="text"
-                        className="w-full rounded mb-5 text-black p-2"
+                        className="w-full rounded-sm mb-5 text-black p-2 bg-white"
                         placeholder="Your name"
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
@@ -133,7 +133,7 @@ export default function LetsTalk() {
                       <p className="font-bold text-sm">Email Address</p>
                       <input
                         type="email"
-                        className="w-full rounded mb-5 text-black p-2"
+                        className="w-full rounded-sm mb-5 text-black p-2 bg-white"
                         placeholder="Your email address"
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
@@ -142,7 +142,7 @@ export default function LetsTalk() {
                       <p className="font-bold text-sm">Phone Number</p>
                       <input
                         type="tel"
-                        className="w-full rounded mb-5 text-black p-2"
+                        className="w-full rounded-sm mb-5 text-black p-2 bg-white"
                         placeholder="Your phone number"
                         onChange={(e) =>
                           setFormData({ ...formData, phone: e.target.value })
@@ -152,7 +152,7 @@ export default function LetsTalk() {
                         What would you like to talk about?
                       </p>
                       <textarea
-                        className="w-full min-h-48 rounded mb-5 text-black p-2"
+                        className="w-full min-h-48 rounded-sm mb-5 text-black p-2 bg-white"
                         placeholder="Write about your requirements, anything you might need help with or what your favourite sandwich filling is..."
                         onChange={(e) =>
                           setFormData({ ...formData, message: e.target.value })

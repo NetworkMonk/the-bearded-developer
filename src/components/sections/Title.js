@@ -32,6 +32,7 @@ export default function Title() {
                             alt="The Bearded Developer Logo"
                             className="mx-auto w-24 lg:w-64 my-10 in-up"
                             style={{ animationDelay: "0.5s" }}
+                            priority={true}
                           />
                           <h2
                             className={`text-2xl md:text-4xl font-medium mt-10 in-up text-center mx-auto max-w-2xl`}
@@ -45,7 +46,7 @@ export default function Title() {
                             style={{ animationDelay: "1.5s" }}
                           >
                             <a href="/contact">
-                              <button className="animated-button animated-button-fill min-w-48 text-white hover:text-brand-black uppercase font-semibold transition-all duration-500 transform lg:scale-125">
+                              <button className="animated-button animated-button-fill min-w-48 hover:text-brand-black uppercase font-semibold transition-all duration-500 transform lg:scale-125">
                                 Let&apos;s talk
                               </button>
                             </a>

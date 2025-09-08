@@ -125,7 +125,7 @@ export default async function Projects() {
                                 href={project.link}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="bg-gray-200 bg-opacity-30 text-white rounded px-5 py-3 hover:bg-opacity-50 transition-colors duration-300"
+                                className="bg-gray-200/30 text-white rounded-sm px-5 py-3 hover:bg-gray-200/50 transition-colors duration-300"
                               >
                                 View
                               </a>

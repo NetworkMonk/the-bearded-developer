@@ -36,7 +36,7 @@ export function Customise({ onSet, defaultValues }) {
 
   return (
     <div
-      className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center sm:p-2"
+      className="fixed top-0 left-0 right-0 bottom-0 bg-black/50 flex items-center justify-center sm:p-2"
       style={{ zIndex: "2000" }}
     >
       <div className="max-w-2xl mx-auto">

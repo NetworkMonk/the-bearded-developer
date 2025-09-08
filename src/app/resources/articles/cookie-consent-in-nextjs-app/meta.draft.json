@@ -1,0 +1,14 @@
+{
+  "title": "Cookie Consent in Next.js Apps",
+  "subTitle": "A detailed guide on implementing cookie consent in Next.js applications",
+  "description": "Learn how to implement cookie consent in Next.js applications in this comprehensive guide.",
+  "date": "2025-08-31",
+  "author": "James Plant",
+  "image": "/img/articles/cookie-consent-nextjs/vyshnavi-bisani-z8kriatLFdA-unsplash.jpg",
+  "tags": ["Google", "Cookie", "Consent", "Next.js"],
+  "metadata": {
+    "title": "Cookie Consent in Next.js Apps | The Bearded Developer | Shopify, Web Development, and Technology Solutions",
+    "description": "A Comprehensive Guide to Cookie Consent in Next.js Apps, Learn how to implement cookie consent in Next.js applications in this comprehensive guide.",
+    "robots": "index, follow"
+  }
+}

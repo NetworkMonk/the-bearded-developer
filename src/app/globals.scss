@@ -1,6 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-3xl: 120rem;
+  --color-brand-black: #131515;
+  --color-brand-orange: #E29578;
+  --color-brand-teal: #028090;
+  --color-brand-white: #ffffff;
+  --color-brand-platinum: #EDF6F9;
+  --color-brand-blue: #006D77;
+  --color-brand-light-blue: #83C5BE;
+  --color-brand-light-orange: #FFDDD2;
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+  /* ... */
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --foreground-rgb: 19, 21, 21;

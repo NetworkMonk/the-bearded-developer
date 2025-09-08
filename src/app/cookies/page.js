@@ -74,7 +74,7 @@ export default function Cookies() {
 
       <h2 className="text-2xl font-semibold mt-6 mb-4">4. Cookies We Use</h2>
       <p className="mb-4">
-        Below is a list of cookies currently in use (update as needed):
+        Below is a list of cookies currently in use:
       </p>
       <table className="w-full border-collapse mb-4">
         <thead>
