@@ -1,4 +1,4 @@
-import article from "./meta.json";
+import article from "./meta.draft.json";
 import ArticleContainer from "@/components/articles/ArticleContainer";
 
 export const metadata = {
