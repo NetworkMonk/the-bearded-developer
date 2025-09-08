@@ -17,7 +17,6 @@ const links = [
     href: "/resources/components",
     description:
       "Browse our collection of pre-built components and templates for web development. These resources are designed to help you kickstart your projects with ease and efficiency.",
-    img: "https://placehold.co/600x400/png",
     buttonTitle: "Explore Components",
   },
   {
@@ -25,7 +24,6 @@ const links = [
     href: "/resources/articles",
     description:
       "Browse our collection of insightful articles covering various topics in web development and technology.",
-    img: "https://placehold.co/600x400/png",
     buttonTitle: "Explore Articles",
   },
   {
@@ -33,7 +31,6 @@ const links = [
     href: false,
     description:
       "View some of our full site and single page templates, get a head start on your project.",
-    img: "https://placehold.co/600x400/png",
     buttonTitle: "Coming Soon",
   },
 ];
@@ -63,12 +60,14 @@ export default function ProjectsPage() {
                     {link.title}
                   </h2>
                   <p>{link.description}</p>
-                  <Image
-                    src={link.img}
-                    alt={link.title}
-                    width={600}
-                    height={400}
-                  />
+                  {link.img && (
+                    <Image
+                      src={link.img}
+                      alt={link.title}
+                      width={600}
+                      height={400}
+                    />
+                  )}
                   <div>
                     {link.href ? (
                       <Link
