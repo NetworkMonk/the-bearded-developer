@@ -24,7 +24,7 @@ export default function Article({ article }) {
               return (
                 <span
                   key={tagIndex}
-                  className="bg-gray-200 text-gray-800 rounded-full px-2 py-1 text-xs font-semibold mr-2 mb-2"
+                  className="bg-gray-200 text-gray-800 rounded-full px-2 py-1 text-xs font-semibold mr-2 mb-2 whitespace-nowrap inline-block"
                 >
                   {tag}
                 </span>

@@ -82,6 +82,27 @@
         "robots": "index, follow"
       },
       "path": "/resources\\articles\\securing-your-business-website"
+    },
+    {
+      "title": "Streamlining Your Business with Cloud-Based Collaboration Tools",
+      "subTitle": "Boost Productivity with the Right Cloud Tools for Your Team",
+      "description": "Learn how to streamline your business with cloud-based collaboration tools like Google Workspace and Microsoft 365 in our practical guide.",
+      "date": "2025-09-08",
+      "author": "James Plant",
+      "image": "/img/articles/streamlining-your-business-with-cloud-collaboration/josh-calabrese-Ev1XqeVL2wI-unsplash.jpg",
+      "tags": [
+        "Cloud Tools",
+        "Collaboration",
+        "Business Productivity",
+        "Google Workspace",
+        "Microsoft 365"
+      ],
+      "metadata": {
+        "title": "Streamlining Your Business with Cloud-Based Collaboration Tools | The Bearded Developer | Shopify, Web Development, and Technology Solutions",
+        "description": "Boost Productivity with the Right Cloud Tools for Your Team, Learn how to streamline your business with cloud-based collaboration tools like Google Workspace and Microsoft 365.",
+        "robots": "index, follow"
+      },
+      "path": "/resources\\articles\\streamlining-your-business-with-cloud-collaboration"
     }
   ]
 }

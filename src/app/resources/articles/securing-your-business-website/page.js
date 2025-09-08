@@ -120,7 +120,7 @@ export default function ArticlePage() {
             twice as friendly.
           </p>
         </div>
-        <aside className="md:col-span-1 bg-gray-100 p-6 rounded-lg mt-10 md:mt-0 md:sticky md:top-4">
+        <aside className="md:col-span-1 bg-gray-100 p-6 rounded-lg mt-10 md:mt-0">
           <div className="sticky top-10">
             <h3 className={`text-xl font-semibold ${lexend.className}`}>
               Pro Tips for Website Security
