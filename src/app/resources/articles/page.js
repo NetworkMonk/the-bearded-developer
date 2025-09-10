@@ -3,6 +3,7 @@ import Section from "@/components/common/Section";
 import { lexend } from "@/app/fonts";
 import ArticleList from "@/components/articles/ArticleList";
 import { Suspense } from "react"; // <-- Add this import
+import SecondaryCTA from "@/components/common/SecondaryCTA";
 
 export const metadata = {
   title:
@@ -36,26 +37,7 @@ export default function ArticlesPage() {
             <ArticleList />
           </Suspense>
 
-          <section className="md:p-10 relative">
-            <h2
-              className={`text-5xl md:text-6xl font-bold ${lexend.className}`}
-            >
-              Ready to Start Your Project?
-            </h2>
-            <p
-              className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 max-w-xl`}
-            >
-              Let&apos;s build a web solution that drives your business forward.
-              Contact us today.
-            </p>
-            <p className="mt-5">
-              <a href="/contact">
-                <button className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500 mx-0 md:ml-auto md:mr-0 text-center">
-                  Let&apos;s talk
-                </button>
-              </a>
-            </p>
-          </section>
+          <SecondaryCTA title="Ready to Start Your Project?" />
         </Container>
       </Section>
     </div>

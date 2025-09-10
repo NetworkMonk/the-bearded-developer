@@ -3,6 +3,7 @@ import Section from "@/components/common/Section";
 import { lexend } from "../fonts";
 import Image from "next/image";
 import Link from "next/link";
+import SecondaryCTA from "@/components/common/SecondaryCTA";
 
 export const metadata = {
   title:
@@ -87,26 +88,7 @@ export default function ProjectsPage() {
               ))}
             </div>
           </section>
-          <section className="md:p-10 relative">
-            <h2
-              className={`text-5xl md:text-6xl font-bold ${lexend.className}`}
-            >
-              Need Something Custom?
-            </h2>
-            <p
-              className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 max-w-xl`}
-            >
-              Let&apos;s work together to create a custom solution that meets
-              your needs. Contact us today.
-            </p>
-            <p className="mt-5">
-              <a href="/contact">
-                <button className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500 text-center">
-                  Let&apos;s talk
-                </button>
-              </a>
-            </p>
-          </section>{" "}
+          <SecondaryCTA title="Need Something Custom?" />
         </Container>
       </Section>
     </div>
