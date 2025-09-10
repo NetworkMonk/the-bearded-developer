@@ -29,7 +29,7 @@ export default function ArticleContainer({ children, article }) {
             style={sectionStyle}
           >
             <h1
-              className={`text-5xl md:text-6xl font-bold ${lexend.className}`}
+              className={`text-3xl sm:text-5xl md:text-6xl font-bold ${lexend.className}`}
             >
               {article.title}
             </h1>
@@ -50,25 +50,28 @@ export default function ArticleContainer({ children, article }) {
             </a>
           </section>
 
-          <section className="md:p-10 relative mt-20">
-            <h2
-              className={`text-5xl md:text-6xl font-bold ${lexend.className}`}
-            >
-              Need Something Else?
-            </h2>
-            <p
-              className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 max-w-xl`}
-            >
-              Let&apos;s work together to create a custom solution that meets
-              your needs. Contact us today.
-            </p>
-            <p className="mt-5">
-              <a href="/contact">
-                <button className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500 text-center">
+          <section className="p-2 md:p-10 relative mt-20">
+            <div className="bg-brand-blue bg-gradient-to-br from-brand-blue to-brand-light-blue rounded-xl shadow-xl p-10 rounded-lg text-white">
+              <h2
+                className={`text-3xl sm:text-5xl md:text-6xl font-bold ${lexend.className}`}
+              >
+                Need Something Else?
+              </h2>
+              <p
+                className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 max-w-xl`}
+              >
+                Let&apos;s work together to create a custom solution that meets
+                your needs. Contact us today.
+              </p>
+              <p className="mt-10">
+                <a
+                  href="/contact"
+                  className="w-48 outline outline-2 outline-white bg-transparent text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold mx-auto md:ml-auto md:mr-0 text-center"
+                >
                   Let&apos;s talk
-                </button>
-              </a>
-            </p>
+                </a>
+              </p>
+            </div>
           </section>
         </Container>
       </Section>
