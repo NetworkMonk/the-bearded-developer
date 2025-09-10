@@ -109,7 +109,7 @@ export default function ArticleList() {
         </p>
       </section>
 
-      <section className="flex flex-col gap-12 md:px-12 my-10 divide-slate-200 divide-y-2">
+      <section className="flex flex-col md:px-12 my-10 divide-slate-200 divide-y-2">
         {paginatedArticles.map((article, index) => (
           <Article key={index} article={article} />
         ))}
