@@ -25,7 +25,7 @@ export default function ArticleContainer({ children, article }) {
       <Section>
         <Container>
           <section
-            className={`p-10 relative rounded-lg ${textColorClass}`}
+            className={`p-10 relative rounded-lg mb-10 md:mb-0 ${textColorClass}`}
             style={sectionStyle}
           >
             <h1
