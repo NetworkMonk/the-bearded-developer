@@ -7,11 +7,15 @@ import Thumbnail from "./Thumbnail";
 export default function Article({ article }) {
   return (
     <div
-      className={`py-16 ${article.image ? "grid md:grid-cols-5 gap-10 content-stretch justify-between" : ""}`}
+      className={`py-16 ${
+        article.image
+          ? "grid md:grid-cols-5 gap-10 content-stretch justify-between"
+          : ""
+      }`}
     >
       <div className="text-black md:col-span-3">
         <h2 className={`text-3xl font-semibold ${lexend.className}`}>
-          {article.title}
+          <a href={article.path}>{article.title}</a>
         </h2>
         <h3
           className={`text-lg opacity-80 font-medium mb-2 ${lexend.className}`}
@@ -37,7 +41,9 @@ export default function Article({ article }) {
         )}
         {article.image && (
           <div className="md:hidden block max-w-sm">
-            <Thumbnail image={article.image} />
+            <a href={article.path}>
+              <Thumbnail image={article.image} />
+            </a>
           </div>
         )}
         <div className="mt-8">
@@ -50,10 +56,10 @@ export default function Article({ article }) {
         </div>
       </div>
       {article.image && (
-        <div
-          className="md:col-span-2 hidden md:block align-items-right"
-        >
-          <Thumbnail image={article.image} />
+        <div className="md:col-span-2 hidden md:block align-items-right">
+          <a href={article.path}>
+            <Thumbnail image={article.image} />
+          </a>
         </div>
       )}
     </div>
