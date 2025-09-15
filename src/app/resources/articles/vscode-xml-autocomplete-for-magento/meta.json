@@ -1,0 +1,20 @@
+{
+  "title": "Configuring VS Code for Magento 2 XML Autocompletion",
+  "subTitle": "A Step-by-Step Guide to Setting Up VS Code for Magento 2 Development",
+  "description": "Learn how to configure VS Code for autocompletion and validation of Magento 2 XML files, like module.xml, with this practical tutorial.",
+  "date": "2025-09-15",
+  "author": "James Plant",
+  "image": "/img/articles/vscode-xml-autocomplete-for-magento/PXL_20250915_135452930.jpg",
+  "tags": [
+    "Magento 2",
+    "VS Code",
+    "XML Autocompletion",
+    "Web Development",
+    "E-commerce"
+  ],
+  "metadata": {
+    "title": "Configuring VS Code for Magento 2 XML Autocompletion | The Bearded Developer | Shopify, Web Development, and Technology Solutions",
+    "description": "A Step-by-Step Guide to Setting Up VS Code for Magento 2 Development, Learn how to configure VS Code for autocompletion of Magento 2 XML files.",
+    "robots": "index, follow"
+  }
+}

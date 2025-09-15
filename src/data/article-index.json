@@ -19,7 +19,7 @@
         "description": "How to Pick the Perfect CMS for Your Business Needs, Discover how to choose the right CMS for your business website with our beginner-friendly guide.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\beginners-guide-to-choosing-the-right-cms"
+      "path": "/resources/articles/beginners-guide-to-choosing-the-right-cms"
     },
     {
       "title": "Mail Migration in Batches",
@@ -39,7 +39,7 @@
         "description": "A Comprehensive Guide to Migrating Mail in Batches, Learn how to efficiently migrate mail in batches with our comprehensive guide.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\mail-migration-in-batches"
+      "path": "/resources/articles/mail-migration-in-batches"
     },
     {
       "title": "Optimizing Your Shopify Store for Speed and Conversions",
@@ -60,7 +60,7 @@
         "description": "A Comprehensive Guide to Boosting Shopify Performance and Sales, Learn how to optimize your Shopify store for speed and conversions with expert tips.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\optimizing-your-shopify-store"
+      "path": "/resources/articles/optimizing-your-shopify-store"
     },
     {
       "title": "Securing Your Business Website: A Step-by-Step Guide to HTTPS and Beyond",
@@ -81,7 +81,7 @@
         "description": "Protect Your Website and Build Customer Trust with These Security Essentials, Learn how to secure your business website with our guide to HTTPS and more.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\securing-your-business-website"
+      "path": "/resources/articles/securing-your-business-website"
     },
     {
       "title": "Streamlining Your Business with Cloud-Based Collaboration Tools",
@@ -102,7 +102,28 @@
         "description": "Boost Productivity with the Right Cloud Tools for Your Team, Learn how to streamline your business with cloud-based collaboration tools like Google Workspace and Microsoft 365.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\streamlining-your-business-with-cloud-collaboration"
+      "path": "/resources/articles/streamlining-your-business-with-cloud-collaboration"
+    },
+    {
+      "title": "Configuring VS Code for Magento 2 XML Autocompletion",
+      "subTitle": "A Step-by-Step Guide to Setting Up VS Code for Magento 2 Development",
+      "description": "Learn how to configure VS Code for autocompletion and validation of Magento 2 XML files, like module.xml, with this practical tutorial.",
+      "date": "2025-09-15",
+      "author": "James Plant",
+      "image": "/img/articles/vscode-xml-autocomplete-for-magento/PXL_20250915_135452930.jpg",
+      "tags": [
+        "Magento 2",
+        "VS Code",
+        "XML Autocompletion",
+        "Web Development",
+        "E-commerce"
+      ],
+      "metadata": {
+        "title": "Configuring VS Code for Magento 2 XML Autocompletion | The Bearded Developer | Shopify, Web Development, and Technology Solutions",
+        "description": "A Step-by-Step Guide to Setting Up VS Code for Magento 2 Development, Learn how to configure VS Code for autocompletion of Magento 2 XML files.",
+        "robots": "index, follow"
+      },
+      "path": "/resources/articles/vscode-xml-autocomplete-for-magento"
     },
     {
       "title": "How to Automate Your Business Processes with Custom Web Applications",
@@ -123,7 +144,7 @@
         "description": "Streamline Operations with Tailored Web Apps for Your Business, Discover how custom web applications can automate your business processes and boost efficiency.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\web-app-automation"
+      "path": "/resources/articles/web-app-automation"
     }
   ]
 }
