@@ -75,6 +75,7 @@ export default async function About() {
                         href="https://www.linkedin.com/in/james-plant-7ab317b/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Visit our LinkedIn profile"
                       >
                         <FontAwesomeIcon
                           icon={faLinkedin}
