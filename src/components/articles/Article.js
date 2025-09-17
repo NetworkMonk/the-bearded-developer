@@ -15,7 +15,7 @@ export default function Article({ article }) {
     >
       <div className="text-black md:col-span-3">
         <h2 className={`text-3xl font-semibold ${lexend.className}`}>
-          <a href={article.path}>{article.title}</a>
+          <a href={article.path} aria-label={article.title}>{article.title}</a>
         </h2>
         <h3
           className={`text-lg opacity-80 font-medium mb-2 ${lexend.className}`}
@@ -41,14 +41,15 @@ export default function Article({ article }) {
         )}
         {article.image && (
           <div className="md:hidden block max-w-sm">
-            <a href={article.path}>
-              <Thumbnail image={article.image} />
+            <a href={article.path} aria-label={article.title}>
+              <Thumbnail image={article.image} alt={article.title} />
             </a>
           </div>
         )}
         <div className="mt-8">
           <Link
             href={article.path}
+            aria-label={article.title}
             className="outline outline-2 outline-white hover:outline-brand-blue bg-brand-blue text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold cursor-pointer"
           >
             Read
@@ -57,8 +58,8 @@ export default function Article({ article }) {
       </div>
       {article.image && (
         <div className="md:col-span-2 hidden md:block align-items-right">
-          <a href={article.path}>
-            <Thumbnail image={article.image} />
+          <a href={article.path} aria-label={article.title}>
+            <Thumbnail image={article.image} alt={article.title} />
           </a>
         </div>
       )}

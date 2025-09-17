@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-export default function Thumbnail({ image }) {
+export default function Thumbnail({ image, alt = "" }) {
   return (
     <div className="mt-4 overflow-hidden rounded-xl">
       <Image
-        alt=""
+        alt={alt}
         width={480}
         height={480}
         src={image}
