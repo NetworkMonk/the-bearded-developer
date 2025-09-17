@@ -118,61 +118,69 @@ export default function LetsTalk() {
                   className="p-5 py-8 mt-5 md:mt-10 md:p-10 bg-gradient-to-br from-brand-blue to-brand-light-blue text-white rounded-xl shadow-xl in-up"
                   style={{ animationDelay: "0.25s" }}
                 >
-                  {formData.status !== "success" && formData.status !== "error" && (
-                    <>
-                      <p className="font-bold text-sm">Name</p>
-                      <input
-                        type="text"
-                        className="w-full rounded-sm mb-5 text-black p-2 bg-white"
-                        placeholder="Your name"
-                        onChange={(e) =>
-                          setFormData({ ...formData, name: e.target.value })
-                        }
-                        disabled={formData.status === "pending"}
-                      />
-                      <p className="font-bold text-sm">Email Address</p>
-                      <input
-                        type="email"
-                        className="w-full rounded-sm mb-5 text-black p-2 bg-white"
-                        placeholder="Your email address"
-                        onChange={(e) =>
-                          setFormData({ ...formData, email: e.target.value })
-                        }
-                      />
-                      <p className="font-bold text-sm">Phone Number</p>
-                      <input
-                        type="tel"
-                        className="w-full rounded-sm mb-5 text-black p-2 bg-white"
-                        placeholder="Your phone number"
-                        onChange={(e) =>
-                          setFormData({ ...formData, phone: e.target.value })
-                        }
-                      />
-                      <p className="font-bold text-sm">
-                        What would you like to talk about?
-                      </p>
-                      <textarea
-                        className="w-full min-h-48 rounded-sm mb-5 text-black p-2 bg-white"
-                        placeholder="Write about your requirements, anything you might need help with or what your favourite sandwich filling is..."
-                        onChange={(e) =>
-                          setFormData({ ...formData, message: e.target.value })
-                        }
-                      ></textarea>
-                      {formData.status === "idle" && (
-                        <button
-                          className="outline outline-2 outline-white bg-transparent text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold block mx-auto"
-                          onClick={() => submitForm()}
-                        >
-                          Send Message
-                        </button>
-                      )}
-                      {formData.status === "pending" && (
-                        <button className="animate-pulse outline outline-2 outline-white bg-white text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold block mx-auto cursor-default">
-                          Sending Message...
-                        </button>
-                      )}
-                    </>
-                  )}
+                  {formData.status !== "success" &&
+                    formData.status !== "error" && (
+                      <>
+                        <p className="font-bold text-sm">Name</p>
+                        <input
+                          type="text"
+                          name="name"
+                          className="w-full rounded-sm mb-5 text-black p-2 bg-white"
+                          placeholder="Your name"
+                          onChange={(e) =>
+                            setFormData({ ...formData, name: e.target.value })
+                          }
+                          disabled={formData.status === "pending"}
+                        />
+                        <p className="font-bold text-sm">Email Address</p>
+                        <input
+                          type="email"
+                          name="email"
+                          className="w-full rounded-sm mb-5 text-black p-2 bg-white"
+                          placeholder="Your email address"
+                          onChange={(e) =>
+                            setFormData({ ...formData, email: e.target.value })
+                          }
+                        />
+                        <p className="font-bold text-sm">Phone Number</p>
+                        <input
+                          type="tel"
+                          name="phone"
+                          className="w-full rounded-sm mb-5 text-black p-2 bg-white"
+                          placeholder="Your phone number"
+                          onChange={(e) =>
+                            setFormData({ ...formData, phone: e.target.value })
+                          }
+                        />
+                        <p className="font-bold text-sm">
+                          What would you like to talk about?
+                        </p>
+                        <textarea
+                          name="message"
+                          className="w-full min-h-48 rounded-sm mb-5 text-black p-2 bg-white"
+                          placeholder="Write about your requirements, anything you might need help with or what your favourite sandwich filling is..."
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              message: e.target.value,
+                            })
+                          }
+                        ></textarea>
+                        {formData.status === "idle" && (
+                          <button
+                            className="outline outline-2 outline-white bg-transparent text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold block mx-auto"
+                            onClick={() => submitForm()}
+                          >
+                            Send Message
+                          </button>
+                        )}
+                        {formData.status === "pending" && (
+                          <button className="animate-pulse outline outline-2 outline-white bg-white text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold block mx-auto cursor-default">
+                            Sending Message...
+                          </button>
+                        )}
+                      </>
+                    )}
                   {formData.status === "success" && (
                     <p className="text-center font-semibold text-lg my-20">
                       Thanks, your message has been sent, we will get back to
