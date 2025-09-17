@@ -42,13 +42,14 @@ export default function Title() {
                             Partner.
                           </h2>
                           <div
-                            className="mt-20 in-up text-center"
+                            className="mt-20 in-up text-center flex justify-center"
                             style={{ animationDelay: "1.5s" }}
                           >
-                            <a href="/contact">
-                              <button className="animated-button animated-button-fill min-w-48 hover:text-brand-black uppercase font-semibold transition-all duration-500 transform lg:scale-125">
-                                Let&apos;s talk
-                              </button>
+                            <a
+                              href="/contact"
+                              className="animated-button animated-button-fill min-w-48 hover:text-brand-black uppercase font-semibold transition-all duration-500 transform lg:scale-125 mx-auto"
+                            >
+                              Let&apos;s talk
                             </a>
                           </div>
                         </div>

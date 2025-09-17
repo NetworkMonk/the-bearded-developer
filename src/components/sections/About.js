@@ -87,10 +87,11 @@ export default async function About() {
                 </div>
               </div>
               <p className="mt-10 in-up" style={{ animationDelay: ".75s" }}>
-                <a href="/contact">
-                  <button className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500 mx-0 md:ml-auto md:mr-0 text-center">
-                    Let&apos;s talk
-                  </button>
+                <a
+                  href="/contact"
+                  className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500 mx-0 md:ml-auto md:mr-0 text-center"
+                >
+                  Let&apos;s talk
                 </a>
               </p>
             </div>

@@ -125,10 +125,11 @@ export default function ProjectsPage() {
                 forward. Contact us today.
               </p>
               <p className="mt-5 in-up" style={{ animationDelay: ".25s" }}>
-                <a href="/contact">
-                  <button className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500 mx-0 md:ml-auto md:mr-0 text-center">
-                    Let&apos;s talk
-                  </button>
+                <a
+                  href="/contact"
+                  className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500 mx-0 md:ml-0 md:mr-0 text-center"
+                >
+                  Let&apos;s talk
                 </a>
               </p>
             </section>

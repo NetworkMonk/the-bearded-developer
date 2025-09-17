@@ -275,10 +275,11 @@ export default function Nav() {
               </div>
               <div className="flex items-center">
                 <div className="shrink-0">
-                  <a href="/contact">
-                    <button className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum font-semibold transition-all duration-500">
-                      Let&apos;s talk
-                    </button>
+                  <a
+                    href="/contact"
+                    className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum font-semibold transition-all duration-500 flex items-center"
+                  >
+                    Let&apos;s talk
                   </a>
                 </div>
               </div>
