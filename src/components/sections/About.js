@@ -52,8 +52,8 @@ export default async function About() {
                 <Image
                   src="/img/james-plant-portrait.jpg"
                   alt="James Plant"
-                  width={200}
-                  height={200}
+                  width={80}
+                  height={80}
                   className="rounded-full mt-10 w-20 h-20"
                 />
                 <div>
