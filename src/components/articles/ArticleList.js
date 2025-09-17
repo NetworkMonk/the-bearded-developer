@@ -84,6 +84,7 @@ export default function ArticleList() {
           <button
             onClick={handleSearch}
             className="cursor-pointer ml-4 outline outline-2 outline-white hover:outline-brand-blue bg-brand-blue text-white hover:bg-white hover:text-brand-blue w-10 h-10 rounded-full transition-colors duration-500 uppercase font-semibold"
+            aria-label="Search Articles"
           >
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </button>
