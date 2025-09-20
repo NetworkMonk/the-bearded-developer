@@ -89,7 +89,7 @@ export default function ArticlePage() {
               Code:
               <CodeBlock
                 language="bash"
-                code="bin/magento dev:urn-catalog:generate ./.vscode/catalog.xml"
+                code="bin/magento dev:urn-catalog:generate --ide=vscode ./.vscode/catalog.xml"
               />
               This creates a &quot;catalog.xml&quot; file in the
               &quot;.vscode&quot; folder, mapping Magento&apos;s URNs (like
