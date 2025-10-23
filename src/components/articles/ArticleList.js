@@ -14,10 +14,12 @@ const articles = articleIndex.articles.sort((a, b) => {
 
 const popularSearches = [
   "Automation",
-  "Shopify",
+  "Cloud",
   "Infrastructure",
-  "Security",
+  "Integration",
   "Performance",
+  "Security",
+  "Shopify",
 ];
 
 export default function ArticleList() {
