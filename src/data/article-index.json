@@ -1,6 +1,28 @@
 {
   "articles": [
     {
+      "title": "Automation Tools for Every Scale: Patchworks vs n8n",
+      "subTitle": "The Right Tool for the Right Job: When to Use Enterprise Integration vs Lightweight Automation",
+      "description": "Discover how to choose between Patchworks for complex enterprise integrations and n8n for quick, lightweight automations that get the job done fast.",
+      "date": "2025-10-23",
+      "author": "James Plant",
+      "image": "/img/articles/automation-article-header.jpg",
+      "tags": [
+        "Automation",
+        "Patchworks",
+        "n8n",
+        "Integration",
+        "Workflow Automation",
+        "Business Efficiency"
+      ],
+      "metadata": {
+        "title": "Automation Tools for Every Scale: Patchworks vs n8n | The Bearded Developer | Shopify, Web Development, and Technology Solutions",
+        "description": "Discover how to choose between Patchworks for complex enterprise integrations and n8n for quick, lightweight automations that get the job done fast.",
+        "robots": "index, follow"
+      },
+      "path": "/resources/articles/automation-tools-patchworks-vs-n8n"
+    },
+    {
       "title": "A Beginner's Guide to Choosing the Right CMS for Your Business Website",
       "subTitle": "How to Pick the Perfect CMS for Your Business Needs",
       "description": "Discover how to choose the right CMS for your business website with our beginner-friendly guide, comparing platforms like WordPress, Shopify, and more.",
