@@ -1,0 +1,21 @@
+{
+  "title": "Optimizing Cloud Spending: How to Avoid Surprise Bills",
+  "subTitle": "Smart Strategies to Control Your AWS, Google Cloud, and Azure Costs Before They Control You",
+  "description": "Learn practical techniques to monitor, optimize, and control your cloud spending across AWS, Google Cloud, and Azure to avoid unexpected bills and maximize value.",
+  "date": "2025-10-24",
+  "author": "James Plant",
+  "image": "/img/articles/cloud-costs-header-image.jpg",
+  "tags": [
+    "Cloud Computing",
+    "AWS",
+    "Google Cloud",
+    "Azure",
+    "Cost Optimization",
+    "Cloud Management"
+  ],
+  "metadata": {
+    "title": "Optimizing Cloud Spending: How to Avoid Surprise Bills | The Bearded Developer | Shopify, Web Development, and Technology Solutions",
+    "description": "Learn practical techniques to monitor, optimize, and control your cloud spending across AWS, Google Cloud, and Azure to avoid unexpected bills and maximize value.",
+    "robots": "index, follow"
+  }
+}
