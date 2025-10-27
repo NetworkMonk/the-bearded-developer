@@ -1,0 +1,20 @@
+{
+  "title": "What to Do When You Find a Security Hole in Your Business",
+  "subTitle": "A practical, calm playbook for technicians, consultants, and IT leaders",
+  "description": "Steps to take (and avoid) when you discover a security vulnerability — immediate containment, communication, remediation, and follow-up guidance for different roles.",
+  "date": "2025-10-27",
+  "author": "James Plant",
+  "image": "/img/articles/what-to-do-when-you-find-a-security-hole/header.jpg",
+  "tags": [
+    "Security",
+    "Incident Response",
+    "DevSecOps",
+    "Operations",
+    "Guides"
+  ],
+  "metadata": {
+    "title": "What to Do When You Find a Security Hole | The Bearded Developer",
+    "description": "A calm, practical guide for technicians, consultants and IT directors on how to handle finding a security vulnerability in your systems.",
+    "robots": "index, follow"
+  }
+}
