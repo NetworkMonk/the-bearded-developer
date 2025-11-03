@@ -254,6 +254,27 @@
       "path": "/resources\\articles\\web-app-automation"
     },
     {
+      "title": "Website Backup & Disaster Recovery: A Practical Guide for Small Businesses",
+      "subTitle": "How to plan, test, and recover from website failures (hacks, outages, accidental deletions)",
+      "description": "Practical backup strategies, recovery playbook, testing cadence, and tooling recommendations for small businesses running websites on Shopify, self-hosted platforms, or cloud servers.",
+      "date": "2025-11-03",
+      "author": "James Plant",
+      "image": "/img/articles/website-backups-disaster-recovery/header.jpg",
+      "tags": [
+        "Backups",
+        "Disaster Recovery",
+        "Business Continuity",
+        "DevOps",
+        "Website Security"
+      ],
+      "metadata": {
+        "title": "Website Backup & Disaster Recovery: A Practical Guide for Small Businesses | The Bearded Developer",
+        "description": "Learn backup strategies, recovery playbooks, and testing cadence to protect your website from hacks, outages and accidental data loss.",
+        "robots": "index, follow"
+      },
+      "path": "/resources\\articles\\website-backups-disaster-recovery"
+    },
+    {
       "title": "What to Do When You Find a Security Hole in Your Business",
       "subTitle": "A practical, calm playbook for technicians, consultants, and IT leaders",
       "description": "Steps to take (and avoid) when you discover a security vulnerability — immediate containment, communication, remediation, and follow-up guidance for different roles.",
