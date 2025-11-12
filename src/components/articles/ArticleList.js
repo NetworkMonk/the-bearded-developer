@@ -13,6 +13,7 @@ const articles = articleIndex.articles.sort((a, b) => {
 });
 
 const popularSearches = [
+  "AI",
   "Automation",
   "Cloud",
   "Infrastructure",
@@ -20,6 +21,7 @@ const popularSearches = [
   "Performance",
   "Security",
   "Shopify",
+  "Web",
 ];
 
 export default function ArticleList() {
