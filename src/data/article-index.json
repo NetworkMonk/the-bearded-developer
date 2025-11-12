@@ -42,7 +42,7 @@
         "description": "Discover how to choose between Patchworks for complex enterprise integrations and n8n for quick, lightweight automations that get the job done fast.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\automation-tools-patchworks-vs-n8n"
+      "path": "/resources/articles/automation-tools-patchworks-vs-n8n"
     },
     {
       "title": "A Beginner's Guide to Choosing the Right CMS for Your Business Website",
@@ -63,7 +63,7 @@
         "description": "How to Pick the Perfect CMS for Your Business Needs, Discover how to choose the right CMS for your business website with our beginner-friendly guide.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\beginners-guide-to-choosing-the-right-cms"
+      "path": "/resources/articles/beginners-guide-to-choosing-the-right-cms"
     },
     {
       "title": "Choosing the Right Cloud Server Provider: A Simple Guide",
@@ -84,7 +84,7 @@
         "description": "A straightforward guide to choosing the right cloud server provider for your business needs, with practical tips and recommendations to avoid complexity.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\choosing-the-right-cloud-server-provider"
+      "path": "/resources/articles/choosing-the-right-cloud-server-provider"
     },
     {
       "title": "Mail Migration in Batches",
@@ -104,7 +104,7 @@
         "description": "A Comprehensive Guide to Migrating Mail in Batches, Learn how to efficiently migrate mail in batches with our comprehensive guide.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\mail-migration-in-batches"
+      "path": "/resources/articles/mail-migration-in-batches"
     },
     {
       "title": "Making Your Website Accessible: A Practical Guide to WCAG Compliance",
@@ -125,7 +125,7 @@
         "description": "Enhance User Experience and Meet Accessibility Standards, Learn how to make your website WCAG-compliant with our guide to accessibility.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\making-your-website-accessible"
+      "path": "/resources/articles/making-your-website-accessible"
     },
     {
       "title": "Optimizing Cloud Spending: How to Avoid Surprise Bills",
@@ -147,7 +147,7 @@
         "description": "Learn practical techniques to monitor, optimize, and control your cloud spending across AWS, Google Cloud, and Azure to avoid unexpected bills and maximize value.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\optimizing-cloud-spending-avoid-surprise-bills"
+      "path": "/resources/articles/optimizing-cloud-spending-avoid-surprise-bills"
     },
     {
       "title": "Optimizing Magento 2 Performance: Speed Up Your E-commerce Store",
@@ -168,7 +168,7 @@
         "description": "A Practical Guide to Boosting Magento 2 Speed and Conversions, Learn how to optimize your Magento 2 store for speed with caching and more.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\optimizing-magento-2-performance"
+      "path": "/resources/articles/optimizing-magento-2-performance"
     },
     {
       "title": "Optimizing Your Shopify Store for Speed and Conversions",
@@ -189,7 +189,7 @@
         "description": "A Comprehensive Guide to Boosting Shopify Performance and Sales, Learn how to optimize your Shopify store for speed and conversions with expert tips.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\optimizing-your-shopify-store"
+      "path": "/resources/articles/optimizing-your-shopify-store"
     },
     {
       "title": "Securing Your Business Website: A Step-by-Step Guide to HTTPS and Beyond",
@@ -210,7 +210,7 @@
         "description": "Protect Your Website and Build Customer Trust with These Security Essentials, Learn how to secure your business website with our guide to HTTPS and more.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\securing-your-business-website"
+      "path": "/resources/articles/securing-your-business-website"
     },
     {
       "title": "Streamlining Your Business with Cloud-Based Collaboration Tools",
@@ -231,7 +231,7 @@
         "description": "Boost Productivity with the Right Cloud Tools for Your Team, Learn how to streamline your business with cloud-based collaboration tools like Google Workspace and Microsoft 365.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\streamlining-your-business-with-cloud-collaboration"
+      "path": "/resources/articles/streamlining-your-business-with-cloud-collaboration"
     },
     {
       "title": "Configuring VS Code for Magento 2 XML Autocompletion",
@@ -252,7 +252,7 @@
         "description": "A Step-by-Step Guide to Setting Up VS Code for Magento 2 Development, Learn how to configure VS Code for autocompletion of Magento 2 XML files.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\vscode-xml-autocomplete-for-magento"
+      "path": "/resources/articles/vscode-xml-autocomplete-for-magento"
     },
     {
       "title": "How to Automate Your Business Processes with Custom Web Applications",
@@ -273,7 +273,7 @@
         "description": "Streamline Operations with Tailored Web Apps for Your Business, Discover how custom web applications can automate your business processes and boost efficiency.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\web-app-automation"
+      "path": "/resources/articles/web-app-automation"
     },
     {
       "title": "Website Backup & Disaster Recovery: A Practical Guide for Small Businesses",
@@ -294,7 +294,7 @@
         "description": "Learn backup strategies, recovery playbooks, and testing cadence to protect your website from hacks, outages and accidental data loss.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\website-backups-disaster-recovery"
+      "path": "/resources/articles/website-backups-disaster-recovery"
     },
     {
       "title": "What to Do When You Find a Security Hole in Your Business",
@@ -315,7 +315,7 @@
         "description": "A calm, practical guide for technicians, consultants and IT directors on how to handle finding a security vulnerability in your systems.",
         "robots": "index, follow"
       },
-      "path": "/resources\\articles\\what-to-do-when-you-find-a-security-hole"
+      "path": "/resources/articles/what-to-do-when-you-find-a-security-hole"
     }
   ]
 }
