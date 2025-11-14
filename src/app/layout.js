@@ -4,7 +4,6 @@ import { ConsentForm } from "@/components/cookie-consent/ConsentForm";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Nav from "@/components/common/Nav";
 import Footer from "@/components/sections/Footer";
-import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title:
@@ -24,7 +23,6 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         {gtmId && <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />}
-        {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
   );
