@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <body className={`${montserrat.className} min-h-screen`}>
         <ConsentForm />
         <Nav />
-        {children}
+        <main>{children}</main>
         <Footer />
         {gtmId && <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />}
       </body>
