@@ -91,6 +91,7 @@ export default function LetsTalk() {
                     <a
                       href="tel:447545960983"
                       className="hover:text-brand-light-blue transition-all duration-300"
+                      aria-label="Call us on +44 7545 960 983"
                     >
                       <FontAwesomeIcon
                         icon={faPhone}
@@ -103,6 +104,7 @@ export default function LetsTalk() {
                     <a
                       href="https://wa.me/447545960983"
                       className="hover:text-brand-light-blue transition-all duration-300"
+                      aria-label="Chat with us on WhatsApp"
                     >
                       <FontAwesomeIcon
                         icon={faWhatsapp}
