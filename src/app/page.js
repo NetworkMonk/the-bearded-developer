@@ -9,18 +9,58 @@ import About from "@/components/sections/About";
 
 export const metadata = {
   title:
-    "The Bearded Developer | Shopify, Web Development, and Technology Solutions",
+    "The Bearded Developer | Shopify & Web Development in Braintree, Essex",
   description:
-    "Your friendly web development and technology partner. Offering Shopify solutions, web development services, and tech insights. Let's build something great together!",
+    "Professional web development and Shopify solutions based in Braintree, Essex, serving businesses nationwide. Your trusted technology partner across the UK. Expert e-commerce development, custom web applications, and digital solutions for local and national clients.",
 };
 
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
-    name: "The Bearded Developer | Shopify, Web Development, and Technology Solutions",
+    "@type": "LocalBusiness",
+    name: "The Bearded Developer",
     image: "https://www.thebeardeddeveloper.co.uk/images/beard-black.png",
     description:
-      "Your friendly web development and technology partner. Offering Shopify solutions, web development services, and tech insights. Let's build something great together!",
+      "Professional web development and Shopify solutions based in Braintree, Essex, serving businesses nationwide across the UK.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Braintree",
+      addressRegion: "Essex",
+      addressCountry: "GB",
+    },
+    areaServed: [
+      {
+        "@type": "State",
+        name: "Essex",
+      },
+      {
+        "@type": "State",
+        name: "London",
+      },
+      {
+        "@type": "State",
+        name: "Hertfordshire",
+      },
+      {
+        "@type": "State",
+        name: "Suffolk",
+      },
+      {
+        "@type": "State",
+        name: "Cambridgeshire",
+      },
+      {
+        "@type": "Country",
+        name: "United Kingdom",
+      },
+    ],
+    serviceType: [
+      "Web Development",
+      "Shopify Development",
+      "E-commerce Solutions",
+      "Custom Web Applications",
+    ],
+    url: "https://www.thebeardeddeveloper.co.uk",
   };
 
   return (

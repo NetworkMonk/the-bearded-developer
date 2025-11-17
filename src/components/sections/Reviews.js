@@ -8,7 +8,7 @@ import blob1 from "@/components/blobs/blob1.svg";
 export default async function Reviews() {
   const reviews = [
     {
-      author: "Jacqui T",
+      author: "Jackie T",
       company: "Cotton and Twigg",
       rating: 5,
       content:

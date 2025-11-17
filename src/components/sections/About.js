@@ -20,29 +20,20 @@ export default async function About() {
                 Who We Are
               </h2>
               <p
-                className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up`}
-                style={{ animationDelay: ".25s" }}
-              >
-                Over 20 Years of Experience in IT and E-Commerce.
-              </p>
-              <p
-                className="mt-8 mb-2 opacity-80 flex items-start font-medium in-up"
+                className="mt-8 mb-2 opacity-80 flex items-start font-medium in-up text-lg"
                 style={{ animationDelay: ".5s" }}
               >
                 <FontAwesomeIcon
                   icon={faQuoteLeft}
                   className="opacity-50 mr-3 w-6 h-6 -mt-1.5"
                 />
-                At The Bearded Developer, we craft high-performance web
-                solutions that empower UK e-commerce businesses to thrive. Our
-                founder, James, specialises in building scalable Shopify stores,
-                bespoke Next.js applications, and seamless Celigo integrations.
-                Certified in Shopify and Celigo, we deliver tailored solutions
-                that boost conversions, streamline operations, and drive growth.
-                Whether you&apos;re a retailer seeking a custom store front or a
-                startup needing technical expertise, we&apos;re here to bring
-                your vision to life. Explore our portfolio and let&apos;s start
-                building your next project today.
+                Hi, I&apos;m James! I&apos;ve been building websites and solving
+                tech problems for over 20 years from my base here in Braintree,
+                Essex. I love helping businesses - whether you&apos;re down the
+                road or across the country - create amazing online experiences
+                that actually work for your customers. From Shopify stores to
+                custom web apps, I&apos;m here to make your digital life easier.
+                Let&apos;s chat about what you need!
               </p>
 
               <div
@@ -67,7 +58,7 @@ export default async function About() {
                     </span>
                     <br />
                     <span className="opacity-80 font-medium">
-                      20+ Years of Experience
+                      20+ Years Serving UK Businesses
                     </span>
                     <br />
                     <span className="opacity-80 font-medium">
