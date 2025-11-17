@@ -4,12 +4,12 @@ import { lexend } from "@/app/fonts";
 import InView from "../animated/InView";
 import Image from "next/image";
 import blob2 from "@/components/blobs/blob2.svg";
+import Shopify from "./services/Shopify";
+import BigCommerce from "./services/BigCommerce";
+import Bespoke from "./services/Bespoke";
+import AI from "./services/AI";
 import Integrations from "./services/Integrations";
 import NetSuite from "./services/NetSuite";
-import API from "./services/API";
-import Agency from "./services/Agency";
-import Ecommerce from "./services/Ecommerce";
-import Bespoke from "./services/Bespoke";
 
 const services = [
   {
@@ -99,12 +99,12 @@ export default async function Services() {
                 help you with.
               </p>
               <div className="in-up" style={{ animationDelay: ".75s" }}>
-                <Ecommerce />
+                <Shopify />
+                <BigCommerce />
                 <Bespoke />
+                <AI />
                 <Integrations />
                 <NetSuite />
-                <API />
-                <Agency />
               </div>
             </div>
           </InView>
