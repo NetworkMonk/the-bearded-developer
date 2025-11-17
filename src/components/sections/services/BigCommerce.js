@@ -18,9 +18,9 @@ export default function BigCommerce() {
             scalability.
           </p>
           <p className="my-2">
-            From custom theme development to complex B2B configurations, we'll
-            help you build a BigCommerce store that grows with your business and
-            delivers exceptional customer experiences.
+            From custom theme development to complex B2B configurations,
+            we&apos;ll help you build a BigCommerce store that grows with your
+            business and delivers exceptional customer experiences.
           </p>
         </div>
         <div className="md:order-1"></div>

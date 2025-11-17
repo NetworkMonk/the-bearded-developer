@@ -17,9 +17,10 @@ export default function AI() {
             efficiency and reduce manual tasks.
           </p>
           <p className="my-2">
-            Whether it's prompt engineering for better AI outputs, building
+            Whether it&apos;s prompt engineering for better AI outputs, building
             custom ChatGPT integrations, or automating your content workflows,
-            we'll help you harness AI's power responsibly and effectively.
+            we&apos;ll help you harness AI&apos;s power responsibly and
+            effectively.
           </p>
         </div>
         <div className="md:order-1"></div>
