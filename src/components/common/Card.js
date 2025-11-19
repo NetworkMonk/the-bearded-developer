@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 
 export default function Card({
   logo,
@@ -20,9 +21,11 @@ export default function Card({
         )}
         <h3 className="text-center font-semibold text-xl">{title}</h3>
       </div>
-      <img
+      <Image
         src={image}
         alt={title}
+        width={200}
+        height={200}
         className="absolute bottom-0 left-0 w-full opacity-75 pointer-events-none"
       />
       <div className="px-6 py-3 relative flex-1">

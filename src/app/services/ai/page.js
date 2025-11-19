@@ -5,7 +5,6 @@ import Link from "next/link";
 import SecondaryCTA from "@/components/common/SecondaryCTA";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faOpenai,
   faPython,
   faAws,
   faMicrosoft,
@@ -14,16 +13,13 @@ import {
   faBrain,
   faRobot,
   faChartLine,
-  faCog,
   faLightbulb,
   faShield,
   faCode,
   faUsers,
   faMapMarkerAlt,
-  faAutomobile,
   faLanguage,
   faImage,
-  faDatabase,
   faCloudUploadAlt,
   faDesktop,
 } from "@fortawesome/free-solid-svg-icons";
@@ -151,7 +147,7 @@ const services = [
 ];
 
 const technologies = [
-  { name: "OpenAI GPT", icon: faOpenai, color: "text-green-600" },
+  { name: "OpenAI GPT", icon: faBrain, color: "text-green-600" },
   { name: "Python & TensorFlow", icon: faPython, color: "text-blue-600" },
   { name: "AWS AI Services", icon: faAws, color: "text-orange-600" },
   { name: "Azure Cognitive", icon: faMicrosoft, color: "text-blue-500" },
