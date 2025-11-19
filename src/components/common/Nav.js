@@ -26,6 +26,17 @@ const desktopMenu = [
       { name: "Reviews", href: "/#reviews" },
     ],
   },
+  {
+    name: "Services",
+    children: [
+      { name: "Shopify", href: "/services/shopify" },
+      { name: "AI", href: "/services/ai" },
+      { name: "BigCommerce", href: "/services/bigcommerce" },
+      { name: "NetSuite", href: "/services/netsuite" },
+      { name: "Integrations", href: "/services/integrations" },
+      { name: "Bespoke Software", href: "/services/bespoke" },
+    ],
+  },
   { name: "Projects", href: "/projects" },
   {
     name: "Resources",
@@ -49,6 +60,18 @@ const mobileMenu = [
       { name: "Reviews", href: "/#reviews" },
     ],
   },
+  {
+    name: "Services",
+    children: [
+      { name: "Shopify", href: "/services/shopify" },
+      { name: "AI", href: "/services/ai" },
+      { name: "BigCommerce", href: "/services/bigcommerce" },
+      { name: "NetSuite", href: "/services/netsuite" },
+      { name: "Integrations", href: "/services/integrations" },
+      { name: "Bespoke Solutions", href: "/services/bespoke" },
+    ],
+  },
+
   { name: "Projects", href: "/projects" },
   {
     name: "Resources",
