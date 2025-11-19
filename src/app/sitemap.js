@@ -10,6 +10,12 @@ export default async function Sitemap() {
   const routes = [
     "",
     "/projects",
+    "/services/bespoke",
+    "/services/shopify",
+    "/services/bigcommerce",
+    "/services/netsuite",
+    "/services/ai",
+    "/services/integrations",
     "/contact",
     "/privacy",
     "/cookies",

@@ -3,7 +3,6 @@ import Section from "@/components/common/Section";
 import { lexend } from "@/app/fonts";
 import InView from "../animated/InView";
 import Image from "next/image";
-import blob1 from "@/components/blobs/blob1.svg";
 
 export default async function Achievements() {
   const clients = [
@@ -45,10 +44,10 @@ export default async function Achievements() {
       name: "Lightwork Electrical Services Ltd",
       logo: "/img/client-logos/lightwork_electrical_logo.png",
     },
-    // {
-    //   name: "Cotton and Twigg",
-    //   logo: "/img/client-logos/Cotton-and-Twigg.png",
-    // },
+    {
+      name: "Cotton and Twigg",
+      logo: "/img/client-logos/cotton_and_twigg_pink_square.png",
+    },
   ];
 
   return (
@@ -108,16 +107,6 @@ export default async function Achievements() {
             </div>
           </InView>
         </Container>
-        <div className="max-w-7xl mx-auto relative">
-          <div className="absolute right-0 bottom-32 max-w-full w-[500px] h-[500px] xl:w-[600px] xl:h-[600px] z-10 overflow-y-visible pointer-events-none">
-            <Image
-              priority
-              src={blob1}
-              alt="A Blob"
-              className="absolute h-[500px] w-[500px] xl:h-[600px] xl:w-[600px] transform rotate-270 opacity-15 pointer-events-none"
-            />
-          </div>
-        </div>
       </Section>
     </div>
   );

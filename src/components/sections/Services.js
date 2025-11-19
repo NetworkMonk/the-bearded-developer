@@ -2,69 +2,76 @@ import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
 import { lexend } from "@/app/fonts";
 import InView from "../animated/InView";
-import Image from "next/image";
-import blob2 from "@/components/blobs/blob2.svg";
-import Shopify from "./services/Shopify";
-import BigCommerce from "./services/BigCommerce";
-import Bespoke from "./services/Bespoke";
-import AI from "./services/AI";
-import Integrations from "./services/Integrations";
-import NetSuite from "./services/NetSuite";
+import Card from "../common/Card";
+import { faShopify } from "@fortawesome/free-brands-svg-icons";
+import {
+  faBrain,
+  faCartShopping,
+  faCode,
+  faDatabase,
+  faDownLeftAndUpRightToCenter,
+} from "@fortawesome/free-solid-svg-icons";
 
 const services = [
   {
-    title: "Ecommerce",
-    subtitle: "Helping you to manage your online stores",
+    title: "Shopify",
+    image: "/img/waves/blue-layered-wave.svg",
     content: [
-      "We are certified partners with Shopify and can work on many other platforms. If you have an existing online store or are looking to start selling online then we can help you with your e-commerce needs.",
-      "We can work with your internal and external teams to deliver the best solution for your business.",
+      "As a Shopify Certified Partner, we specialize in building high-converting stores, custom themes, and powerful app integrations. From store setup to advanced customizations, we know Shopify inside and out.",
     ],
-    background: "from-brand-blue to-brand-light-blue text-white",
+    logo: faShopify,
+    colorClass: "bg-[#EE6123]/30",
+    link: "/services/shopify",
   },
   {
-    title: "Bespoke Web Applications",
-    subtitle: "An application that is exactly what you need, no more, no less",
+    title: "AI",
+    image: "/img/waves/blue-layered-wave.svg",
     content: [
-      "Start with a blank canvas and build exactly what you need. We will work with you to understand your requirements and build a web application that is exactly what you need.",
-      "If you have a specific requirement that can't be met with an off the shelf solution then a bespoke web application is the way to go. We're happy to discuss specific needs with you and make the best recommendation we can.",
+      "From custom AI integrations to intelligent automation workflows, we help businesses leverage cutting-edge technology to improve efficiency and reduce manual tasks.",
     ],
-    background: "from-indigo-700 to-indigo-500 text-white",
+    logo: faBrain,
+    colorClass: "bg-[#343837]/30",
+    link: "/services/ai",
+  },
+  {
+    title: "BigCommerce",
+    image: "/img/waves/blue-layered-wave.svg",
+    content: [
+      "BigCommerce offers powerful built-in features perfect for growing businesses. We help you leverage its advanced capabilities including multi-channel selling, API-first architecture, and enterprise scalability.",
+    ],
+    logo: faCartShopping,
+    colorClass: "bg-[#43d6bd]/30",
+    link: "/services/bigcommerce",
   },
   {
     title: "Integrations",
-    subtitle: "We love getting technology talking",
+    image: "/img/waves/gray-layered-wave.svg",
     content: [
       "If you have a need to get two systems talking to each other, we can help. We have experience in integrating systems to save time and reduce errors.",
-      "We can help create or improve integrations in any number of iPaaS tools such as Celigo. Or we can create custom integrations using APIs and webhooks. Whatever you need to get one system talking to another, we can help.",
     ],
-    background: "from-emerald-700 to-emerald-500 text-white",
+    logo: faDownLeftAndUpRightToCenter,
+    colorClass: "bg-[#2c6ccd]/30",
+    link: "/services/integrations",
   },
   {
     title: "NetSuite",
-    subtitle: "Customisations and integrations for your ERP",
+    image: "/img/waves/gray-layered-wave.svg",
     content: [
       "NetSuite is a powerful tool, but sometimes it needs a little help to do exactly what you need. We can help with customisation of forms, workflows, and scripts to make NetSuite work exactly how you want it to.",
-      "We can audit and improve your NetSuite setup to make sure you are getting the most out of your investment. We can also help with integrations to other systems to make sure you have a seamless experience.",
     ],
-    background: "from-blue-700 to-blue-500 text-white",
+    logo: faDatabase,
+    colorClass: "bg-[#F15A24]/30",
+    link: "/services/netsuite",
   },
   {
-    title: "APIs",
-    subtitle: "Create custom endpoints for your systems and partners",
+    title: "Bespoke Solutions",
+    image: "/img/waves/gray-layered-wave.svg",
     content: [
-      "Custom APIs can be a powerful tool for your business. We can help create custom endpoints for your systems to talk to each other. This can be useful for integrating systems that don't have a native integration, or for creating a custom interface for your customers to interact with your systems.",
-      "We can help create APIs using REST, SOAP, or GraphQL, and can help with the security and documentation of your APIs to make sure they are secure and easy to use.",
+      "Start with a blank canvas and build exactly what you need. We will work with you to understand your requirements and build a web application that is exactly what you need.",
     ],
-    background: "from-orange-700 to-orange-500 text-white",
-  },
-  {
-    title: "Agency Management",
-    subtitle: "Helping you manage your external teams",
-    content: [
-      "If you have a team of developers working on your project, we can help you manage them. We can help with project management, code reviews, and mentoring to make sure your project is on track and on budget.",
-      "We can help with setting up CI/CD pipelines to make sure your code is tested and deployed automatically, and we can help with code quality tools to make sure your code is maintainable and scalable.",
-    ],
-    background: "from-rose-700 to-rose-500 text-white",
+    logo: faCode,
+    colorClass: "bg-[#343837]/30",
+    link: "/services/bespoke",
   },
 ];
 
@@ -72,16 +79,6 @@ export default async function Services() {
   return (
     <div id="services" className="my-20">
       <Section>
-        <div className="max-w-7xl mx-auto relative">
-          <div className="absolute top-64 md:left-48 max-w-full w-[500px] h-[500px] xl:w-[600px] xl:h-[600px] z-10 overflow-y-visible pointer-events-none">
-            <Image
-              priority
-              src={blob2}
-              alt="A Blob"
-              className="absolute h-[500px] w-[500px] xl:h-[600px] xl:w-[600px] transform rotate-270 opacity-15 pointer-events-none"
-            />
-          </div>
-        </div>
         <Container>
           <InView>
             <div className="md:p-10 relative z-20">
@@ -98,27 +95,31 @@ export default async function Services() {
                 So, what can we do for you? Here are some of the things we can
                 help you with.
               </p>
-              <div className="in-up" style={{ animationDelay: ".75s" }}>
-                <Shopify />
-                <BigCommerce />
-                <Bespoke />
-                <AI />
-                <Integrations />
-                <NetSuite />
+
+              <div
+                className="in-up grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-10"
+                style={{ animationDelay: ".75s" }}
+              >
+                {services.map((service, index) => (
+                  <Card
+                    key={index}
+                    image={service.image}
+                    title={service.title}
+                    logo={service.logo}
+                    link={service.link}
+                    colorClass={service.colorClass}
+                  >
+                    {service.content.map((text, i) => (
+                      <p key={i} className="mb-3">
+                        {text}
+                      </p>
+                    ))}
+                  </Card>
+                ))}
               </div>
             </div>
           </InView>
         </Container>
-        <div className="max-w-7xl mx-auto relative">
-          <div className="absolute bottom-32 max-w-full w-[500px] h-[500px] xl:w-[600px] xl:h-[600px] z-10 overflow-y-visible pointer-events-none">
-            <Image
-              priority
-              src={blob2}
-              alt="A Blob"
-              className="absolute -ml-32 h-[500px] w-[500px] xl:h-[600px] xl:w-[600px] transform rotate-90 opacity-15 pointer-events-none"
-            />
-          </div>
-        </div>
       </Section>
     </div>
   );

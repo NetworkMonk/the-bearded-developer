@@ -3,7 +3,6 @@ import Section from "@/components/common/Section";
 import { lexend } from "@/app/fonts";
 import InView from "../animated/InView";
 import Image from "next/image";
-import blob2 from "@/components/blobs/blob2.svg";
 
 export default async function Technologies() {
   const technologies = [
@@ -100,16 +99,6 @@ export default async function Technologies() {
             </div>
           </InView>
         </Container>
-        <div className="max-w-7xl mx-auto">
-          <div className="absolute bottom-32 max-w-full w-[300px] h-[300px] xl:w-[600px] xl:h-[600px] z-10 overflow-y-visible pointer-events-none">
-            <Image
-              priority
-              src={blob2}
-              alt="A Blob"
-              className="absolute mt-10 -ml-32 h-[300px] w-[300px] xl:h-[600px] xl:w-[600px] transform rotate-45 opacity-15 pointer-events-none"
-            />
-          </div>
-        </div>
       </Section>
     </div>
   );

@@ -2,8 +2,6 @@ import Container from "@/components/common/Container";
 import Section from "@/components/common/Section";
 import { lexend } from "@/app/fonts";
 import InView from "../animated/InView";
-import Image from "next/image";
-import blob1 from "@/components/blobs/blob1.svg";
 
 export default async function Reviews() {
   const reviews = [
