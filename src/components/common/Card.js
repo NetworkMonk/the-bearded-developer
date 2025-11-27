@@ -36,6 +36,7 @@ export default function Card({
           <a
             href={link}
             className="inline-block my-4 px-4 py-2 bg-white text-black font-semibold rounded-full hover:bg-black hover:text-white cursor-pointer transition duration-500"
+            aria-label={`Learn more about ${title}`}
           >
             Learn More
           </a>
