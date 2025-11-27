@@ -38,7 +38,7 @@ export default function Card({
             className="inline-block my-4 px-4 py-2 bg-white text-black font-semibold rounded-full hover:bg-black hover:text-white cursor-pointer transition duration-500"
             aria-label={`Learn more about ${title}`}
           >
-            Learn More
+            Learn More<span className="sr-only"> about {title}</span>
           </a>
         </p>
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white/30 to-transparent pointer-events-none"></div>
