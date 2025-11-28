@@ -128,6 +128,28 @@
       "path": "/resources/articles/making-your-website-accessible"
     },
     {
+      "title": "Monitoring and Alerting: Staying Ahead of Website Problems",
+      "subTitle": "How to Know About Issues Before Your Customers Do",
+      "description": "Learn how to set up comprehensive monitoring and alerting for your website to prevent downtime, catch performance issues early, and maintain customer trust.",
+      "date": "2025-11-28",
+      "author": "James Plant",
+      "image": "/img/articles/monitoring-and-alerting-website-problems/website-monitoring-header.jpg",
+      "tags": [
+        "Website Monitoring",
+        "Alerting",
+        "Uptime",
+        "Performance",
+        "DevOps",
+        "Site Reliability"
+      ],
+      "metadata": {
+        "title": "Monitoring and Alerting: Staying Ahead of Website Problems | The Bearded Developer | Shopify, Web Development, and Technology Solutions",
+        "description": "Learn how to set up comprehensive monitoring and alerting for your website to prevent downtime, catch performance issues early, and maintain customer trust.",
+        "robots": "index, follow"
+      },
+      "path": "/resources/articles/monitoring-and-alerting-website-problems"
+    },
+    {
       "title": "Optimizing Cloud Spending: How to Avoid Surprise Bills",
       "subTitle": "Smart Strategies to Control Your AWS, Google Cloud, and Azure Costs Before They Control You",
       "description": "Learn practical techniques to monitor, optimize, and control your cloud spending across AWS, Google Cloud, and Azure to avoid unexpected bills and maximize value.",
