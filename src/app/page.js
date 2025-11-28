@@ -19,7 +19,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "The Bearded Developer",
-    image: "https://www.thebeardeddeveloper.co.uk/images/beard-black.png",
+    image: "https://www.thebeardeddeveloper.co.uk/img/beard-black.png",
     description:
       "Professional web development and Shopify solutions based in Braintree, Essex, serving businesses nationwide across the UK.",
     address: {
