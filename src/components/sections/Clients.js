@@ -48,6 +48,11 @@ export default async function Achievements() {
       name: "Cotton and Twigg",
       logo: "/img/client-logos/cotton_and_twigg_pink_square.png",
     },
+    { name: "Love Leo", logo: "/img/client-logos/love-leo.jpeg" },
+    {
+      name: "Fluffs and Files",
+      logo: "/img/client-logos/fluffs-and-files.svg",
+    },
   ];
 
   return (

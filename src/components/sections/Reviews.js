@@ -6,6 +6,20 @@ import InView from "../animated/InView";
 export default async function Reviews() {
   const reviews = [
     {
+      author: "Leanne P",
+      company: "Love Leo",
+      rating: 5,
+      content:
+        "James is a tech angel!! James has worked with me to create an amazing website for my registered non profit organisation. As someone that is not tech savvy at all I can honestly say James has been an absolute angel to work with. Thank you James, for everything - we love our new website!",
+    },
+    {
+      author: "Robyn P",
+      company: "Fluffs and Files",
+      rating: 5,
+      content:
+        "Since James helped me with my website I've had brilliant results. My SEO is excellent and I get regular business via links from the website be it calls or WhatsApp. Also this has boosted my social media. James is an easy going person and really understood my needs for my business. Will definitely use him again.",
+    },
+    {
       author: "Jackie T",
       company: "Cotton and Twigg",
       rating: 5,
