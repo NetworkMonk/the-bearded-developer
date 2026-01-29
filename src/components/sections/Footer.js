@@ -98,7 +98,16 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className="md:px-10 md:grid grid-cols-2 py-3 mt-10 z-20 mb-10 md:mb-auto">
+            <div className="mt-10 mb-20 md:mb-0">
+              <iframe
+                className="max-w-full border-0"
+                id="iframewin"
+                width="610px"
+                height="200px"
+                src="https://zcv2-zcmp.maillist-manage.eu/ua/Optin?od=12ba7f205d2b&zx=14aec52267&tD=13c03951893fe541&sD=13c03951893ff0f1"
+              ></iframe>
+            </div>
+            <div className="md:px-10 md:grid grid-cols-2 py-3 -mt-10 z-20 mb-10 md:mb-auto">
               <div className="text-xs mt-auto">
                 © 2025 The Bearded Developer Ltd
               </div>
