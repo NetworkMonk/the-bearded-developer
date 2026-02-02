@@ -9,9 +9,9 @@ import About from "@/components/sections/About";
 
 export const metadata = {
   title:
-    "The Bearded Developer | Shopify & Web Development in Braintree, Essex",
+    "The Bearded Developer | Shopify, BigCommerce & Bespoke Development in Braintree, Essex",
   description:
-    "Professional web development and Shopify solutions based in Braintree, Essex, serving businesses nationwide. Your trusted technology partner across the UK. Expert e-commerce development, custom web applications, and digital solutions for local and national clients.",
+    "Professional web development and Shopify, BigCommerce solutions based in Braintree, Essex, serving businesses nationwide. Your trusted technology partner across the UK. Expert e-commerce development, custom web applications, and digital solutions for local and national clients.",
 };
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
     name: "The Bearded Developer",
     image: "https://www.thebeardeddeveloper.co.uk/img/beard-black.png",
     description:
-      "Professional web development and Shopify solutions based in Braintree, Essex, serving businesses nationwide across the UK.",
+      "Professional web development and Shopify, BigCommerce solutions based in Braintree, Essex, serving businesses nationwide across the UK.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Braintree",
@@ -57,6 +57,9 @@ export default function Home() {
     serviceType: [
       "Web Development",
       "Shopify Development",
+      "BigCommerce Development",
+      "NetSuite Integration",
+      "AI Solutions",
       "E-commerce Solutions",
       "Custom Web Applications",
     ],
