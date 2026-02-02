@@ -7,6 +7,28 @@ export default async function Sitemap() {
 
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL || "https://www.thebeardeddeveloper.co.uk";
+
+  // Build timestamp for static routes
+  const buildDate = new Date().toISOString();
+
+  // Priority configuration for different route types
+  const routePriorities = {
+    "": 1.0, // Homepage
+    "/services/bespoke": 0.8,
+    "/services/shopify": 0.8,
+    "/services/bigcommerce": 0.8,
+    "/services/netsuite": 0.8,
+    "/services/ai": 0.8,
+    "/services/integrations": 0.8,
+    "/projects": 0.7,
+    "/contact": 0.7,
+    "/resources": 0.7,
+    "/resources/components": 0.7,
+    "/resources/articles": 0.7,
+    "/privacy": 0.3,
+    "/cookies": 0.3,
+  };
+
   const routes = [
     "",
     "/projects",
@@ -24,9 +46,19 @@ export default async function Sitemap() {
     "/resources/articles",
   ];
 
-  const posts = articles.map((article) => article.path.replace(/\\/g, "/"));
+  // Transform static routes with lastmod and priority
+  const staticRoutes = routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: buildDate,
+    priority: routePriorities[route] || 0.5,
+  }));
 
-  return [...routes, ...posts].map((url) => {
-    return { url: `${baseUrl}${url}` };
-  });
+  // Transform article routes with publication date and uniform priority
+  const articleRoutes = articles.map((article) => ({
+    url: `${baseUrl}${article.path.replace(/\\/g, "/")}`,
+    lastModified: new Date(article.date).toISOString(),
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...articleRoutes];
 }
