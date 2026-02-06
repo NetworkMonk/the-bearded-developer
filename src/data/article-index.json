@@ -194,6 +194,28 @@
       "path": "/resources/articles/monitoring-and-alerting-website-problems"
     },
     {
+      "title": "NetSuite SuiteScript Development: When to Build Custom vs Use Native Features",
+      "subTitle": "How to Make Smart Customization Decisions That Save Money and Reduce Technical Debt",
+      "description": "Learn when to build custom SuiteScript solutions versus using NetSuite's native features. Expert guidance to avoid over-customization, reduce costs, and make strategic development decisions.",
+      "date": "2026-02-06",
+      "author": "James Plant",
+      "image": "/img/articles/netsuite-suitescript-custom-vs-native/netsuite-development-header.jpg",
+      "tags": [
+        "NetSuite",
+        "SuiteScript",
+        "Custom Development",
+        "ERP",
+        "Business Technology",
+        "NetSuite Customization"
+      ],
+      "metadata": {
+        "title": "NetSuite SuiteScript Development: When to Build Custom vs Use Native Features | The Bearded Developer",
+        "description": "Learn when to build custom SuiteScript solutions versus using NetSuite's native features. Expert guidance to avoid over-customization, reduce costs, and make strategic development decisions.",
+        "robots": "index, follow"
+      },
+      "path": "/resources/articles/netsuite-suitescript-custom-vs-native"
+    },
+    {
       "title": "Optimizing Cloud Spending: How to Avoid Surprise Bills",
       "subTitle": "Smart Strategies to Control Your AWS, Google Cloud, and Azure Costs Before They Control You",
       "description": "Learn practical techniques to monitor, optimize, and control your cloud spending across AWS, Google Cloud, and Azure to avoid unexpected bills and maximize value.",

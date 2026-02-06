@@ -1,0 +1,21 @@
+{
+  "title": "NetSuite SuiteScript Development: When to Build Custom vs Use Native Features",
+  "subTitle": "How to Make Smart Customization Decisions That Save Money and Reduce Technical Debt",
+  "description": "Learn when to build custom SuiteScript solutions versus using NetSuite's native features. Expert guidance to avoid over-customization, reduce costs, and make strategic development decisions.",
+  "date": "2026-02-06",
+  "author": "James Plant",
+  "image": "/img/articles/netsuite-suitescript-custom-vs-native/netsuite-development-header.jpg",
+  "tags": [
+    "NetSuite",
+    "SuiteScript",
+    "Custom Development",
+    "ERP",
+    "Business Technology",
+    "NetSuite Customization"
+  ],
+  "metadata": {
+    "title": "NetSuite SuiteScript Development: When to Build Custom vs Use Native Features | The Bearded Developer",
+    "description": "Learn when to build custom SuiteScript solutions versus using NetSuite's native features. Expert guidance to avoid over-customization, reduce costs, and make strategic development decisions.",
+    "robots": "index, follow"
+  }
+}
