@@ -8,10 +8,24 @@ import Reviews from "@/components/sections/Reviews";
 import About from "@/components/sections/About";
 
 export const metadata = {
-  title:
-    "The Bearded Developer | Shopify, BigCommerce & Bespoke Development in Braintree, Essex",
+  title: "Shopify & BigCommerce Developer UK | NetSuite Integration Expert",
   description:
-    "Professional web development and Shopify, BigCommerce solutions based in Braintree, Essex, serving businesses nationwide. Your trusted technology partner across the UK. Expert e-commerce development, custom web applications, and digital solutions for local and national clients.",
+    "Senior Shopify & BigCommerce developer specialising in custom integrations, NetSuite connectivity & API development. Proven £100k+ cost savings. Free consultation available.",
+  openGraph: {
+    title: "Shopify & BigCommerce Developer UK | NetSuite Integration Expert",
+    description:
+      "Senior Shopify & BigCommerce developer specialising in custom integrations, NetSuite connectivity & API development. Proven £100k+ cost savings. Free consultation available.",
+    type: "website",
+    url: "https://www.thebeardeddeveloper.co.uk/",
+    images: [
+      {
+        url: "https://www.thebeardeddeveloper.co.uk/img/the-bearded-developer.png",
+        width: 1200,
+        height: 630,
+        alt: "Shopify & BigCommerce Developer UK",
+      },
+    ],
+  },
 };
 
 export default function Home() {
@@ -19,14 +33,17 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "The Bearded Developer",
-    image: "https://www.thebeardeddeveloper.co.uk/img/beard-black.png",
+    image:
+      "https://www.thebeardeddeveloper.co.uk/img/the-bearded-developer.png",
     description:
-      "Professional web development and Shopify, BigCommerce solutions based in Braintree, Essex, serving businesses nationwide across the UK.",
+      "Senior Shopify & BigCommerce developer specialising in custom integrations, NetSuite connectivity & API development for UK businesses.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Braintree",
       addressRegion: "Essex",
       addressCountry: "GB",
+      postalCode: "CM7 9NF",
+      streetAddress: "Braintree, Essex",
     },
     areaServed: [
       {
@@ -55,15 +72,25 @@ export default function Home() {
       },
     ],
     serviceType: [
-      "Web Development",
       "Shopify Development",
       "BigCommerce Development",
       "NetSuite Integration",
-      "AI Solutions",
-      "E-commerce Solutions",
-      "Custom Web Applications",
+      "E-commerce Custom Development",
+      "Laravel Development",
+      "React Development",
+      "API Integration",
+      "Bespoken Web Development",
     ],
     url: "https://www.thebeardeddeveloper.co.uk",
+    // Add these for better local SEO
+    telephone: "07545960983",
+    email: "jamesplant@gmail.com",
+    priceRange: "£££",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0", // If you have reviews
+      reviewCount: "5", // Update with actual count
+    },
   };
 
   return (

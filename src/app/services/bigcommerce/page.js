@@ -33,18 +33,98 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata = {
-  title:
-    "BigCommerce Development Services | Essex & UK | The Bearded Developer",
+  title: "BigCommerce Developer UK | Custom Apps & NetSuite Integration",
   description:
-    "Expert BigCommerce development and customization in Essex and across the UK. Custom themes, app development, migrations, and API integrations for growing businesses.",
+    "BigCommerce development specialist. Custom apps, Stencil themes, platform migrations & NetSuite integration. 15+ years experience. Free consultation.",
   keywords:
-    "bigcommerce development, bigcommerce developer, bigcommerce essex, ecommerce development, bigcommerce themes, bigcommerce apps uk",
+    "bigcommerce developer uk, bigcommerce custom app, bigcommerce netsuite integration, bigcommerce migration, stencil theme development, bigcommerce api integration",
   openGraph: {
-    title: "Professional BigCommerce Development Services | Essex & UK",
+    title: "BigCommerce Developer UK | Custom Apps & NetSuite Integration",
     description:
-      "Grow your business with expert BigCommerce development. Custom solutions, themes, and integrations from experienced developers.",
+      "BigCommerce development specialist. Custom apps, migrations & NetSuite integration. 15+ years experience delivering results.",
     type: "website",
+    url: "https://www.thebeardeddeveloper.co.uk/services/bigcommerce",
+    images: [
+      {
+        url: "https://www.thebeardeddeveloper.co.uk/img/thebearded-developer.png",
+        width: 1200,
+        height: 630,
+        alt: "BigCommerce Development Services UK",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "BigCommerce Developer UK | Custom Apps & NetSuite Integration",
+    description:
+      "BigCommerce development specialist. Custom apps, migrations & NetSuite integration.",
+  },
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "BigCommerce Development",
+
+  provider: {
+    "@type": "LocalBusiness",
+    name: "The Bearded Developer",
+    image:
+      "https://www.thebeardeddeveloper.co.uk/img/the-bearded-developer.png",
+    priceRange: "£££",
+    telephone: "07545960983",
+
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Braintree",
+      addressRegion: "Essex",
+      addressCountry: "GB",
+      postalCode: "CM7 9NF",
+      streetAddress: "Braintree, Essex",
+    },
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "United Kingdom",
+  },
+  description:
+    "Professional BigCommerce development services including custom apps, theme development, platform migrations, and NetSuite integration.",
+  offers: {
+    "@type": "Offer",
+    availability: "https://schema.org/InStock",
+    priceRange: "£££",
+  },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How much does BigCommerce development cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "BigCommerce development costs vary based on project complexity. Custom theme development typically starts from £3,000, while custom apps and integrations are quoted individually. Contact us for a free consultation.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you migrate my store from Shopify to BigCommerce?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we specialize in platform migrations including Shopify to BigCommerce. We preserve your data, SEO rankings, and ensure a smooth transition with minimal downtime.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you integrate BigCommerce with NetSuite?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we're experienced in BigCommerce-NetSuite integration, connecting your e-commerce platform with your ERP for real-time inventory, order management, and customer data synchronization.",
+      },
+    },
+  ],
 };
 
 const services = [
@@ -507,9 +587,11 @@ export default function BigCommerceServicesPage() {
                 BigCommerce Development Across Essex & The UK
               </h2>
               <p className="text-center text-lg mb-8 max-w-3xl mx-auto">
-                Based in Essex, we provide BigCommerce development services to
-                businesses across the UK. From startups to enterprise retailers,
-                we help you leverage BigCommerce&apos;s powerful platform.
+                Based in Braintree, Essex, we provide BigCommerce development
+                services to businesses throughout Essex, London, and across the
+                UK. Whether you're a startup in Chelmsford or an established
+                retailer in London, we deliver enterprise-grade BigCommerce
+                solutions with personalized local service.
               </p>
               <div className="text-center">
                 <span className="inline-block bg-white px-6 py-3 rounded-full shadow-sm font-bold text-lg">
@@ -521,6 +603,14 @@ export default function BigCommerceServicesPage() {
           <SecondaryCTA title="Ready to Accelerate Your E-commerce Growth?" />
         </Container>
       </Section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
     </div>
   );
 }

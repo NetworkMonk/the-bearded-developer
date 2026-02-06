@@ -31,17 +31,110 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata = {
-  title: "Bespoke Software Development | Custom Web Applications | Essex & UK",
+  title: "Bespoke Software Developer Essex | Laravel & React Specialist",
   description:
-    "Expert bespoke software development in Essex and across the UK. Custom web applications, tailored solutions, and enterprise software built to your exact requirements.",
+    "Custom software development in Essex. Laravel, React & Python specialist. Business automation, web apps & API integration. 15+ years experience. Free consultation.",
   keywords:
-    "bespoke software development, custom web applications, tailored software, enterprise development, bespoke essex, custom software uk",
+    "bespoke software development essex, custom software essex, web app development essex, software developer essex, laravel developer, react developer",
   openGraph: {
-    title: "Professional Bespoke Software Development Services | Essex & UK",
+    title: "Bespoke Software Developer Essex | Laravel & React Specialist",
     description:
-      "Transform your business with custom-built software solutions. Expert development from concept to deployment.",
+      "Custom software development in Essex. Business automation, web apps & API integration. 15+ years proven experience.",
     type: "website",
+    url: "https://www.thebeardeddeveloper.co.uk/services/bespoke",
+    images: [
+      {
+        url: "https://www.thebeardeddeveloper.co.uk/img/the-bearded-developer.png",
+        width: 1200,
+        height: 630,
+        alt: "Bespoke Software Development Essex",
+      },
+    ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bespoke Software Developer Essex | Laravel & React Specialist",
+    description:
+      "Custom software development in Essex. Business automation, web apps & API integration.",
+  },
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Bespoke Software Development",
+  provider: {
+    "@type": "LocalBusiness",
+    name: "The Bearded Developer",
+    image:
+      "https://www.thebeardeddeveloper.co.uk/img/the-bearded-developer.png",
+    priceRange: "£££",
+    telephone: "07545960983",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Braintree",
+      addressRegion: "Essex",
+      addressCountry: "GB",
+      postalCode: "CM7 9NF",
+      streetAddress: "Braintree, Essex",
+    },
+  },
+  areaServed: [
+    {
+      "@type": "State",
+      name: "Essex",
+    },
+    {
+      "@type": "Country",
+      name: "United Kingdom",
+    },
+  ],
+  description:
+    "Professional bespoke software development services including custom web applications, business automation, and API integration for businesses in Essex and across the UK.",
+  offers: {
+    "@type": "Offer",
+    availability: "https://schema.org/InStock",
+    priceRange: "£££",
+  },
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is bespoke software development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Bespoke software development is creating custom software applications tailored specifically to your business requirements, rather than using off-the-shelf solutions. It provides a perfect fit for your unique processes and workflows.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does bespoke software development cost?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Bespoke software costs vary based on complexity and scope. Simple web applications start from £5,000, while complex enterprise systems can range from £20,000-£100,000+. Contact us for a detailed quote based on your specific requirements.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does it take to develop bespoke software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Development timelines depend on project scope. Simple applications typically take 2-3 months, while larger enterprise systems may take 6-12 months. We use agile methodology with regular milestones and demonstrations throughout the process.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you provide support after the software is built?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we provide ongoing support and maintenance packages to ensure your software continues to run smoothly, stays secure, and evolves with your business needs.",
+      },
+    },
+  ],
 };
 
 const services = [
@@ -467,10 +560,11 @@ export default function BespokeServicesPage() {
                 Bespoke Development Across Essex & The UK
               </h2>
               <p className="text-center text-lg mb-8 max-w-3xl mx-auto">
-                Based in Essex, we provide bespoke software development services
-                to businesses across the UK. From small startups to large
-                enterprises, we create custom solutions that drive business
-                growth.
+                Based in Braintree, we provide bespoke software development
+                services throughout Essex, including Chelmsford, Colchester,
+                Basildon, and across the wider region. Our team specializes in
+                Laravel and React development, creating custom web applications
+                that streamline your business processes and drive growth.
               </p>
               <div className="text-center">
                 <span className="inline-block bg-white px-6 py-3 rounded-full shadow-sm font-bold text-lg">
@@ -478,10 +572,74 @@ export default function BespokeServicesPage() {
                 </span>
               </div>
             </div>
+
+            {/* FAQ Section */}
+            <div className="mb-20">
+              <h2
+                className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-12 text-center`}
+              >
+                Frequently Asked Questions
+              </h2>
+              <div className="max-w-3xl mx-auto space-y-6">
+                <div className="bg-white rounded-lg shadow-lg p-6">
+                  <h3 className="text-xl font-bold mb-3">
+                    What is bespoke software development?
+                  </h3>
+                  <p className="text-gray-600">
+                    Bespoke software development is creating custom software
+                    applications tailored specifically to your business
+                    requirements, rather than using off-the-shelf solutions. It
+                    provides a perfect fit for your unique processes and
+                    workflows.
+                  </p>
+                </div>
+                <div className="bg-white rounded-lg shadow-lg p-6">
+                  <h3 className="text-xl font-bold mb-3">
+                    How much does bespoke software development cost?
+                  </h3>
+                  <p className="text-gray-600">
+                    Bespoke software costs vary based on complexity and scope.
+                    Simple web applications start from £5,000, while complex
+                    enterprise systems can range from £20,000-£100,000+. Contact
+                    us for a detailed quote based on your specific requirements.
+                  </p>
+                </div>
+                <div className="bg-white rounded-lg shadow-lg p-6">
+                  <h3 className="text-xl font-bold mb-3">
+                    How long does it take to develop bespoke software?
+                  </h3>
+                  <p className="text-gray-600">
+                    Development timelines depend on project scope. Simple
+                    applications typically take 2-3 months, while larger
+                    enterprise systems may take 6-12 months. We use agile
+                    methodology with regular milestones and demonstrations
+                    throughout the process.
+                  </p>
+                </div>
+                <div className="bg-white rounded-lg shadow-lg p-6">
+                  <h3 className="text-xl font-bold mb-3">
+                    Do you provide support after the software is built?
+                  </h3>
+                  <p className="text-gray-600">
+                    Yes, we provide ongoing support and maintenance packages to
+                    ensure your software continues to run smoothly, stays
+                    secure, and evolves with your business needs.
+                  </p>
+                </div>
+              </div>
+            </div>
           </section>
           <SecondaryCTA title="Ready to Build Your Perfect Solution?" />
         </Container>
       </Section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
     </div>
   );
 }
