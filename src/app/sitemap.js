@@ -8,9 +8,6 @@ export default async function Sitemap() {
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL || "https://www.thebeardeddeveloper.co.uk";
 
-  // Build timestamp for static routes
-  const buildDate = new Date().toISOString();
-
   // Priority configuration for different route types
   const routePriorities = {
     "": 1.0, // Homepage
@@ -49,7 +46,6 @@ export default async function Sitemap() {
   // Transform static routes with lastmod and priority
   const staticRoutes = routes.map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: buildDate,
     priority: routePriorities[route] || 0.5,
   }));
 
