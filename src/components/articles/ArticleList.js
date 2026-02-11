@@ -18,6 +18,7 @@ const popularSearches = [
   "Cloud",
   "Infrastructure",
   "Integration",
+  "NetSuite",
   "Performance",
   "Security",
   "Shopify",
@@ -38,8 +39,8 @@ export default function ArticleList() {
             .toLowerCase()
             .includes(searchQuery.toLowerCase()) ||
           article.tags.some((keyword) =>
-            keyword.toLowerCase().includes(searchQuery.toLowerCase())
-          )
+            keyword.toLowerCase().includes(searchQuery.toLowerCase()),
+          ),
       )
     : articles;
 
@@ -48,11 +49,11 @@ export default function ArticleList() {
 
   const paginatedArticles = filteredArticles.slice(
     (currentPage - 1) * 10,
-    currentPage * 10
+    currentPage * 10,
   );
 
   const [searchInputValue, setSearchInputValue] = useState(
-    searchQuery ? searchQuery : ""
+    searchQuery ? searchQuery : "",
   );
 
   // Handler to navigate based on search input
@@ -61,7 +62,7 @@ export default function ArticleList() {
       window.location.href = `/resources/articles`;
     } else {
       window.location.href = `/resources/articles?search=${encodeURIComponent(
-        searchInputValue.trim()
+        searchInputValue.trim(),
       )}`;
     }
   };
@@ -103,7 +104,7 @@ export default function ArticleList() {
               key={index}
               onClick={() => {
                 window.location.href = `/resources/articles?search=${encodeURIComponent(
-                  term.trim()
+                  term.trim(),
                 )}`;
               }}
               className="mr-2 mb-2 cursor-pointer outline outline-2 outline-gray-300 hover:outline-brand-blue bg-white text-brand-black hover:bg-brand-blue hover:text-white transition-colors duration-500 px-3 py-1 rounded-full"

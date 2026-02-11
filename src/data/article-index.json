@@ -301,6 +301,28 @@
       "path": "/resources/articles/securing-your-business-website"
     },
     {
+      "title": "Shopify NetSuite Integration: Complete Guide to Connecting Your Store and ERP",
+      "subTitle": "How to Seamlessly Sync Your E-commerce Platform with Enterprise Resource Planning",
+      "description": "Learn how to integrate Shopify with NetSuite ERP for real-time inventory sync, automated order processing, and unified financial reporting. Expert guidance on integration methods, costs, and best practices.",
+      "date": "2026-02-11",
+      "author": "James Plant",
+      "image": "/img/articles/shopify-netsuite-integration-guide/integration-header.jpg",
+      "tags": [
+        "Shopify",
+        "NetSuite",
+        "Integration",
+        "ERP",
+        "E-commerce",
+        "Business Automation"
+      ],
+      "metadata": {
+        "title": "Shopify NetSuite Integration: Complete Guide to Connecting Your Store and ERP | The Bearded Developer",
+        "description": "Learn how to integrate Shopify with NetSuite ERP for real-time inventory sync, automated order processing, and unified financial reporting. Expert guidance on integration methods, costs, and best practices.",
+        "robots": "index, follow"
+      },
+      "path": "/resources/articles/shopify-netsuite-integration-guide"
+    },
+    {
       "title": "Streamlining Your Business with Cloud-Based Collaboration Tools",
       "subTitle": "Boost Productivity with the Right Cloud Tools for Your Team",
       "description": "Learn how to streamline your business with cloud-based collaboration tools like Google Workspace and Microsoft 365 in our practical guide.",
