@@ -15,6 +15,7 @@ const articles = articleIndex.articles.sort((a, b) => {
 const popularSearches = [
   "AI",
   "Automation",
+  "Celigo",
   "Cloud",
   "Infrastructure",
   "Integration",

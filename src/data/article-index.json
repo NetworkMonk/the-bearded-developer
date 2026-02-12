@@ -88,6 +88,28 @@
       "path": "/resources/articles/bigcommerce-vs-shopify-comparison"
     },
     {
+      "title": "Celigo Error Troubleshooting: How to Fix Common Integration Failures",
+      "subTitle": "Diagnose and Resolve Celigo Integration Errors Before They Impact Your Business",
+      "description": "Learn how to troubleshoot and fix common Celigo integration errors with expert guidance. Covers authentication failures, mapping errors, API limits, and performance issues.",
+      "date": "2026-02-12",
+      "author": "James Plant",
+      "image": "/img/articles/celigo-error-troubleshooting-guide/troubleshooting-header.jpg",
+      "tags": [
+        "Celigo",
+        "Integration",
+        "Troubleshooting",
+        "NetSuite",
+        "iPaaS",
+        "Error Handling"
+      ],
+      "metadata": {
+        "title": "Celigo Error Troubleshooting: How to Fix Common Integration Failures | The Bearded Developer",
+        "description": "Learn how to troubleshoot and fix common Celigo integration errors with expert guidance. Covers authentication failures, mapping errors, API limits, and performance issues.",
+        "robots": "index, follow"
+      },
+      "path": "/resources/articles/celigo-error-troubleshooting-guide"
+    },
+    {
       "title": "Celigo Integration Platform: Why It's the Smart Choice for NetSuite Businesses",
       "subTitle": "Pre-Built Connectors and Real-Time Integration Without the Custom Development Headaches",
       "description": "Discover why Celigo has become the go-to integration platform for NetSuite businesses, offering pre-built connectors, powerful automation, and enterprise-grade reliability.",
