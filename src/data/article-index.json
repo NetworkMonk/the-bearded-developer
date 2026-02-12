@@ -132,6 +132,27 @@
       "path": "/resources/articles/celigo-integration-platform-netsuite"
     },
     {
+      "title": "Celigo Monitoring Best Practices: How to Catch Integration Issues Before They Break",
+      "subtitle": "Proactive Monitoring Strategies to Keep Your Celigo Integrations Running Smoothly",
+      "description": "Learn essential Celigo monitoring best practices to catch integration issues before they impact your business. Comprehensive guide covering alerting, health checks, credential management, and proactive maintenance for NetSuite integrations.",
+      "date": "2026-02-12",
+      "author": "James Plant",
+      "image": "/img/articles/celigo-monitoring-best-practices/monitoring-header.jpg",
+      "tags": [
+        "Celigo",
+        "Monitoring",
+        "Best Practices",
+        "NetSuite",
+        "Integration",
+        "Maintenance"
+      ],
+      "metadata": {
+        "title": "Celigo Monitoring Best Practices: Catch Integration Issues Early | The Bearded Developer",
+        "description": "Essential Celigo monitoring best practices for NetSuite integrations. Learn how to configure alerts, schedule health checks, and prevent integration failures before they impact business operations."
+      },
+      "path": "/resources/articles/celigo-monitoring-best-practices"
+    },
+    {
       "title": "Choosing the Right Cloud Server Provider: A Simple Guide",
       "subTitle": "Keep It Simple: How to Pick the Perfect Cloud Server for Your Business",
       "description": "A straightforward guide to choosing the right cloud server provider for your business needs, with practical tips and recommendations to avoid complexity.",
