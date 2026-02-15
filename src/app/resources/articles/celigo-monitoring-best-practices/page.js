@@ -136,74 +136,70 @@ export default function ArticlePage() {
                 integrations
               </p>
               <ul className="mt-3 list-disc list-inside space-y-2 text-blue-800 text-sm">
-                <li>Email alerts when flows fail completely</li>
-                <li>Weekly manual health check review</li>
-                <li>Credential expiration calendar reminders</li>
-                <li>Basic error log review during business hours</li>
-                <li>Monthly performance spot checks</li>
+                <li>Dedicated Slack channel</li>
+                <li>Daily/automated checks of key Celigo flows</li>
+                <li>Proactive alerting and first-line triage of errors</li>
+                <li>Quarterly "integration health" report</li>
+                <li>Next business day SLA response time for errors</li>
+                <li>Included: 4 hours development/month</li>
               </ul>
               <p className="mt-3 text-blue-800 text-sm">
-                <strong>Investment:</strong> ~2 hours/week of staff time, or
-                £800/month managed service
+                <strong>Investment:</strong> £800/month managed service
               </p>
             </div>
             <div className="bg-green-50 p-6 rounded-lg">
               <h4
                 className={`font-semibold text-xl ${lexend.className} text-green-900`}
               >
-                Level 2: Proactive Monitoring (Recommended)
+                Level 2: Standard Monitoring and Support (Recommended)
               </h4>
               <p className="mt-3 text-green-800 text-sm">
                 <strong>For:</strong> Growing businesses, 4-10 flows,
                 business-critical integrations
               </p>
               <ul className="mt-3 list-disc list-inside space-y-2 text-green-800 text-sm">
-                <li>Continuous monitoring with intelligent alerting</li>
-                <li>Health checks twice per week with trend analysis</li>
-                <li>Proactive error pattern detection</li>
-                <li>Performance degradation alerts</li>
-                <li>Automated credential expiration warnings</li>
-                <li>
-                  Record failure threshold monitoring (alert if &gt;5% fail)
-                </li>
-                <li>Flow optimization recommendations</li>
+                <li>Dedicated Slack channel</li>
+                <li>Daily/automated checks of key Celigo flows</li>
+                <li>Proactive alerting and first-line triage of errors</li>
+                <li>Monthly "integration health" report</li>
+                <li>4 hour SLA response time for errors</li>
+                <li>Liaison with Celigo support or other vendors</li>
+                <li>Monthly call to review performance and optimisations</li>
+                <li>Included: 8 hours development/month</li>
               </ul>
               <p className="mt-3 text-green-800 text-sm">
-                <strong>Investment:</strong> ~8 hours/week specialized staff
-                time, or £1,500/month managed service
+                <strong>Investment:</strong> £1,500/month managed service
               </p>
             </div>
             <div className="bg-purple-50 p-6 rounded-lg">
               <h4
                 className={`font-semibold text-xl ${lexend.className} text-purple-900`}
               >
-                Level 3: Enterprise Monitoring (Maximum Reliability)
+                Level 3: Enterprise Management (Maximum Reliability)
               </h4>
               <p className="mt-3 text-purple-800 text-sm">
                 <strong>For:</strong> Enterprise, 10+ complex flows,
                 zero-tolerance for downtime
               </p>
               <ul className="mt-3 list-disc list-inside space-y-2 text-purple-800 text-sm">
-                <li>
-                  Real-time monitoring dashboards with 1-hour response SLA
-                </li>
-                <li>Dedicated Slack channel for immediate alerts</li>
-                <li>Predictive analytics for failure prevention</li>
-                <li>Automated remediation for common issues</li>
-                <li>Weekly strategic reviews with optimization planning</li>
-                <li>Disaster recovery testing and planning</li>
-                <li>On-call emergency support for critical failures</li>
-                <li>Integration performance SLA tracking</li>
+                <li>Dedicated Slack channel</li>
+                <li>Daily/automated checks of all Celigo flows</li>
+                <li>Proactive alerting and first-line triage of errors</li>
+                <li>Monthly "integration health" report</li>
+                <li>1 hour SLA response time for errors</li>
+                <li>Liaison with Celigo support or other vendors</li>
+                <li>Monthly call to review performance and optimisations</li>
+                <li>Included: 20 hours development/month</li>
+                <li>On call emergency support outside of business hours</li>
               </ul>
               <p className="mt-3 text-purple-800 text-sm">
-                <strong>Investment:</strong> Dedicated integration specialist,
-                or £2,500+/month managed service
+                <strong>Investment:</strong> £2,500+/month managed service
               </p>
             </div>
           </div>
           <p className="mt-6">
-            Most businesses should aim for Level 2 (Proactive Monitoring). It
-            catches problems before business impact while remaining
+            Most businesses should aim for Level 2 (Standard Monitoring and
+            Support). It catches problems before business impact while remaining
             cost-effective. Level 1 is acceptable for very simple, non-critical
             integrations. Level 3 is necessary when integration downtime costs
             thousands per hour.
@@ -356,8 +352,8 @@ export default function ArticlePage() {
             </h4>
             <p className="mt-2 text-blue-800 text-sm mb-3">
               For essential monitoring (Level 1), complete this weekly. For
-              proactive monitoring (Level 2), complete twice per week. Time
-              required: 20-30 minutes.
+              standard monitoring and support (Level 2), complete twice per
+              week. Time required: 20-30 minutes.
             </p>
             <ol className="space-y-3 text-blue-800 text-sm">
               <li>
@@ -857,9 +853,11 @@ export default function ArticlePage() {
               </div>
               <ul className="text-sm space-y-1 mb-4">
                 <li>✓ Dedicated Slack channel</li>
-                <li>✓ Alert configuration</li>
-                <li>✓ Weekly health checks</li>
-                <li>✓ Monthly reporting</li>
+                <li>✓ Daily/automated flow checks</li>
+                <li>✓ Proactive alerting and triage</li>
+                <li>✓ Quarterly health report</li>
+                <li>✓ Next business day SLA</li>
+                <li>✓ 4 hours development/month</li>
               </ul>
               <p className="text-xs text-gray-600">
                 Perfect for stable integrations with 1-3 simple flows
@@ -872,16 +870,18 @@ export default function ArticlePage() {
                 </span>
               </div>
               <h4 className={`font-semibold text-lg ${lexend.className} mb-3`}>
-                Proactive Support
+                Standard Monitoring and Support
               </h4>
               <div className="text-2xl font-bold text-blue-600 mb-2">
                 £1,500/month
               </div>
               <ul className="text-sm space-y-1 mb-4">
-                <li>✓ Everything in Essential</li>
-                <li>✓ Health checks twice per week</li>
-                <li>✓ Performance optimization</li>
-                <li>✓ 5 hours development included</li>
+                <li>✓ Dedicated Slack channel</li>
+                <li>✓ Daily/automated flow checks</li>
+                <li>✓ Monthly health report</li>
+                <li>✓ 4 hour SLA response</li>
+                <li>✓ Monthly review call</li>
+                <li>✓ 8 hours development/month</li>
               </ul>
               <p className="text-xs text-gray-600">
                 Recommended for growing businesses with 4-10 flows
@@ -895,10 +895,11 @@ export default function ArticlePage() {
                 £2,500+/month
               </div>
               <ul className="text-sm space-y-1 mb-4">
-                <li>✓ Everything in Proactive</li>
-                <li>✓ Dedicated specialist</li>
-                <li>✓ 1-hour response SLA</li>
-                <li>✓ On-call emergency support</li>
+                <li>✓ Daily checks of all flows</li>
+                <li>✓ 1 hour SLA response</li>
+                <li>✓ 20 hours development/month</li>
+                <li>✓ Vendor liaison and escalation</li>
+                <li>✓ On call emergency support</li>
               </ul>
               <p className="text-xs text-gray-600">
                 For enterprise with 10+ complex business-critical flows
@@ -1002,17 +1003,17 @@ export default function ArticlePage() {
             </h4>
             <div className="text-sm mt-2 space-y-2">
               <div>
-                <strong>Level 1:</strong> Essential
+                <strong>Level 1:</strong> Essential Monitoring
                 <br />
                 <span className="text-xs">1-3 flows | £800/mo</span>
               </div>
               <div>
-                <strong>Level 2:</strong> Proactive
+                <strong>Level 2:</strong> Standard Monitoring and Support
                 <br />
                 <span className="text-xs">4-10 flows | £1,500/mo</span>
               </div>
               <div>
-                <strong>Level 3:</strong> Enterprise
+                <strong>Level 3:</strong> Enterprise Management
                 <br />
                 <span className="text-xs">10+ flows | £2,500+/mo</span>
               </div>
