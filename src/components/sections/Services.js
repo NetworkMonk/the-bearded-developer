@@ -144,7 +144,7 @@ export default function Services() {
 
                             <div>
                               <h3
-                                className={`text-3xl md:text-5xl font-medium text-brand-black ${lexend.className}`}
+                                className={`text-3xl md:text-3xl font-medium text-brand-black ${lexend.className}`}
                               >
                                 {service.title}
                               </h3>
@@ -174,7 +174,7 @@ export default function Services() {
                                 }`}
                               >
                                 <div className="overflow-hidden">
-                                  <p className="text-base md:text-lg max-w-3xl leading-relaxed text-brand-black/90">
+                                  <p className="text-base md:text-md max-w-3xl leading-relaxed text-brand-black/90">
                                     {service.content}
                                   </p>
 
