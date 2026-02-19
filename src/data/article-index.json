@@ -1,6 +1,27 @@
 {
   "articles": [
     {
+      "title": "5 Signs Your E-commerce Integration Is Failing (And How to Fix It)",
+      "subtitle": "How to Spot Integration Problems Before They Cost You Sales and Customer Trust",
+      "description": "Learn to identify the 5 warning signs that your e-commerce integration is failing. Quick diagnostic checklist for inventory sync issues, order delays, and data discrepancies—plus when to fix vs outsource.",
+      "date": "2026-02-19",
+      "author": "James Plant",
+      "image": "/img/articles/5-signs-ecommerce-integration-failing/integration-warning-header.jpg",
+      "tags": [
+        "E-commerce",
+        "Integration",
+        "Shopify",
+        "NetSuite",
+        "Troubleshooting",
+        "Celigo"
+      ],
+      "metadata": {
+        "title": "5 Signs Your E-commerce Integration Is Failing (And How to Fix It) | The Bearded Developer",
+        "description": "Learn to identify the 5 warning signs that your e-commerce integration is failing. Quick diagnostic checklist for inventory sync issues, order delays, and data discrepancies—plus when to fix vs outsource."
+      },
+      "path": "/resources/articles/5-signs-ecommerce-integration-failing"
+    },
+    {
       "title": "AI Development Tools for Small Business: Beyond ChatGPT",
       "subTitle": "Practical AI Tools That Actually Move the Needle for Small Business Operations",
       "description": "Discover powerful AI development tools beyond ChatGPT that can transform your small business operations, from customer service automation to code generation and data analysis.",
