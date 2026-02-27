@@ -657,7 +657,7 @@ export default function NetSuiteServicesPage() {
             </div>
 
             {/* Social Proof */}
-            <div className="mb-20">
+            {/* <div className="mb-20">
               <h2
                 className={`text-3xl md:text-4xl font-bold ${lexend.className} mb-6 text-center`}
               >
@@ -681,7 +681,7 @@ export default function NetSuiteServicesPage() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Local Coverage */}
             <div className="mb-20 bg-gray-50 rounded-lg p-8">

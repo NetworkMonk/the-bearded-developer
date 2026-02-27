@@ -331,17 +331,17 @@ const managedSupportTiers = [
 const bigCommerceProof = [
   {
     quote:
-      "Our BigCommerce checkout and product page issues were fixed fast, and we now have a predictable monthly release cadence instead of ad-hoc firefighting.",
-    company: "UK Home & Lifestyle Retailer",
+      "We had issues with stability and performance in our BigCommerce store that were causing lost sales and support tickets. The Bearded Developer quickly identified and resolved the underlying issues, improving our store's performance and customer experience.",
+    company: "Tool Retailer (BigCommerce)",
     outcome:
       "Stabilized checkout and reduced support tickets within the first month.",
   },
   {
     quote:
-      "The managed support retainer gave us a clear SLA and dedicated development time each month, which helped us launch feature updates without disrupting trade.",
-    company: "B2B Components Merchant (BigCommerce)",
+      "Using the support available from The Bearded Developer has been a game-changer for our BigCommerce store. We can focus on growing our business while they handle the technical side with expertise and reliability.",
+    company: "B2B Merchant (BigCommerce)",
     outcome:
-      "Delivered conversion-focused enhancements while maintaining day-to-day platform reliability.",
+      "Provided technical expertise and ongoing support that allowed the merchant to focus on growth while we handled maintenance, bug fixes, and feature development.",
   },
 ];
 

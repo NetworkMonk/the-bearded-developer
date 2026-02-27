@@ -87,6 +87,28 @@
       "path": "/resources/articles/beginners-guide-to-choosing-the-right-cms"
     },
     {
+      "title": "BigCommerce NetSuite Integration: Complete Guide for Growing Retailers",
+      "subtitle": "How to Connect Your BigCommerce Store to NetSuite and Keep Everything in Sync",
+      "description": "Learn how to integrate BigCommerce with NetSuite ERP for real-time inventory sync, automated order processing, and accurate financial reporting. Expert guidance on integration methods, costs, and best practices.",
+      "date": "2026-02-27",
+      "author": "James Plant",
+      "image": "/img/articles/bigcommerce-netsuite-integration-guide/integration-header.jpg",
+      "tags": [
+        "BigCommerce",
+        "NetSuite",
+        "Integration",
+        "ERP",
+        "E-commerce",
+        "Celigo"
+      ],
+      "metadata": {
+        "title": "BigCommerce NetSuite Integration: Complete Guide for Growing Retailers | The Bearded Developer",
+        "description": "Learn how to integrate BigCommerce with NetSuite ERP for real-time inventory sync, automated order processing, and accurate financial reporting. Expert guidance on integration methods, costs, and best practices.",
+        "robots": "index, follow"
+      },
+      "path": "/resources/articles/bigcommerce-netsuite-integration-guide"
+    },
+    {
       "title": "BigCommerce vs Shopify: Which E-commerce Platform is Right for Your Business?",
       "subTitle": "An Honest Comparison to Help You Choose the Right Platform for Your Store",
       "description": "Compare BigCommerce and Shopify feature-by-feature to find the best e-commerce platform for your business needs, budget, and growth plans.",
@@ -174,6 +196,28 @@
       "path": "/resources/articles/celigo-monitoring-best-practices"
     },
     {
+      "title": "Celigo vs MuleSoft: Which Integration Platform Is Right for Your Business?",
+      "subtitle": "A Plain-English Comparison to Help You Choose Without the Sales Pitch",
+      "description": "Compare Celigo and MuleSoft to find the right integration platform for your business. Honest, plain-English breakdown of costs, complexity, use cases, and which type of business suits each platform.",
+      "date": "2026-02-27",
+      "author": "James Plant",
+      "image": "/img/articles/celigo-vs-mulesoft-comparison/platform-comparison-header.jpg",
+      "tags": [
+        "Celigo",
+        "MuleSoft",
+        "Integration",
+        "iPaaS",
+        "Platform Comparison",
+        "Business Automation"
+      ],
+      "metadata": {
+        "title": "Celigo vs MuleSoft: Which Integration Platform Is Right for Your Business? | The Bearded Developer",
+        "description": "Compare Celigo and MuleSoft to find the right integration platform for your business. Honest, plain-English breakdown of costs, complexity, use cases, and which type of business suits each platform.",
+        "robots": "index, follow"
+      },
+      "path": "/resources/articles/celigo-vs-mulesoft-comparison"
+    },
+    {
       "title": "Choosing the Right Cloud Server Provider: A Simple Guide",
       "subTitle": "Keep It Simple: How to Pick the Perfect Cloud Server for Your Business",
       "description": "A straightforward guide to choosing the right cloud server provider for your business needs, with practical tips and recommendations to avoid complexity.",
@@ -193,6 +237,28 @@
         "robots": "index, follow"
       },
       "path": "/resources/articles/choosing-the-right-cloud-server-provider"
+    },
+    {
+      "title": "What Is a Digital Support Retainer (And Does Your Business Need One)?",
+      "subtitle": "The Honest Guide to Ongoing Tech Support — What You Actually Get and Whether It Is Worth It",
+      "description": "Understand what a digital support retainer is, what it includes, and whether your business would benefit from one. Plain-English guide covering costs, what to look for, and how retainers compare to one-off fixes.",
+      "date": "2026-02-27",
+      "author": "James Plant",
+      "image": "/img/articles/digital-support-retainer-guide/retainer-header.jpg",
+      "tags": [
+        "Support Retainer",
+        "Digital Services",
+        "Managed Services",
+        "Business Technology",
+        "Tech Support",
+        "E-commerce"
+      ],
+      "metadata": {
+        "title": "What Is a Digital Support Retainer (And Does Your Business Need One)? | The Bearded Developer",
+        "description": "Understand what a digital support retainer is, what it includes, and whether your business would benefit from one. Plain-English guide covering costs, what to look for, and how retainers compare to one-off fixes.",
+        "robots": "index, follow"
+      },
+      "path": "/resources/articles/digital-support-retainer-guide"
     },
     {
       "title": "Mail Migration in Batches",
