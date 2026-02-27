@@ -10,11 +10,11 @@ import About from "@/components/sections/About";
 export const metadata = {
   title: "Shopify & BigCommerce Developer UK | NetSuite Integration Expert",
   description:
-    "Shopify & BigCommerce developer specialising in custom integrations, NetSuite connectivity & API development. Free consultation available.",
+    "Expert BigCommerce & Shopify developer based in Essex, UK. Bespoke software, NetSuite integrations, managed support & more. Free consultation - get in touch today.",
   openGraph: {
     title: "Shopify & BigCommerce Developer UK | NetSuite Integration Expert",
     description:
-      "Shopify & BigCommerce developer specialising in custom integrations, NetSuite connectivity & API development. Free consultation available.",
+      "Expert BigCommerce & Shopify developer based in Essex, UK. Bespoke software, NetSuite integrations, managed support & more. Free consultation - get in touch today.",
     type: "website",
     url: "https://www.thebeardeddeveloper.co.uk/",
     images: [
@@ -36,7 +36,7 @@ export default function Home() {
     image:
       "https://www.thebeardeddeveloper.co.uk/img/the-bearded-developer.png",
     description:
-      "Shopify & BigCommerce developer specialising in custom integrations, NetSuite connectivity & API development for UK businesses.",
+      "Expert BigCommerce & Shopify developer based in Essex, UK. Bespoke software, NetSuite integrations, managed support & more. Free consultation - get in touch today.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Braintree",

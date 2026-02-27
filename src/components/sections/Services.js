@@ -19,16 +19,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const services = [
   {
-    title: "Shopify",
+    title: "Shopify Development and Ongoing Support",
     content:
       "As a Shopify Certified Partner, we build high-converting storefronts, custom themes, and robust app integrations tailored to your operations.",
-    highlights: ["Theme Development", "App Integrations", "Store Optimisation"],
+    highlights: [
+      "Theme Development",
+      "Support",
+      "App Integrations",
+      "Store Optimisation",
+    ],
     logo: faShopify,
     link: "/services/shopify",
     bgColor: "bg-orange-100",
   },
   {
-    title: "Celigo",
+    title: "Celigo Integration Services",
     content:
       "We deliver Celigo integration services from architecture through ongoing managed support, helping your business automate critical cross-platform workflows.",
     highlights: ["Integration Design", "Managed Support", "Error Monitoring"],
@@ -37,7 +42,7 @@ const services = [
     bgColor: "bg-emerald-100",
   },
   {
-    title: "AI",
+    title: "AI and Automation Solutions",
     content:
       "From custom AI integrations to practical automation workflows, we help your team reduce repetitive work and move faster with confidence.",
     highlights: ["Automation", "LLM Integrations", "Process Improvement"],
@@ -46,16 +51,21 @@ const services = [
     bgColor: "bg-violet-100",
   },
   {
-    title: "BigCommerce",
+    title: "BigCommerce Development and Ongoing Support",
     content:
       "We help you get the most from BigCommerce with scalable architecture, clean integrations, and thoughtful implementation for growth.",
-    highlights: ["B2B Features", "API-first Build", "Multi-channel Commerce"],
+    highlights: [
+      "B2B Features",
+      "Support",
+      "API-first Build",
+      "Multi-channel Commerce",
+    ],
     logo: faCartShopping,
     link: "/services/bigcommerce",
     bgColor: "bg-amber-100",
   },
   {
-    title: "Integrations",
+    title: "Integration Services",
     content:
       "When systems need to talk, we connect them reliably so your data flows cleanly and your team avoids manual rework.",
     highlights: ["System Connectivity", "Data Flows", "Operational Efficiency"],
@@ -64,7 +74,7 @@ const services = [
     bgColor: "bg-rose-100",
   },
   {
-    title: "NetSuite",
+    title: "NetSuite Customisation and Development",
     content:
       "We tailor NetSuite to your business with custom workflows, scripts, and form logic so your ERP works the way your team actually operates.",
     highlights: ["SuiteScript", "Workflow Customisation", "Performance Tuning"],
@@ -96,7 +106,7 @@ export default function Services() {
                 className={`text-5xl md:text-6xl font-bold in-up ${lexend.className}`}
                 style={{ animationDelay: "0.25s" }}
               >
-                What We Do
+                Our Web & E-commerce Development Services
               </h2>
               <p
                 className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up max-w-xl`}

@@ -29,17 +29,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata = {
-  title:
-    "Celigo Integration Services | Celigo Technical Partner | Essex & UK | The Bearded Developer",
+  title: "Celigo Managed Support & Integration Services | Technical Partner UK",
   description:
-    "Expert Celigo integration services from a Celigo Technical Partner. Specializing in NetSuite integrations, managed support, error troubleshooting, and flow optimization across Essex and the UK.",
+    "Expert Celigo integration and managed support services from a certified Celigo Technical Partner. Monthly support packages from £800/month. Essex-based, UK-wide.",
   keywords:
     "celigo integration, celigo partner, celigo netsuite, celigo support, celigo managed services, integration platform, ipaas, celigo essex, celigo uk",
   openGraph: {
     title:
-      "Celigo Integration Services | Celigo Technical Partner | Essex & UK",
+      "Celigo Managed Support & Integration Services | Technical Partner UK",
     description:
-      "Expert Celigo integration services including setup, troubleshooting, optimization, and managed support. Celigo Technical Partner serving businesses across the UK.",
+      "Expert Celigo integration and managed support services from a certified Celigo Technical Partner. Monthly support packages from £800/month. Essex-based, UK-wide.",
     type: "website",
   },
 };
@@ -282,7 +281,7 @@ export default function CeligoServicesPage() {
               <h1
                 className={`text-5xl md:text-6xl font-bold ${lexend.className} mb-6`}
               >
-                Celigo Integration Services
+                Celigo Integration & Managed Support Services
               </h1>
               <p className="text-xl md:text-2xl font-semibold mb-8 max-w-4xl mx-auto">
                 Expert Celigo integration services from a Celigo Technical
@@ -311,6 +310,71 @@ export default function CeligoServicesPage() {
                   />
                   UK Coverage
                 </span>
+              </div>
+            </div>
+
+            {/* Managed Support Pricing Summary */}
+            <div className="mb-20 bg-white rounded-lg shadow-lg p-8 md:p-10 border border-blue-100">
+              <h2
+                className={`text-3xl md:text-4xl font-bold ${lexend.className} mb-4 text-center`}
+              >
+                Managed Celigo Support Packages from £800/month
+              </h2>
+              <p className="text-center text-lg mb-8 max-w-3xl mx-auto">
+                Compare packages quickly by SLA and included development hours,
+                then jump to full package details below.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-blue-50 rounded-lg p-6 text-center">
+                  <h3 className={`text-xl font-bold ${lexend.className} mb-2`}>
+                    Essential
+                  </h3>
+                  <p className="text-2xl font-bold text-blue-700 mb-2">
+                    £800/mo
+                  </p>
+                  <p className="text-sm text-gray-700">Next business day SLA</p>
+                  <p className="text-sm text-gray-700">
+                    4 hours development/month
+                  </p>
+                </div>
+                <div className="bg-green-50 rounded-lg p-6 text-center border-2 border-green-200">
+                  <h3 className={`text-xl font-bold ${lexend.className} mb-2`}>
+                    Standard
+                  </h3>
+                  <p className="text-2xl font-bold text-green-700 mb-2">
+                    £1,500/mo
+                  </p>
+                  <p className="text-sm text-gray-700">4 hour SLA</p>
+                  <p className="text-sm text-gray-700">
+                    8 hours development/month
+                  </p>
+                </div>
+                <div className="bg-purple-50 rounded-lg p-6 text-center">
+                  <h3 className={`text-xl font-bold ${lexend.className} mb-2`}>
+                    Enterprise
+                  </h3>
+                  <p className="text-2xl font-bold text-purple-700 mb-2">
+                    £2,500+/mo
+                  </p>
+                  <p className="text-sm text-gray-700">1 hour SLA</p>
+                  <p className="text-sm text-gray-700">
+                    20 hours development/month
+                  </p>
+                </div>
+              </div>
+              <div className="text-center flex flex-wrap justify-center gap-4">
+                <Link
+                  href="#managed-support-packages"
+                  className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors inline-block"
+                >
+                  View Full Package Details
+                </Link>
+                <Link
+                  href="/contact"
+                  className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors inline-block border-2 border-blue-600"
+                >
+                  Get a Managed Celigo Support Quote
+                </Link>
               </div>
             </div>
 
@@ -365,7 +429,10 @@ export default function CeligoServicesPage() {
             </div>
 
             {/* Managed Services Section */}
-            <div className="mb-20 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-8 md:p-12">
+            <div
+              id="managed-support-packages"
+              className="mb-20 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-8 md:p-12"
+            >
               <h2
                 className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-6 text-center`}
               >
@@ -433,7 +500,7 @@ export default function CeligoServicesPage() {
                   href="/contact"
                   className="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-colors inline-block text-lg"
                 >
-                  Schedule Free Consultation
+                  Get a Managed Celigo Support Quote
                 </Link>
               </div>
             </div>
@@ -636,7 +703,7 @@ export default function CeligoServicesPage() {
                         href="/contact"
                         className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-block w-full text-center"
                       >
-                        Schedule Free Consultation
+                        Get a Managed Celigo Support Quote
                       </Link>
                       <Link
                         href="/resources/articles/celigo-error-troubleshooting-guide"
@@ -792,7 +859,7 @@ export default function CeligoServicesPage() {
               </div>
             </div>
           </section>
-          <SecondaryCTA title="Ready to Optimize Your Celigo Integrations?" />
+          <SecondaryCTA title="Get a Managed Celigo Support Quote" />
         </Container>
       </Section>
     </div>

@@ -42,6 +42,22 @@ export default function ArticlePage() {
             or the hundredth, these techniques will help you resolve issues
             faster and prevent future failures.
           </p>
+          <div className="mt-6 bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+            <p className="text-blue-900 font-semibold">
+              Need proactive support instead of reactive firefighting?
+            </p>
+            <p className="mt-2 text-blue-800 text-sm">
+              Explore our{" "}
+              <Link
+                href="/services/celigo"
+                className="text-blue-700 hover:underline font-semibold"
+              >
+                managed Celigo support packages
+              </Link>{" "}
+              for SLA-backed monitoring, troubleshooting, and ongoing flow
+              optimization.
+            </p>
+          </div>
           <div>
             <Image
               src="/img/articles/celigo-error-troubleshooting-guide/troubleshooting-header.jpg"
@@ -1119,7 +1135,14 @@ export default function ArticlePage() {
             Need help with a current Celigo error or want to discuss proactive
             monitoring services? Contact us for expert Celigo troubleshooting
             and managed integration support that keeps your business running
-            smoothly.
+            smoothly. If you need ongoing cover, review our{" "}
+            <Link
+              href="/services/celigo"
+              className="text-blue-600 hover:underline font-semibold"
+            >
+              Celigo managed support services
+            </Link>
+            .
           </p>
         </div>
         <aside className="md:col-span-1 bg-gray-100 p-6 rounded-lg mt-10 md:mt-0 md:sticky top-10">

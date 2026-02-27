@@ -65,7 +65,7 @@ export default async function Achievements() {
                 className={`text-5xl md:text-6xl font-bold in-up ${lexend.className}`}
                 style={{ animationDelay: "0.25s" }}
               >
-                Who We&apos;ve Worked With
+                Proudly Working With These Clients
               </h2>
               <p
                 className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up max-w-xl`}

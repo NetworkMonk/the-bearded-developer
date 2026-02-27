@@ -17,10 +17,10 @@ export default async function About() {
               <h2
                 className={`text-5xl md:text-6xl font-bold in-up ${lexend.className}`}
               >
-                Who We Are
+                Our Story
               </h2>
               <p
-                className="mt-8 mb-2 opacity-80 flex items-start font-medium in-up text-lg"
+                className="mt-8 mb-2 opacity-80 flex items-start font-medium in-up md:text-lg"
                 style={{ animationDelay: ".5s" }}
               >
                 <FontAwesomeIcon

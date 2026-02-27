@@ -920,7 +920,7 @@ export default function ArticlePage() {
                 href="/services/celigo"
                 className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-block"
               >
-                View Celigo Services
+                Celigo managed support services
               </Link>
               <Link
                 href="/contact"
@@ -956,7 +956,7 @@ export default function ArticlePage() {
               href="/services/celigo"
               className="text-blue-600 hover:underline font-semibold"
             >
-              Celigo integration services page
+              managed Celigo support packages
             </Link>
             .
           </p>
@@ -1036,7 +1036,7 @@ export default function ArticlePage() {
               href="/services/celigo"
               className="text-blue-600 hover:underline"
             >
-              View our managed services
+              Celigo managed support services
             </a>{" "}
             or{" "}
             <a href="/contact" className="text-blue-600 hover:underline">

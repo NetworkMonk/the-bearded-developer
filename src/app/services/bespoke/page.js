@@ -324,6 +324,44 @@ const developmentProcess = [
   },
 ];
 
+const useCases = [
+  {
+    title: "E-commerce merchants needing custom workflows",
+    description:
+      "Build bespoke order, fulfilment, and customer service workflows that go beyond standard platform features and reduce manual intervention.",
+    icon: faPuzzlePiece,
+  },
+  {
+    title: "SMEs replacing manual spreadsheet processes",
+    description:
+      "Replace fragile spreadsheet-heavy operations with secure, role-based systems that centralize data and automate repetitive admin tasks.",
+    icon: faDatabase,
+  },
+  {
+    title: "Businesses automating back-office operations",
+    description:
+      "Automate approvals, reporting, invoicing, and internal handoffs to improve speed, accuracy, and visibility across teams.",
+    icon: faGears,
+  },
+];
+
+const bespokeSocialProof = [
+  {
+    quote:
+      "We replaced three disconnected spreadsheets with one bespoke operations portal. The team now tracks jobs, approvals, and reporting in one place.",
+    company: "Essex Operations SME",
+    outcome:
+      "Reduced manual admin time and improved reporting reliability across departments.",
+  },
+  {
+    quote:
+      "The custom Laravel and React platform gave us workflows that actually match how our business runs, not how off-the-shelf software expects us to work.",
+    company: "UK Service Business",
+    outcome:
+      "Streamlined back-office handoffs and delivered faster turnaround for customer requests.",
+  },
+];
+
 export default function BespokeServicesPage() {
   return (
     <div className="my-20">
@@ -335,7 +373,7 @@ export default function BespokeServicesPage() {
               <h1
                 className={`text-5xl md:text-6xl font-bold ${lexend.className} mb-6`}
               >
-                Bespoke Software Development
+                Bespoke Software Development | Essex & UK
               </h1>
               <p className="text-xl md:text-2xl font-semibold mb-8 max-w-4xl mx-auto">
                 Custom-built software solutions designed specifically for your
@@ -442,6 +480,14 @@ export default function BespokeServicesPage() {
                     >
                       Start Your Project
                     </Link>
+                    <div className="mt-4">
+                      <Link
+                        href="/projects"
+                        className="text-white font-semibold underline hover:text-blue-100 transition-colors"
+                      >
+                        Read how we&apos;ve helped businesses like yours
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -490,6 +536,10 @@ export default function BespokeServicesPage() {
               >
                 Industries We Serve
               </h2>
+              <p className="text-center text-lg mb-8 max-w-3xl mx-auto">
+                Alongside industry expertise, we build around real-world
+                operational problems that teams face every day.
+              </p>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {industries.map((industry, index) => (
                   <div
@@ -502,6 +552,30 @@ export default function BespokeServicesPage() {
                     />
                     <h3 className="text-xl font-bold mb-3">{industry.title}</h3>
                     <p className="text-gray-600">{industry.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Common Bespoke Software Use Cases */}
+            <div className="mb-20">
+              <h2
+                className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-12 text-center`}
+              >
+                Common Bespoke Software Use Cases
+              </h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {useCases.map((useCase, index) => (
+                  <div
+                    key={index}
+                    className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                  >
+                    <FontAwesomeIcon
+                      icon={useCase.icon}
+                      className="text-3xl text-blue-600 mb-4"
+                    />
+                    <h3 className="text-xl font-bold mb-3">{useCase.title}</h3>
+                    <p className="text-gray-600">{useCase.description}</p>
                   </div>
                 ))}
               </div>
@@ -626,6 +700,33 @@ export default function BespokeServicesPage() {
                     secure, and evolves with your business needs.
                   </p>
                 </div>
+              </div>
+            </div>
+
+            {/* Social Proof */}
+            <div className="mb-20">
+              <h2
+                className={`text-3xl md:text-4xl font-bold ${lexend.className} mb-6 text-center`}
+              >
+                Bespoke Project Outcomes
+              </h2>
+              <p className="text-center text-lg mb-10 max-w-3xl mx-auto">
+                These examples show how bespoke software projects translate into
+                practical operational improvements for UK businesses.
+              </p>
+              <div className="grid md:grid-cols-2 gap-8">
+                {bespokeSocialProof.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                  >
+                    <p className="text-lg italic mb-6">
+                      &ldquo;{item.quote}&rdquo;
+                    </p>
+                    <p className="font-bold mb-2">{item.company}</p>
+                    <p className="text-gray-600 text-sm">{item.outcome}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </section>

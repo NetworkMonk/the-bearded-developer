@@ -37,18 +37,84 @@ import {
 
 export const metadata = {
   title:
-    "NetSuite Development & Customization | Essex & UK | The Bearded Developer",
+    "NetSuite Development & Managed Support | Essex & UK | The Bearded Developer",
   description:
-    "Expert NetSuite development and customization services in Essex and across the UK. SuiteScript development, workflows, forms, and integrations for optimized business processes.",
+    "Expert NetSuite development, customization and managed support services in Essex and across the UK. SuiteScript, workflows, integrations, and monthly support retainers. Free consultation.",
   keywords:
     "netsuite development, netsuite customization, suitescript, netsuite essex, netsuite consultant, erp customization uk, netsuite integration",
   openGraph: {
-    title: "Professional NetSuite Development & Customization | Essex & UK",
+    title: "NetSuite Development & Managed Support | Essex & UK",
     description:
-      "Optimize your NetSuite ERP with custom development, workflows, and integrations. Expert SuiteScript developers in Essex.",
+      "Expert NetSuite development, customization and managed support services in Essex and across the UK. SuiteScript, workflows, integrations, and monthly support retainers. Free consultation.",
     type: "website",
   },
 };
+
+const managedSupportTiers = [
+  {
+    name: "Essential Support",
+    price: "From £900/month",
+    icon: faShield,
+    sla: "Next business day response",
+    developmentHours: "6 development hours/month",
+    features: [
+      "Proactive NetSuite monitoring and issue triage",
+      "SuiteScript bug fixes and workflow corrections",
+      "Monthly health review and backlog planning",
+      "Priority support queue for production issues",
+    ],
+    ideal:
+      "Best for teams that need reliable Netsuite support UK coverage for day-to-day stability.",
+  },
+  {
+    name: "Growth Support",
+    price: "From £1,800/month",
+    icon: faChartLine,
+    sla: "4-hour response for standard business-critical issues",
+    developmentHours: "12 development hours/month",
+    features: [
+      "Everything in Essential Support",
+      "Expanded delivery capacity for enhancements",
+      "Saved search and reporting optimisation",
+      "Integration incident management and vendor liaison",
+    ],
+    ideal:
+      "Best for scaling teams that need Netsuite managed services with regular monthly delivery.",
+    popular: true,
+  },
+  {
+    name: "Enterprise Support",
+    price: "From £3,000/month",
+    icon: faRocket,
+    sla: "1-hour response + emergency out-of-hours support available",
+    developmentHours: "24 development hours/month",
+    features: [
+      "Everything in Growth Support",
+      "Highest monthly development allocation",
+      "Advanced performance and integration optimisation",
+      "Escalation-ready support for complex environments",
+    ],
+    ideal:
+      "Best for enterprise teams where NetSuite uptime and rapid issue response are mission-critical.",
+  },
+];
+
+const netSuiteSocialProof = [
+  {
+    quote:
+      "We moved from reactive fixes to a structured monthly NetSuite support model, and our operations team now has predictable turnaround for both bugs and improvements.",
+    company: "UK Wholesale Distributor",
+    outcome:
+      "Reduced recurring script issues and delivered faster month-end reporting improvements.",
+  },
+  {
+    quote:
+      "The custom SuiteScript and workflow changes removed manual rekeying across finance and fulfilment. The support retainer keeps everything stable as we grow.",
+    company: "Essex Manufacturing Business",
+    outcome:
+      "Improved process accuracy and released internal admin time for higher-value work.",
+  },
+];
 
 const services = [
   {
@@ -224,12 +290,12 @@ export default function NetSuiteServicesPage() {
               <h1
                 className={`text-5xl md:text-6xl font-bold ${lexend.className} mb-6`}
               >
-                NetSuite Development & Customization
+                NetSuite Development & Customization Services
               </h1>
               <p className="text-xl md:text-2xl font-semibold mb-8 max-w-4xl mx-auto">
-                Expert NetSuite customization and development services across
-                Essex and the UK. Optimize your ERP with custom scripts,
-                workflows, and integrations tailored to your business needs.
+                Expert NetSuite customization services across Essex and the UK.
+                Optimize your ERP with custom scripts, workflows, integrations,
+                and ongoing support tailored to your business needs.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <span className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full font-semibold">
@@ -330,7 +396,7 @@ export default function NetSuiteServicesPage() {
                       href="/contact"
                       className="bg-white text-orange-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-block"
                     >
-                      Get NetSuite Consultation
+                      Get a NetSuite Support Quote
                     </Link>
                   </div>
                 </div>
@@ -370,7 +436,7 @@ export default function NetSuiteServicesPage() {
               <h2
                 className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-12 text-center`}
               >
-                Our NetSuite Services
+                Our NetSuite Customization Services
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
                 {services.map((service, index) => (
@@ -396,6 +462,71 @@ export default function NetSuiteServicesPage() {
                         </li>
                       ))}
                     </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Managed Support / Retainers */}
+            <div className="mb-20 bg-gradient-to-br from-orange-50 to-red-50 rounded-lg p-8 md:p-12">
+              <h2
+                className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-6 text-center`}
+              >
+                NetSuite Managed Support
+              </h2>
+              <p className="text-center text-lg mb-12 max-w-4xl mx-auto">
+                Ongoing NetSuite support UK packages for businesses that need
+                reliable issue response, proactive monitoring, and monthly
+                development capacity. Our Netsuite managed services retainers
+                are designed for teams that want predictable support and
+                delivery.
+              </p>
+              <div className="grid md:grid-cols-3 gap-8">
+                {managedSupportTiers.map((tier, index) => (
+                  <div
+                    key={index}
+                    className={`bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow relative ${
+                      tier.popular ? "ring-4 ring-orange-500" : ""
+                    }`}
+                  >
+                    {tier.popular && (
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold">
+                          Most Popular
+                        </span>
+                      </div>
+                    )}
+                    <div className="text-center mb-6">
+                      <FontAwesomeIcon
+                        icon={tier.icon}
+                        className="text-4xl text-orange-600 mb-4"
+                      />
+                      <h3
+                        className={`text-2xl font-bold ${lexend.className} mb-2`}
+                      >
+                        {tier.name}
+                      </h3>
+                      <div className="text-3xl font-bold text-orange-600 mb-2">
+                        {tier.price}
+                      </div>
+                      <p className="text-sm font-semibold text-gray-900">
+                        {tier.developmentHours}
+                      </p>
+                      <p className="text-sm text-gray-600 mt-2">{tier.sla}</p>
+                    </div>
+                    <ul className="space-y-3 mb-6">
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start">
+                          <span className="text-green-500 mr-2 mt-1">✓</span>
+                          <span className="text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="border-t pt-4 mt-4">
+                      <p className="text-sm text-gray-600 italic">
+                        {tier.ideal}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -525,6 +656,33 @@ export default function NetSuiteServicesPage() {
               </div>
             </div>
 
+            {/* Social Proof */}
+            <div className="mb-20">
+              <h2
+                className={`text-3xl md:text-4xl font-bold ${lexend.className} mb-6 text-center`}
+              >
+                NetSuite Client Outcomes
+              </h2>
+              <p className="text-center text-lg mb-10 max-w-3xl mx-auto">
+                NetSuite ongoing support should improve reliability and release
+                velocity. Here are examples from recent delivery work.
+              </p>
+              <div className="grid md:grid-cols-2 gap-8">
+                {netSuiteSocialProof.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+                  >
+                    <p className="text-lg italic mb-6">
+                      &ldquo;{item.quote}&rdquo;
+                    </p>
+                    <p className="font-bold mb-2">{item.company}</p>
+                    <p className="text-gray-600 text-sm">{item.outcome}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Local Coverage */}
             <div className="mb-20 bg-gray-50 rounded-lg p-8">
               <h2
@@ -544,7 +702,7 @@ export default function NetSuiteServicesPage() {
               </div>
             </div>
           </section>
-          <SecondaryCTA title="Ready to Optimize Your NetSuite System?" />
+          <SecondaryCTA title="Discuss Your NetSuite Project" />
         </Container>
       </Section>
     </div>

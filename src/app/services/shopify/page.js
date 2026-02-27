@@ -24,18 +24,68 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata = {
-  title: "Shopify Developer & Partner | Essex & UK | The Bearded Developer",
+  title:
+    "Shopify Developer Essex | Shopify Support & Development UK | The Bearded Developer",
   description:
-    "Expert Shopify developers in Essex and across the UK. Shopify Plus, custom themes, app development, migrations, and POS solutions. Certified Shopify partners with proven results.",
+    "Expert Shopify developer Essex services and UK-wide support. Shopify Plus, custom themes, app development, migrations, and managed support retainers from £900/month.",
   keywords:
     "shopify developer, shopify partner, shopify plus, shopify essex, shopify developer uk, ecommerce development, shopify themes, shopify apps",
   openGraph: {
-    title: "Professional Shopify Development Services | Essex & UK",
+    title: "Shopify Developer Essex | Shopify Support & Development UK",
     description:
-      "Transform your business with expert Shopify development. Custom stores, Shopify Plus solutions, and ongoing support from certified partners.",
+      "Expert Shopify developer Essex services and UK-wide support. Shopify Plus, custom themes, app development, migrations, and managed support retainers from £900/month.",
     type: "website",
   },
 };
+
+const managedSupportTiers = [
+  {
+    name: "Essential Support",
+    price: "From £900/month",
+    icon: faShield,
+    sla: "24-hour response SLA for standard issues",
+    developmentHours: "8 development hours/month",
+    features: [
+      "Store monitoring and issue triage",
+      "Bug fixes and theme maintenance",
+      "Small feature enhancements",
+      "Priority support for trading issues",
+    ],
+    ideal:
+      "For established Shopify stores that need dependable monthly support coverage.",
+  },
+  {
+    name: "Growth Support",
+    price: "From £1,900/month",
+    icon: faChartLine,
+    sla: "Same-day response for standard business-critical issues",
+    developmentHours: "16 development hours/month",
+    features: [
+      "Everything in Essential Support",
+      "Expanded monthly development capacity",
+      "Conversion and checkout optimisation backlog",
+      "Integration and app compatibility management",
+    ],
+    ideal:
+      "For scaling merchants that need ongoing improvements and faster support response.",
+    popular: true,
+  },
+  {
+    name: "Scale Support",
+    price: "From £3,200/month",
+    icon: faRocket,
+    sla: "4-hour response for high-priority issues + emergency out-of-hours support available",
+    developmentHours: "28 development hours/month",
+    features: [
+      "Everything in Growth Support",
+      "Highest monthly delivery allocation",
+      "Incident escalation for complex platform issues",
+      "Ongoing roadmap delivery with support coverage",
+    ],
+    ideal:
+      "For high-volume Shopify and Shopify Plus businesses needing rapid support and delivery.",
+  },
+];
 
 const services = [
   {
@@ -168,11 +218,12 @@ export default function ShopifyServicesPage() {
               <h1
                 className={`text-5xl md:text-6xl font-bold ${lexend.className} mb-6`}
               >
-                Expert Shopify Development Services
+                Expert Shopify Development Services | Essex & UK
               </h1>
               <p className="text-xl md:text-2xl font-semibold mb-8 max-w-4xl mx-auto">
+                Looking for a Shopify developer Essex businesses trust?
                 Certified Shopify Partners delivering custom e-commerce
-                solutions across Essex and the UK. From startup stores to
+                solutions and Shopify support UK-wide. From startup stores to
                 enterprise Shopify Plus implementations.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -273,7 +324,7 @@ export default function ShopifyServicesPage() {
                       href="/contact"
                       className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-block"
                     >
-                      Get Free Consultation
+                      Get a Free Shopify Consultation
                     </Link>
                   </div>
                 </div>
@@ -311,6 +362,70 @@ export default function ShopifyServicesPage() {
                         </li>
                       ))}
                     </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Managed Support / Retainers */}
+            <div className="mb-20 bg-gradient-to-br from-green-50 to-blue-50 rounded-lg p-8 md:p-12">
+              <h2
+                className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-6 text-center`}
+              >
+                Shopify Managed Support & Maintenance Retainers
+              </h2>
+              <p className="text-center text-lg mb-12 max-w-4xl mx-auto">
+                Ongoing Shopify maintenance service for UK merchants that need
+                proactive monitoring, bug fixes, feature development, and
+                priority support from a dedicated Shopify developer retainer
+                team.
+              </p>
+              <div className="grid md:grid-cols-3 gap-8">
+                {managedSupportTiers.map((tier, index) => (
+                  <div
+                    key={index}
+                    className={`bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow relative ${
+                      tier.popular ? "ring-4 ring-green-500" : ""
+                    }`}
+                  >
+                    {tier.popular && (
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-bold">
+                          Most Popular
+                        </span>
+                      </div>
+                    )}
+                    <div className="text-center mb-6">
+                      <FontAwesomeIcon
+                        icon={tier.icon}
+                        className="text-4xl text-green-600 mb-4"
+                      />
+                      <h3
+                        className={`text-2xl font-bold ${lexend.className} mb-2`}
+                      >
+                        {tier.name}
+                      </h3>
+                      <div className="text-3xl font-bold text-green-600 mb-2">
+                        {tier.price}
+                      </div>
+                      <p className="text-sm font-semibold text-gray-900">
+                        {tier.developmentHours}
+                      </p>
+                      <p className="text-sm text-gray-600 mt-2">{tier.sla}</p>
+                    </div>
+                    <ul className="space-y-3 mb-6">
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start">
+                          <span className="text-green-500 mr-2 mt-1">✓</span>
+                          <span className="text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="border-t pt-4 mt-4">
+                      <p className="text-sm text-gray-600 italic">
+                        {tier.ideal}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -441,7 +556,7 @@ export default function ShopifyServicesPage() {
               </div>
             </div>
           </section>
-          <SecondaryCTA title="Ready to Transform Your E-commerce Business?" />
+          <SecondaryCTA title="Get a Free Shopify Consultation" />
         </Container>
       </Section>
     </div>

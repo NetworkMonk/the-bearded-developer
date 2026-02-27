@@ -118,7 +118,8 @@ export default function ArticlePage() {
                 <p className="mt-1 text-sm">
                   Manages FBA (Fulfilled by Amazon) and FBM (Fulfilled by
                   Merchant) orders, inventory synchronization across multiple
-                  marketplaces, and settlement report reconciliation.
+                  marketplaces, and settlement report reconciliation. import
+                  Link from "next/link";
                 </p>
               </div>
               <div className="border-l-4 border-purple-500 pl-4 text-purple-800">
@@ -145,6 +146,21 @@ export default function ArticlePage() {
             Each connector typically includes 80-90% of the functionality most
             businesses need out of the box. The remaining 10-20% can be
             customized using Celigo&apos;s scripting capabilities, giving you
+            <div className="mt-6 bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+              <p className="text-blue-900 font-semibold">
+                Planning a Celigo rollout and need ongoing technical cover?
+              </p>
+              <p className="mt-2 text-blue-800 text-sm">
+                See our{" "}
+                <Link
+                  href="/services/celigo"
+                  className="text-blue-700 hover:underline font-semibold"
+                >
+                  Celigo managed support services
+                </Link>{" "}
+                for SLA-backed monitoring, troubleshooting, and optimization.
+              </p>
+            </div>
             the best of both worlds: rapid deployment with flexibility for
             unique requirements.
           </p>

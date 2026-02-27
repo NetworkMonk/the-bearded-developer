@@ -22,10 +22,11 @@ export default function Title() {
                       <div className="flex-1 flex items-center pt-20 pb-10 xl:pb-0 relative">
                         <div>
                           <h1
-                            className={`text-6xl md:text-7xl font-bold in-up text-center ${lexend.className}`}
+                            className={`text-4xl md:text-6xl font-bold in-up text-center ${lexend.className}`}
                             style={{ animationDelay: "0s" }}
                           >
-                            The Bearded Developer
+                            BigCommerce, Shopify & Bespoke Software Developer
+                            Essex & UK
                           </h1>
                           <Image
                             src={beard}
@@ -35,11 +36,12 @@ export default function Title() {
                             priority={true}
                           />
                           <h2
-                            className={`text-2xl md:text-4xl font-medium mt-10 in-up text-center mx-auto max-w-2xl`}
+                            className={`text-lg md:text-xl font-medium mt-10 in-up text-center mx-auto max-w-2xl`}
                             style={{ animationDelay: "1s" }}
                           >
-                            Your Web Application Development and Technology
-                            Partner.
+                            Helping UK businesses build better e-commerce
+                            stores, automate their operations, and grow with 20+
+                            years of hands-on development experience.
                           </h2>
                           <div
                             className="mt-20 in-up text-center flex justify-center"
