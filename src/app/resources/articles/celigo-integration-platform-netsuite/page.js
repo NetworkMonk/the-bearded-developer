@@ -3,6 +3,7 @@ import article from "./meta.json";
 import ArticleContainer from "@/components/articles/ArticleContainer";
 import { lexend } from "@/app/fonts";
 import CodeBlock from "@/components/resources/example-components/CodeBlock";
+import Link from "next/link";
 
 export const metadata = {
   title: article.metadata.title,
