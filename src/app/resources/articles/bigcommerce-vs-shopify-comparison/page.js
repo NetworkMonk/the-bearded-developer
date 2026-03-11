@@ -9,6 +9,70 @@ export const metadata = {
   description: article.metadata.description,
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Which is cheaper, BigCommerce or Shopify?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Both start at $39/month, but BigCommerce has zero transaction fees while Shopify charges 2.4-2.9% + 30¢ per transaction. For a store doing $50k/month, BigCommerce saves approximately $1,200/month in transaction fees. However, Shopify may require more paid apps, adding $100-300/month.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is BigCommerce better than Shopify for SEO?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "BigCommerce has historically offered better built-in SEO features like granular meta tag control and automatic microdata. However, Shopify has closed the gap significantly. Both platforms can rank well with proper optimization - the SEO difference is minimal with proper setup.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I migrate from Shopify to BigCommerce?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, migration is possible but requires careful planning. You'll need to transfer product data, preserve SEO rankings with 301 redirects, rebuild custom features, and handle customer data migration. Professional migration services typically take 4-8 weeks depending on store complexity.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which platform is easier for beginners?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Shopify is generally easier for beginners with its more intuitive interface and simpler onboarding. BigCommerce offers more built-in features but has a steeper learning curve. If you're launching your first store and want to get running quickly, Shopify has the advantage.",
+      },
+    },
+  ],
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "BigCommerce vs Shopify 2026: UK Developer Comparison",
+  image:
+    "https://www.thebeardeddeveloper.co.uk/img/articles/bigcommerce-vs-shopify-comparison/platform-comparison-header.jpg",
+  author: {
+    "@type": "Person",
+    name: "James Plant",
+    url: "https://www.thebeardeddeveloper.co.uk",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "The Bearded Developer",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.thebeardeddeveloper.co.uk/img/the-bearded-developer.png",
+    },
+  },
+  datePublished: "2026-02-02",
+  dateModified: "2026-02-02",
+  description:
+    "Real comparison from a developer who builds on both. Pricing, features, scalability, hidden costs. No affiliate BS.",
+};
+
 export default function ArticlePage() {
   return (
     <ArticleContainer article={article}>
@@ -18,6 +82,13 @@ export default function ArticlePage() {
             BigCommerce vs Shopify: Which E-commerce Platform is Right for Your
             Business?
           </h2>
+          <p className="mt-6 bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+            <strong>Updated February 2026:</strong> This comparison reflects
+            current pricing, features, and real-world experience from building
+            and migrating stores throughout 2025-2026. Unlike affiliate-driven
+            comparisons, I have no financial incentive to recommend either
+            platform—just honest insights from actual implementation work.
+          </p>
           <p className="mt-10">
             I&apos;ve built stores on both BigCommerce and Shopify, migrated
             businesses between them, and spent countless hours troubleshooting
@@ -448,12 +519,18 @@ export default function ArticlePage() {
           </p>
           <p className="mt-6">
             Need help making the decision, migrating between platforms, or
-            optimizing your existing store? The Bearded Developer team has deep
-            experience with both BigCommerce and Shopify. We can help you
-            evaluate your specific requirements, handle complex migrations, and
-            ensure your store performs optimally regardless of which platform
-            you choose—because the right platform is the one that supports your
-            business growth without getting in the way.
+            optimizing your existing store?{" "}
+            <Link
+              href="/contact"
+              className="text-blue-600 hover:underline font-semibold"
+            >
+              Contact The Bearded Developer
+            </Link>{" "}
+            for expert BigCommerce and Shopify consulting. We have deep
+            experience with both platforms and can help you evaluate your
+            specific requirements, handle complex migrations, and ensure your
+            store performs optimally—because the right platform is the one that
+            supports your business growth without getting in the way.
           </p>
         </div>
         <aside className="md:col-span-1 bg-gray-100 p-6 rounded-lg mt-10 md:mt-0 md:sticky top-10">
@@ -529,6 +606,15 @@ export default function ArticlePage() {
           </p>
         </aside>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
     </ArticleContainer>
   );
 }

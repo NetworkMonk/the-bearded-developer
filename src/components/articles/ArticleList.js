@@ -35,7 +35,7 @@ export default function ArticleList() {
     ? articles.filter(
         (article) =>
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          article.subTitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          // article.subTitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
           article.description
             .toLowerCase()
             .includes(searchQuery.toLowerCase()) ||
