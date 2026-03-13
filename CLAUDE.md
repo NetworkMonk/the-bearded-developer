@@ -282,13 +282,13 @@ Link to service pages **within the article body** when introducing a recommended
 
 ## Article Index
 
-Every new article must be added to:
+After creating a new article, run the following command from the project root to update the index automatically:
 
-```
-src/data/article-index.json
+```bash
+npm run index-articles
 ```
 
-Add new articles to the top of the `articles` array (most recent first). The entry should match the `meta.json` content exactly.
+**Do not edit `src/data/article-index.json` directly.** The script reads all `meta.json` files and rebuilds the index. Manual edits will be overwritten the next time the script runs.
 
 ---
 
@@ -303,19 +303,43 @@ Images are generated using Bing DALL-E. All images should follow the same visual
 - Small green plants as accents — succulents, monstera leaves, or small ferns in white ceramic pots
 - White or light grey walls, surfaces, and furniture
 
-**Two main approaches:**
+### Generating Unique Images Per Article
 
-1. **Desk/workspace scene** — Clean minimal white desk near a large window. Objects on the desk relate to the article topic (laptop showing a dashboard, calculator and documents for cost articles, etc.). Monstera or succulent plant to one side.
+**Each article must have images that are visually distinct from all other articles on the site.** Before writing the image prompts, think about the article's core concept and find a physical object, metaphor, or scene that represents it specifically — not generically.
 
-2. **Framed diagram on wall** — A large white-framed poster or whiteboard on a bright white wall showing a simple diagram, checklist, or icon set related to the topic. Small plants on a shelf below. Chair and desk in the foreground.
+Ask: *What physical object or scene best captures the central idea of this article?* Then build the prompt around that specific concept rather than defaulting to a generic office scene.
+
+**Themes already used — do not repeat these:**
+- Open laptop on a desk
+- Whiteboard or framed flowchart/diagram on a wall
+- Clipboard with a checklist
+- Calculator and budget documents on a desk
+- Computer monitor with a dark dashboard
+- Framed warning sign posters on a wall
+- Sticky notes spread across a desk
+- Stopwatch with coloured blocks
+
+**Wider range of scene types to draw from:**
+- A specific physical object that metaphorically represents the article's concept (e.g. a compass for navigation/decision-making, a set of keys for access/unlocking, a magnifying glass for investigation)
+- Small physical items sorted, arranged, or grouped on a clean white surface (cards, tokens, envelopes, labels) — representing categorisation, triage, or organisation
+- A single striking object with strong symbolic relevance to the topic, lit cleanly against a white surface
+- A simple craft or workshop scene — tools laid out neatly, a workbench, materials in progress
+- An outdoor-facing window with a plant and a single relevant object on the sill
+- A product or packaging scene if the article relates to e-commerce fulfilment or retail
+- A simple architectural or spatial metaphor — a doorway, a bridge, a set of steps
 
 **Prompt format:**
-> Photorealistic 3D render. [Scene description]. [Relevant objects]. Small [succulent/monstera/fern] plant in a white ceramic pot. Soft natural light from a large window casting gentle shadows. Bright, airy, white and light grey tones. Minimal and clean.
+> Photorealistic 3D render. [Unique scene rooted in the article's specific concept]. Small [succulent/monstera/fern] plant in a white ceramic pot as an accent. Soft natural light from a large window casting gentle shadows. Bright, airy, white and light grey tones. Minimal and clean.
+
+**Before writing prompts, briefly note:**
+1. What is the article's single most important concept or metaphor?
+2. What physical object or scene could represent that without a laptop or whiteboard?
+3. Are either of these prompts too similar to an existing article's images?
 
 ### Image file naming
 
 - Header image: descriptive name ending in `-header.jpg` (e.g. `integration-header.jpg`)
-- Content image: descriptive name reflecting the content it accompanies (e.g. `data-flow-diagram.jpg`, `partnership-support.jpg`)
+- Content image: descriptive name reflecting the content it accompanies (e.g. `sorting-tray.jpg`, `magnifying-glass-list.jpg`)
 
 ---
 
@@ -329,15 +353,32 @@ Images are generated using Bing DALL-E. All images should follow the same visual
 
 ---
 
+## Before Writing Any Article — Pre-Writing Interview
+
+**Always ask James at least 5 questions before writing any article.** The goal is to capture his genuine opinions, experience, and voice so the article reads as human-authored rather than generated. Do not skip this step, even if the topic seems straightforward.
+
+Questions should be tailored to the specific article topic but should always aim to uncover:
+
+1. **His honest, practical take** on the subject — not the textbook answer, his actual opinion from working with clients
+2. **A real-world example or scenario** he has encountered — a specific client situation, problem he has seen repeatedly, or outcome he has witnessed
+3. **The biggest misconception** businesses have about the topic — what he finds himself correcting most often
+4. **How it connects to the tools and services he works with** — Celigo, NetSuite, Shopify, BigCommerce, support retainers
+5. **What advice he would give to a business owner** who knows nothing about the subject — the "coffee conversation" version
+
+Wait for his answers before writing anything. Build the article structure and content around what he says. His language, opinions, and examples should be woven directly into the copy — not paraphrased into generic advice.
+
+---
+
 ## Adding a New Article — Checklist
 
-1. Create directory: `src/app/resources/articles/[article-slug]/`
-2. Create `meta.json` with title, subtitle, description, date, author, image path, tags, metadata, and path
-3. Create `page.js` using the standard imports, layout, and component patterns above
-4. Add entry to top of `src/data/article-index.json`
-5. Create image directory: `public/img/articles/[article-slug]/`
-6. Generate header image and content image using Bing DALL-E with the style guide above
-7. Save images to the image directory
+1. **Ask at least 5 pre-writing questions** and wait for answers (see above)
+2. Create directory: `src/app/resources/articles/[article-slug]/`
+3. Create `meta.json` with title, subtitle, description, date, author, image path, tags, metadata, and path
+4. Create `page.js` using the standard imports, layout, and component patterns above
+5. Run `npm run index-articles` to update the article index
+6. Create image directory: `public/img/articles/[article-slug]/`
+7. Generate header image and content image using Bing DALL-E with the style guide above
+8. Save images to the image directory
 
 ---
 
