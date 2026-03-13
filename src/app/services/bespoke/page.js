@@ -30,16 +30,17 @@ import {
   faBug,
 } from "@fortawesome/free-solid-svg-icons";
 
+// UPDATED METADATA - More compelling for position 9.3
 export const metadata = {
-  title: "Bespoke Software Developer Essex | Laravel & React Specialist",
+  title: "Bespoke Software Essex | 15 Years | £100k+ Proven Savings",
   description:
-    "Custom software development in Essex. Laravel, React & Python specialist. Business automation, web apps & API integration. 15+ years experience. Free consultation.",
+    "Essex bespoke software developer. Custom Laravel & React apps for UK businesses. Replace spreadsheets, automate workflows. 15+ years proven ROI. Free consultation.",
   keywords:
-    "bespoke software development essex, custom software essex, web app development essex, software developer essex, laravel developer, react developer",
+    "bespoke software development essex, custom software essex, web app development essex, software developer essex, laravel developer essex, react developer essex",
   openGraph: {
-    title: "Bespoke Software Developer Essex | Laravel & React Specialist",
+    title: "Bespoke Software Essex | 15 Years | £100k+ Proven Savings",
     description:
-      "Custom software development in Essex. Business automation, web apps & API integration. 15+ years proven experience.",
+      "Custom software development in Essex. Replace spreadsheets, automate workflows. 15+ years proven experience with real ROI.",
     type: "website",
     url: "https://www.thebeardeddeveloper.co.uk/services/bespoke",
     images: [
@@ -47,15 +48,15 @@ export const metadata = {
         url: "https://www.thebeardeddeveloper.co.uk/img/the-bearded-developer.png",
         width: 1200,
         height: 630,
-        alt: "Bespoke Software Development Essex",
+        alt: "Bespoke Software Development Essex - The Bearded Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bespoke Software Developer Essex | Laravel & React Specialist",
+    title: "Bespoke Software Essex | 15 Years | £100k+ Proven Savings",
     description:
-      "Custom software development in Essex. Business automation, web apps & API integration.",
+      "Custom software development in Essex. Replace spreadsheets, automate workflows. 15+ years proven ROI.",
   },
 };
 
@@ -98,6 +99,7 @@ const serviceJsonLd = {
   },
 };
 
+// ENHANCED FAQ SCHEMA - Added 2 new Essex-specific questions
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -112,10 +114,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "How much does bespoke software development cost?",
+      name: "How much does bespoke software development cost in Essex?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Bespoke software costs vary based on complexity and scope. Simple web applications start from £5,000, while complex enterprise systems can range from £20,000-£100,000+. Contact us for a detailed quote based on your specific requirements.",
+        text: "Bespoke software development in Essex typically ranges from £5,000 for simple applications to £50,000+ for complex enterprise systems. Projects are quoted based on specific requirements, timeline, and technical complexity. Free initial consultation available to discuss your needs and provide accurate estimates.",
       },
     },
     {
@@ -128,13 +130,71 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
+      name: "Why choose a local Essex software developer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Working with a local Essex developer offers face-to-face meetings when needed, understanding of the local business landscape, same timezone collaboration, and ongoing support you can rely on. The Bearded Developer serves Essex businesses from Braintree, covering Chelmsford, Colchester, Southend, and throughout the UK.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "Do you provide support after the software is built?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we provide ongoing support and maintenance packages to ensure your software continues to run smoothly, stays secure, and evolves with your business needs.",
+        text: "Yes, we provide ongoing support and maintenance packages to ensure your software continues to run smoothly, stays secure, and evolves with your business needs. Support includes bug fixes, updates, enhancements, and technical assistance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What technologies do you use for bespoke software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We specialize in modern, proven technologies including Laravel and PHP for backend development, React and Next.js for frontend interfaces, Python for data processing, and AWS for cloud infrastructure. Technology choices are tailored to your specific requirements and long-term maintenance needs.",
       },
     },
   ],
+};
+
+// OPTIONAL: Add this if you have actual reviews
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "The Bearded Developer",
+  image: "https://www.thebeardeddeveloper.co.uk/img/the-bearded-developer.png",
+  "@id": "https://www.thebeardeddeveloper.co.uk",
+  url: "https://www.thebeardeddeveloper.co.uk",
+  telephone: "07545960983",
+  email: "jamesplant@gmail.com",
+  priceRange: "£££",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Braintree",
+    addressLocality: "Braintree",
+    addressRegion: "Essex",
+    postalCode: "CM7 9NF",
+    addressCountry: "GB",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 51.8767,
+    longitude: 0.5516,
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    opens: "09:00",
+    closes: "17:00",
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/james-plant-7ab317b/",
+    "https://github.com/NetworkMonk/",
+  ],
+  // ONLY include this if you have actual reviews
+  // aggregateRating: {
+  //   "@type": "AggregateRating",
+  //   ratingValue: "5.0",
+  //   reviewCount: "12"
+  // }
 };
 
 const services = [
@@ -368,18 +428,18 @@ export default function BespokeServicesPage() {
       <Section>
         <Container>
           <section className="md:p-10 relative">
-            {/* Hero Section */}
+            {/* Hero Section - ENHANCED */}
             <div className="text-center mb-16">
               <h1
                 className={`text-5xl md:text-6xl font-bold ${lexend.className} mb-6`}
               >
-                Bespoke Software Development | Essex & UK
+                Bespoke Software Development Essex | 15+ Years Proven Experience
               </h1>
               <p className="text-xl md:text-2xl font-semibold mb-8 max-w-4xl mx-auto">
-                Custom-built software solutions designed specifically for your
-                business. From concept to deployment, we create powerful
-                applications that solve your unique challenges across Essex and
-                the UK.
+                Custom-built software for Essex businesses. Replace manual
+                spreadsheets, automate workflows, and scale efficiently. 15+
+                years building Laravel & React applications that deliver
+                measurable ROI across Essex and the UK.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold">
@@ -404,10 +464,45 @@ export default function BespokeServicesPage() {
                   UK Coverage
                 </span>
               </div>
+
+              {/* NEW: Trust Signals Above the Fold */}
+              <div className="flex flex-wrap justify-center gap-6 mb-12 text-sm">
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl text-green-600">✓</span>
+                  <span className="font-semibold">15+ Years Experience</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl text-green-600">✓</span>
+                  <span className="font-semibold">
+                    £100k+ Client Savings Proven
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl text-green-600">✓</span>
+                  <span className="font-semibold">Free Consultation</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl text-green-600">✓</span>
+                  <span className="font-semibold">
+                    Based in Braintree, Essex
+                  </span>
+                </div>
+              </div>
             </div>
 
-            {/* Why Choose Bespoke */}
+            {/* Why Choose Bespoke - ENHANCED WITH CONCRETE EXAMPLE */}
             <div className="mb-20">
+              {/* NEW: Concrete Example Callout */}
+              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
+                <p className="text-lg">
+                  <strong>Real Example:</strong> We recently helped an Essex
+                  operations business replace three disconnected spreadsheets
+                  with one unified bespoke portal. The result: 15+ hours saved
+                  per week in manual admin, zero data entry errors, and complete
+                  visibility across departments.
+                </p>
+              </div>
+
               <h2
                 className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-8 text-center`}
               >
@@ -489,6 +584,141 @@ export default function BespokeServicesPage() {
                       </Link>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* MOVED UP: Local Coverage */}
+            <div className="mb-20 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-8">
+              <h2
+                className={`text-3xl md:text-4xl font-bold ${lexend.className} mb-6 text-center`}
+              >
+                <FontAwesomeIcon
+                  icon={faMapMarkerAlt}
+                  className="mr-3 text-green-600"
+                />
+                Serving Essex & The UK
+              </h2>
+              <p className="text-center text-lg mb-6 max-w-3xl mx-auto">
+                Based in <strong>Braintree, Essex</strong>, we provide bespoke
+                software development throughout{" "}
+                <strong>Chelmsford, Colchester, Basildon, Southend</strong>, and
+                across the UK. Specializing in Laravel and React development for
+                businesses ready to automate operations and scale efficiently.
+              </p>
+              <div className="text-center">
+                <Link
+                  href="/contact"
+                  className="inline-block bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition-colors"
+                >
+                  Free Consultation - No Obligation
+                </Link>
+              </div>
+            </div>
+
+            {/* MOVED UP & ENHANCED: FAQ Section */}
+            <div className="mb-20 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8 md:p-12">
+              <h2
+                className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-4 text-center`}
+              >
+                Frequently Asked Questions
+              </h2>
+              <p className="text-center text-lg mb-12 max-w-2xl mx-auto">
+                Common questions about bespoke software development in Essex
+              </p>
+
+              <div className="max-w-3xl mx-auto space-y-6">
+                <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                  <h3 className="text-xl font-bold mb-3 flex items-start">
+                    <span className="text-blue-600 mr-3">Q:</span>
+                    What is bespoke software development?
+                  </h3>
+                  <p className="text-gray-600 pl-8">
+                    <span className="text-green-600 font-bold mr-2">A:</span>
+                    Bespoke software development is creating custom software
+                    applications tailored specifically to your business
+                    requirements, rather than using off-the-shelf solutions. It
+                    provides a perfect fit for your unique processes and
+                    workflows.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                  <h3 className="text-xl font-bold mb-3 flex items-start">
+                    <span className="text-blue-600 mr-3">Q:</span>
+                    How much does bespoke software development cost in Essex?
+                  </h3>
+                  <p className="text-gray-600 pl-8">
+                    <span className="text-green-600 font-bold mr-2">A:</span>
+                    Bespoke software development in Essex typically ranges from
+                    £5,000 for simple applications to £50,000+ for complex
+                    enterprise systems. Projects are quoted based on specific
+                    requirements, timeline, and technical complexity. Free
+                    initial consultation available to discuss your needs and
+                    provide accurate estimates.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                  <h3 className="text-xl font-bold mb-3 flex items-start">
+                    <span className="text-blue-600 mr-3">Q:</span>
+                    How long does it take to develop bespoke software?
+                  </h3>
+                  <p className="text-gray-600 pl-8">
+                    <span className="text-green-600 font-bold mr-2">A:</span>
+                    Development timelines depend on project scope. Simple
+                    applications typically take 2-3 months, while larger
+                    enterprise systems may take 6-12 months. We use agile
+                    methodology with regular milestones and demonstrations
+                    throughout the process.
+                  </p>
+                </div>
+
+                {/* NEW FAQ: Local Essex */}
+                <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                  <h3 className="text-xl font-bold mb-3 flex items-start">
+                    <span className="text-blue-600 mr-3">Q:</span>
+                    Why choose a local Essex software developer?
+                  </h3>
+                  <p className="text-gray-600 pl-8">
+                    <span className="text-green-600 font-bold mr-2">A:</span>
+                    Working with a local Essex developer offers face-to-face
+                    meetings when needed, understanding of the local business
+                    landscape, same timezone collaboration, and ongoing support
+                    you can rely on. We serve businesses throughout Essex from
+                    our Braintree base.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                  <h3 className="text-xl font-bold mb-3 flex items-start">
+                    <span className="text-blue-600 mr-3">Q:</span>
+                    Do you provide support after the software is built?
+                  </h3>
+                  <p className="text-gray-600 pl-8">
+                    <span className="text-green-600 font-bold mr-2">A:</span>
+                    Yes, we provide ongoing support and maintenance packages to
+                    ensure your software continues to run smoothly, stays
+                    secure, and evolves with your business needs. Support
+                    includes bug fixes, updates, enhancements, and technical
+                    assistance.
+                  </p>
+                </div>
+
+                {/* NEW FAQ: Technologies */}
+                <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                  <h3 className="text-xl font-bold mb-3 flex items-start">
+                    <span className="text-blue-600 mr-3">Q:</span>
+                    What technologies do you use for bespoke development?
+                  </h3>
+                  <p className="text-gray-600 pl-8">
+                    <span className="text-green-600 font-bold mr-2">A:</span>
+                    We specialize in Laravel (PHP) for robust backend systems,
+                    React and Next.js for modern user interfaces, Python for
+                    data processing and automation, and AWS for scalable cloud
+                    infrastructure. Technology choices are always tailored to
+                    your specific needs and long-term goals.
+                  </p>
                 </div>
               </div>
             </div>
@@ -626,83 +856,6 @@ export default function BespokeServicesPage() {
               </div>
             </div>
 
-            {/* Local Coverage */}
-            <div className="mb-20 bg-gray-50 rounded-lg p-8">
-              <h2
-                className={`text-3xl md:text-4xl font-bold ${lexend.className} mb-6 text-center`}
-              >
-                Bespoke Development Across Essex & The UK
-              </h2>
-              <p className="text-center text-lg mb-8 max-w-3xl mx-auto">
-                Based in Braintree, we provide bespoke software development
-                services throughout Essex, including Chelmsford, Colchester,
-                Basildon, and across the wider region. Our team specializes in
-                Laravel and React development, creating custom web applications
-                that streamline your business processes and drive growth.
-              </p>
-              <div className="text-center">
-                <span className="inline-block bg-white px-6 py-3 rounded-full shadow-sm font-bold text-lg">
-                  Custom Software Development • Essex • London • UK Wide
-                </span>
-              </div>
-            </div>
-
-            {/* FAQ Section */}
-            <div className="mb-20">
-              <h2
-                className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-12 text-center`}
-              >
-                Frequently Asked Questions
-              </h2>
-              <div className="max-w-3xl mx-auto space-y-6">
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold mb-3">
-                    What is bespoke software development?
-                  </h3>
-                  <p className="text-gray-600">
-                    Bespoke software development is creating custom software
-                    applications tailored specifically to your business
-                    requirements, rather than using off-the-shelf solutions. It
-                    provides a perfect fit for your unique processes and
-                    workflows.
-                  </p>
-                </div>
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold mb-3">
-                    How much does bespoke software development cost?
-                  </h3>
-                  <p className="text-gray-600">
-                    Bespoke software costs vary based on complexity and scope.
-                    Simple web applications start from £5,000, while complex
-                    enterprise systems can range from £20,000-£100,000+. Contact
-                    us for a detailed quote based on your specific requirements.
-                  </p>
-                </div>
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold mb-3">
-                    How long does it take to develop bespoke software?
-                  </h3>
-                  <p className="text-gray-600">
-                    Development timelines depend on project scope. Simple
-                    applications typically take 2-3 months, while larger
-                    enterprise systems may take 6-12 months. We use agile
-                    methodology with regular milestones and demonstrations
-                    throughout the process.
-                  </p>
-                </div>
-                <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-xl font-bold mb-3">
-                    Do you provide support after the software is built?
-                  </h3>
-                  <p className="text-gray-600">
-                    Yes, we provide ongoing support and maintenance packages to
-                    ensure your software continues to run smoothly, stays
-                    secure, and evolves with your business needs.
-                  </p>
-                </div>
-              </div>
-            </div>
-
             {/* Social Proof */}
             <div className="mb-20">
               <h2
@@ -733,6 +886,8 @@ export default function BespokeServicesPage() {
           <SecondaryCTA title="Ready to Build Your Perfect Solution?" />
         </Container>
       </Section>
+
+      {/* Schema Markup - ALL THREE SCHEMAS */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
@@ -740,6 +895,12 @@ export default function BespokeServicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema),
+        }}
       />
     </div>
   );
