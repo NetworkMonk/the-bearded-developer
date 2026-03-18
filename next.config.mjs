@@ -19,7 +19,9 @@ const nextConfig = {
   },
 };
 
-export default withSentryConfig(nextConfig, {
+const sentryEnabled = process.env.NEXT_PUBLIC_SENTRY_ENABLED !== "false";
+
+export default sentryEnabled ? withSentryConfig(nextConfig, {
   // For all available options, see:
   // https://www.npmjs.com/package/@sentry/webpack-plugin#options
 
@@ -55,4 +57,4 @@ export default withSentryConfig(nextConfig, {
       removeDebugLogging: true,
     },
   },
-});
+}) : nextConfig;
