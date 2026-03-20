@@ -250,7 +250,7 @@ export default function Nav() {
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-20 justify-between">
               <div className="flex">
-                <div className="-ml-2 mr-2 flex items-center md:hidden">
+                <div className="-ml-2 mr-2 flex items-center lg:hidden">
                   {/* Mobile menu button */}
                   <DisclosureButton className="relative inline-flex ml-2 items-center justify-center rounded-md p-2 mr-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-hidden transition-all duration-300">
                     <span className="absolute -inset-0.5" />
@@ -271,7 +271,7 @@ export default function Nav() {
                   </DisclosureButton>
                 </div>
                 <div
-                  className={`hidden md:flex shrink-0 text-xl mt-1 mr-5 items-center text-white ${lexend.className}`}
+                  className={`hidden lg:flex shrink-0 text-xl mt-1 mr-5 items-center text-white ${lexend.className}`}
                 >
                   <a className="cursor-pointer" href="/">
                     <Image
@@ -283,7 +283,7 @@ export default function Nav() {
                     />
                   </a>
                 </div>
-                <div className="hidden md:ml-6 md:flex md:space-x-8">
+                <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
                   {desktopMenu.map((item) => {
                     if (item.children) {
                       return <DropDownMenu key={item.name} item={item} />;
@@ -313,7 +313,7 @@ export default function Nav() {
             </div>
           </div>
 
-          <DisclosurePanel className="md:hidden">
+          <DisclosurePanel className="lg:hidden">
             {({ close }) => {
               if (scrollingDown && open) {
                 close();
