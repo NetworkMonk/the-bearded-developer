@@ -262,6 +262,26 @@ The sticky sidebar should always include:
 
 ---
 
+## Apps Section
+
+The site has an `/apps` section showcasing James's own SaaS products. It sits alongside Projects in the nav.
+
+**Live and linked:**
+- `/apps/family-board` — Family Board (familyboard.app)
+- `/apps/nflo` — NFLO (nflo.app)
+
+**Exist but unlinked until live:**
+- `/apps/bp-diary` — BP Diary (React Native, in development)
+- `/apps/bariatric-buddy` — Bariatric Buddy (React Native, in development)
+
+**Framing rule:** Apps are positioned for a B2B audience. Always lead with SaaS capability — live product, paying users, full lifecycle (billing, onboarding, infrastructure). Do not lead with personal use cases or end-user features. The point is demonstrating that James ships and maintains real products.
+
+**Nav:** Uses `lg:` breakpoint (not `md:`) to switch to mobile menu, to accommodate the extra nav item.
+
+When BP Diary and Bariatric Buddy are live, add them back to `src/app/apps/page.js` and `src/app/sitemap.js`.
+
+---
+
 ## Service Pages (Internal Linking Targets)
 
 Always link to relevant service pages within article body and sidebar. Available service pages:
