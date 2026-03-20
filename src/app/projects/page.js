@@ -6,9 +6,9 @@ import Project from "@/components/Project";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Projects | The Bearded Developer",
+  title: "Shopify, BigCommerce & NetSuite Projects | The Bearded Developer",
   description:
-    "A selection of client work spanning Shopify, BigCommerce, infrastructure consultancy, and bespoke web development for UK businesses.",
+    "Client work spanning Shopify development, BigCommerce infrastructure, NetSuite integrations, and ongoing support retainers — delivered for UK businesses.",
 };
 
 const projects = [
@@ -39,6 +39,11 @@ const projects = [
       { label: "Infrastructure", value: "Moved fully in-house" },
       { label: "Engagement type", value: "Ongoing consultancy" },
     ],
+    serviceLinks: [
+      { label: "BigCommerce", href: "/services/bigcommerce" },
+      { label: "Shopify", href: "/services/shopify" },
+      { label: "Integrations", href: "/services/integrations" },
+    ],
     review: null,
     technologies: ["BigCommerce", "Shopify", "Infrastructure", "Monitoring", "API Design", "Consultancy"],
   },
@@ -49,7 +54,7 @@ const projects = [
     logo: "/img/client-logos/rc_boat_engines.png",
     url: "https://rcboatengines.co.uk/",
     description: [
-      "A new business venture selling RC boat engines and accessories, requiring an e-commerce store capable of handling international orders " +
+      "A new business venture selling RC boat engines and accessories, requiring a Shopify store capable of handling international orders " +
         "and multiple currencies from launch. The store also needed a theme that matched the brand's identity.",
       "We recommended Shopify for its reliability, ease of management, and strong integration capabilities — " +
         "giving the business the tools to grow without needing developer involvement for day-to-day operations.",
@@ -64,6 +69,16 @@ const projects = [
       "/img/projects/rcboatengines_03.png",
       "/img/projects/rcboatengines_04.png",
       "/img/projects/rcboatengines_05.png",
+    ],
+    imageAlts: [
+      "RC Boat Engines Shopify store homepage",
+      "RC Boat Engines product listing page",
+      "RC Boat Engines product detail page",
+      "RC Boat Engines mobile view",
+      "RC Boat Engines checkout",
+    ],
+    serviceLinks: [
+      { label: "Shopify Development", href: "/services/shopify" },
     ],
     review:
       "James was very attentive to my project needs and asked the right questions along with bringing his tenure with Shopify and eCommerce stores — " +
@@ -93,6 +108,17 @@ const projects = [
       "/img/projects/codercave_03.png",
       "/img/projects/codercave_04.png",
       "/img/projects/codercave_05.png",
+    ],
+    imageAlts: [
+      "Coder Cave Shopify store homepage",
+      "Coder Cave product listing page",
+      "Coder Cave product detail page",
+      "Coder Cave mobile view",
+      "Coder Cave collections page",
+    ],
+    serviceLinks: [
+      { label: "Shopify Development", href: "/services/shopify" },
+      { label: "Integrations", href: "/services/integrations" },
     ],
     review:
       "We are incredibly happy with the work that The Bearded Developer has done for us. Our store is easy to use and matches our brand perfectly.",
@@ -124,6 +150,11 @@ const projects = [
       { label: "Delivery", value: "Real-time cost estimation" },
       { label: "Engagement type", value: "Bespoke API development" },
     ],
+    serviceLinks: [
+      { label: "NetSuite Integrations", href: "/services/netsuite" },
+      { label: "Integrations", href: "/services/integrations" },
+      { label: "Bespoke Development", href: "/services/bespoke" },
+    ],
     review:
       "The work completed was excellent and the communication was great. We are very happy with the performance of the changes. " +
       "We are looking forward to working with The Bearded Developer again in the future.",
@@ -132,25 +163,29 @@ const projects = [
 
   {
     title: "Cotton & Twigg",
-    subtitle: "Shopify — Ongoing UI and SEO Support",
+    subtitle: "Shopify Support Retainer — SEO & UI",
     logo: "/img/client-logos/cotton_and_twigg_pink_square.png",
     url: "https://cottonandtwigg.co.uk/",
     description: [
       "Cotton & Twigg sell personalised gifts for babies and young children through a Shopify store. " +
-        "The work here has been ongoing rather than a single project — a series of focused UI improvements and SEO changes " +
+        "Rather than a one-off build, this is an ongoing Shopify support retainer — a series of focused UI improvements and SEO changes " +
         "designed to improve search visibility and convert more of the site's existing traffic.",
       "Small, consistent improvements compound over time. Better page structure, clearer product presentation, " +
         "and targeted keyword work have all contributed to the store moving from low visibility to generating regular orders.",
     ],
     outcome:
       "The store is now generating regular orders where it previously struggled to convert traffic. " +
-      "Ongoing iterative support continues to improve search visibility and on-site experience.",
+      "The ongoing support retainer continues to improve search visibility and on-site experience.",
     images: [],
     facts: [
       { label: "Platform", value: "Shopify" },
       { label: "Focus", value: "SEO & UI improvements" },
       { label: "Result", value: "Now generating regular orders" },
-      { label: "Engagement type", value: "Ongoing iterative support" },
+      { label: "Engagement type", value: "Ongoing support retainer" },
+    ],
+    serviceLinks: [
+      { label: "Shopify Development", href: "/services/shopify" },
+      { label: "Support Retainer", href: "/services/bespoke" },
     ],
     review: null,
     technologies: ["Shopify", "SEO", "UI/UX"],
@@ -168,14 +203,15 @@ export default function ProjectsPage() {
               <h2
                 className={`text-5xl md:text-6xl font-bold in-up ${lexend.className}`}
               >
-                Client Work
+                Shopify, BigCommerce &amp; Integration Projects
               </h2>
               <p
                 className="text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up max-w-2xl text-gray-700"
                 style={{ animationDelay: ".25s" }}
               >
-                A selection of projects spanning Shopify, BigCommerce, infrastructure consultancy,
-                and bespoke web development — built for UK businesses at various stages of growth.
+                A selection of client work spanning Shopify development, BigCommerce infrastructure,
+                NetSuite and Celigo integrations, and ongoing support retainers — delivered for UK
+                businesses at various stages of growth.
               </p>
             </section>
 
@@ -199,14 +235,29 @@ export default function ProjectsPage() {
               >
                 Let&apos;s build something that works for your business.
               </p>
-              <p className="mt-6 in-up" style={{ animationDelay: ".25s" }}>
+              <div className="mt-6 flex flex-wrap gap-3 items-center">
                 <Link
                   href="/contact"
                   className="bg-brand-teal text-white px-6 py-3 rounded-full font-semibold hover:bg-brand-blue transition-colors inline-block"
                 >
                   Get in touch
                 </Link>
-              </p>
+                <Link href="/services/shopify" className="text-sm font-semibold text-gray-600 hover:text-brand-teal transition-colors px-3 py-3">
+                  Shopify
+                </Link>
+                <Link href="/services/bigcommerce" className="text-sm font-semibold text-gray-600 hover:text-brand-teal transition-colors px-3 py-3">
+                  BigCommerce
+                </Link>
+                <Link href="/services/celigo" className="text-sm font-semibold text-gray-600 hover:text-brand-teal transition-colors px-3 py-3">
+                  Celigo
+                </Link>
+                <Link href="/services/netsuite" className="text-sm font-semibold text-gray-600 hover:text-brand-teal transition-colors px-3 py-3">
+                  NetSuite
+                </Link>
+                <Link href="/services/integrations" className="text-sm font-semibold text-gray-600 hover:text-brand-teal transition-colors px-3 py-3">
+                  Integrations
+                </Link>
+              </div>
             </section>
           </InView>
         </Container>

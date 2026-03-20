@@ -87,9 +87,25 @@ export default function Project({ project }) {
             </p>
           )}
 
+          {/* Service links */}
+          {project.serviceLinks && project.serviceLinks.length > 0 && (
+            <div className="mt-6 flex flex-wrap gap-2 items-center">
+              <span className="text-xs text-gray-400 uppercase tracking-widest font-semibold">Related services</span>
+              {project.serviceLinks.map((link, i) => (
+                <Link
+                  key={i}
+                  href={link.href}
+                  className="text-xs font-semibold bg-gray-100 text-gray-700 hover:bg-brand-teal hover:text-white px-3 py-1 rounded-full transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          )}
+
           {/* Visit site */}
           {project.url && (
-            <div className="mt-6">
+            <div className="mt-4">
               <Link
                 href={project.url}
                 target="_blank"
@@ -106,7 +122,7 @@ export default function Project({ project }) {
 
         {hasImages && (
           <div className="md:col-span-2">
-            <Gallery images={project.images} />
+            <Gallery images={project.images} alts={project.imageAlts || []} />
           </div>
         )}
 

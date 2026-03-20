@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import FullScreenImage from "./FullScreenImage";
 
-export default function Gallery({ images }) {
+export default function Gallery({ images, alts = [] }) {
   const [selectedImage, setSelectedImage] = useState(false);
 
   return (
@@ -12,7 +12,7 @@ export default function Gallery({ images }) {
           return (
             <div key={galleryImageIndex} className="">
               <Image
-                alt=""
+                alt={alts[galleryImageIndex] || ""}
                 width={480}
                 height={480}
                 src={galleryImage}
