@@ -39,6 +39,7 @@ const desktopMenu = [
     ],
   },
   { name: "Projects", href: "/projects" },
+  { name: "Apps", href: "/apps" },
   {
     name: "Resources",
     children: [
@@ -75,6 +76,7 @@ const mobileMenu = [
   },
 
   { name: "Projects", href: "/projects" },
+  { name: "Apps", href: "/apps" },
   {
     name: "Resources",
     children: [

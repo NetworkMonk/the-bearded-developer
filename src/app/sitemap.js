@@ -29,6 +29,9 @@ export default async function Sitemap() {
   const routes = [
     "",
     "/projects",
+    "/apps",
+    "/apps/family-board",
+    "/apps/nflo",
     "/services/bespoke",
     "/services/shopify",
     "/services/bigcommerce",
