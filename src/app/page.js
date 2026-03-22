@@ -83,8 +83,8 @@ export default function Home() {
     ],
     url: "https://www.thebeardeddeveloper.co.uk",
     // Add these for better local SEO
-    telephone: "07545960983",
-    email: "jamesplant@gmail.com",
+    telephone: "+44 (0) 330 043 5977",
+    email: "james@thebeardeddeveloper.co.uk",
     priceRange: "£££",
     aggregateRating: {
       "@type": "AggregateRating",

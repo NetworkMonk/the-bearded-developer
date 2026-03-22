@@ -70,7 +70,7 @@ const serviceJsonLd = {
     image:
       "https://www.thebeardeddeveloper.co.uk/img/the-bearded-developer.png",
     priceRange: "£££",
-    telephone: "07545960983",
+    telephone: "+44 (0) 330 043 5977",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Braintree",
@@ -163,8 +163,8 @@ const localBusinessSchema = {
   image: "https://www.thebeardeddeveloper.co.uk/img/the-bearded-developer.png",
   "@id": "https://www.thebeardeddeveloper.co.uk",
   url: "https://www.thebeardeddeveloper.co.uk",
-  telephone: "07545960983",
-  email: "jamesplant@gmail.com",
+  telephone: "+44 (0) 330 043 5977",
+  email: "james@thebeardeddeveloper.co.uk",
   priceRange: "£££",
   address: {
     "@type": "PostalAddress",

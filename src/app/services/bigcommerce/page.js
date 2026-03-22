@@ -75,7 +75,8 @@ const serviceJsonLd = {
     image:
       "https://www.thebeardeddeveloper.co.uk/img/the-bearded-developer.png",
     priceRange: "£££",
-    telephone: "07545960983",
+    telephone: "+44 (0) 330 043 5977",
+    email: "james@thebeardeddeveloper.co.uk",
 
     address: {
       "@type": "PostalAddress",
