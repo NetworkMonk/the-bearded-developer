@@ -89,15 +89,15 @@ export default function LetsTalk() {
                   </div>
                   <div className="py-1">
                     <a
-                      href="tel:447545960983"
+                      href="tel:+44 (0) 330 043 5977"
                       className="hover:text-brand-light-blue transition-all duration-300"
-                      aria-label="Call us on +44 7545 960 983"
+                      aria-label="Call us on +44 (0) 330 043 5977"
                     >
                       <FontAwesomeIcon
                         icon={faPhone}
                         className="w-4 h-4 inline-block mr-2"
                       />
-                      +44 7545 960 983
+                      +44 (0) 330 043 5977
                     </a>
                   </div>
                   <div className="py-1">
