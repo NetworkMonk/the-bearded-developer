@@ -7,7 +7,26 @@ import Link from "next/link";
 export const metadata = {
   title: "Apps & Products | The Bearded Developer",
   description:
-    "Software products built and maintained by The Bearded Developer. Live SaaS apps solving real problems — from family organisation to neurodivergent work management.",
+    "Software products built and maintained by The Bearded Developer — including a BigCommerce security app, a subscription SaaS, and a task management tool.",
+};
+
+const featuredApp = {
+  slug: "simplemfa",
+  name: "Simple MFA",
+  tagline: "Two-factor authentication for BigCommerce — no theme code required",
+  description:
+    "A BigCommerce Marketplace app that adds TOTP two-factor authentication and passwordless login to Stencil storefronts. Merchants install once via Script Manager. No custom development, no theme modifications. Currently in early access — actively looking for agency and reseller partners.",
+  status: "Early Access — Seeking Partners",
+  statusColour: "bg-amber-100 text-amber-800",
+  url: "https://simplemfa.app",
+  technologies: ["Next.js", "TypeScript", "Cloudflare Workers", "BigCommerce API"],
+  highlights: [
+    "TOTP 2FA — compatible with Google Authenticator, Authy, 1Password",
+    "Passwordless login via magic link",
+    "No theme modifications required",
+    "Rate limiting and IP throttling at the edge",
+    "Free up to 200 customers — paid plans from $12/month",
+  ],
 };
 
 const apps = [
@@ -46,11 +65,70 @@ export default function AppsPage() {
                 Apps &amp; Products
               </h2>
               <p className="text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up max-w-xl" style={{ animationDelay: ".25s" }}>
-                Alongside client work, I build and ship my own SaaS products. Both are live, with real users — proof that I understand what it takes to design, build, and maintain a product end to end.
+                Alongside client work, I build and ship my own products — including a BigCommerce security app currently in early access, and two live SaaS products with real paying users.
               </p>
             </section>
 
-            <section className="md:p-10 mt-12 grid md:grid-cols-2 gap-8">
+            {/* Featured app — Simple MFA */}
+            <section className="md:px-10 mt-12">
+              <div className="bg-gray-900 text-white rounded-xl p-8 md:p-10">
+                <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
+                  <div>
+                    <span className={`text-xs font-semibold px-3 py-1 rounded-full ${featuredApp.statusColour}`}>
+                      {featuredApp.status}
+                    </span>
+                    <h3 className={`text-3xl font-bold mt-3 ${lexend.className}`}>{featuredApp.name}</h3>
+                    <p className={`text-base font-semibold mt-2 opacity-60 ${lexend.className}`}>{featuredApp.tagline}</p>
+                  </div>
+                </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <p className="text-sm text-gray-300 leading-relaxed">{featuredApp.description}</p>
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {featuredApp.technologies.map((tech) => (
+                        <span key={tech} className="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded-full font-medium">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="mt-6 flex gap-4">
+                      <Link
+                        href={`/apps/${featuredApp.slug}`}
+                        className="text-sm font-semibold text-brand-teal hover:underline"
+                      >
+                        Learn more →
+                      </Link>
+                      {featuredApp.url && (
+                        <a
+                          href={featuredApp.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-semibold text-gray-400 hover:text-gray-200 hover:underline"
+                        >
+                          Visit site →
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                  <div>
+                    <p className={`text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4 ${lexend.className}`}>
+                      What&apos;s included
+                    </p>
+                    <ul className="space-y-3">
+                      {featuredApp.highlights.map((highlight, i) => (
+                        <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
+                          <span className="text-brand-teal mt-0.5 flex-shrink-0">✓</span>
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Smaller apps */}
+            <section className="md:px-10 mt-8 grid md:grid-cols-2 gap-8">
               {apps.map((app) => (
                 <div key={app.slug} className="bg-white border border-gray-200 rounded-xl p-8 flex flex-col">
                   <div className="flex items-start justify-between mb-4">
