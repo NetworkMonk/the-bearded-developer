@@ -60,7 +60,7 @@ export default function ContactForm() {
       </div>
       <div className="py-1">
         <a
-          href="https://wa.me/447545960983"
+          href="https://wa.me/443300435977"
           className="hover:text-brand-light-blue transition-all duration-300"
           aria-label="Chat with us on WhatsApp"
         >
@@ -68,7 +68,7 @@ export default function ContactForm() {
             icon={faWhatsapp}
             className="w-4 h-4 inline-block mr-2"
           />
-          +44 7545 960 983
+          +44 (0) 330 043 5977
         </a>
       </div>
     </div>
@@ -218,7 +218,7 @@ export default function ContactForm() {
                   </div>
                   <div className="py-1">
                     <a
-                      href="https://wa.me/447545960983"
+                      href="https://wa.me/443300435977"
                       className="hover:text-brand-light-blue transition-all duration-300"
                       aria-label="Chat with us on WhatsApp"
                     >
@@ -226,7 +226,7 @@ export default function ContactForm() {
                         icon={faWhatsapp}
                         className="w-4 h-4 inline-block mr-2"
                       />
-                      +44 7545 960 983
+                      +44 (0) 330 043 5977
                     </a>
                   </div>
                 </div>
