@@ -10,6 +10,32 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { useState } from "react";
 
+const contactMethods = [
+  {
+    icon: faEnvelope,
+    label: "info@thebeardeddeveloper.co.uk",
+    href: "mailto:info@thebeardeddeveloper.co.uk",
+    ariaLabel: "Email us",
+  },
+  {
+    icon: faPhone,
+    label: "+44 (0) 330 043 5977",
+    href: "tel:+443300435977",
+    ariaLabel: "Call us on +44 (0) 330 043 5977",
+  },
+  {
+    icon: faWhatsapp,
+    label: "+44 (0) 330 043 5977",
+    href: "https://wa.me/443300435977",
+    ariaLabel: "Chat with us on WhatsApp",
+  },
+];
+
+const inputClass =
+  "w-full rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/50 px-4 py-3 text-sm focus:outline-none focus:border-white focus:ring-1 focus:ring-white/50 transition-colors duration-200 mb-5";
+
+const labelClass = `block text-xs font-semibold uppercase tracking-[0.14em] text-white/80 mb-1.5`;
+
 export default function LetsTalk() {
   const [formData, setFormData] = useState({
     name: "",
@@ -42,7 +68,9 @@ export default function LetsTalk() {
       <Container>
         <div id="lets-talk" className="my-20">
           <InView>
-            <div className="grid md:grid-cols-2 gap-5 mt-5">
+            <div className="grid md:grid-cols-2 gap-8 mt-5 items-start">
+
+              {/* Left: copy + contact methods */}
               <div className="md:p-10">
                 <h2
                   className={`text-5xl md:text-6xl font-bold in-up ${lexend.className}`}
@@ -51,115 +79,121 @@ export default function LetsTalk() {
                   Let&apos;s Talk
                 </h2>
                 <p
-                  className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up`}
+                  className="text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up"
                   style={{ animationDelay: ".5s" }}
                 >
                   Arrange a free no-commitment consultation.
                 </p>
-                <p className={`mt-5 in-up`} style={{ animationDelay: ".75s" }}>
+                <p
+                  className="mt-5 in-up text-brand-black/70 leading-relaxed"
+                  style={{ animationDelay: ".75s" }}
+                >
                   We are always happy to discuss whatever project you have in
                   mind. Let&apos;s discuss your requirements, what you want to
                   achieve for your business, and how we can help you get there.
                 </p>
-                <p className={`mt-5 in-up`} style={{ animationDelay: "1s" }}>
-                  There is no commitment to proceed with us, if you are an
-                  established business experienced in working with development
-                  and technology partners, or if you are completely new to the
-                  process and have no idea where to start, we are here to help.
+                <p
+                  className="mt-4 in-up text-brand-black/70 leading-relaxed"
+                  style={{ animationDelay: "1s" }}
+                >
+                  There is no commitment to proceed with us - whether you are an
+                  established business or completely new to working with a
+                  development partner, we are here to help.
                 </p>
                 <p
-                  className={`mt-5 in-up font-semibold`}
+                  className="mt-4 in-up font-semibold text-brand-black/80"
                   style={{ animationDelay: "1.25s" }}
                 >
-                  Fill in this form and we will get back you, or use any of the
-                  contact methods listed to talk to us.
+                  Fill in the form and we will get back to you, or use any of
+                  the contact methods below.
                 </p>
-                <div className="mt-10 in-up" style={{ animationDelay: "1.5s" }}>
-                  <div className="py-2">
+
+                {/* Divider */}
+                <div
+                  className="mt-8 mb-6 h-px bg-brand-black/10 in-up"
+                  style={{ animationDelay: "1.35s" }}
+                />
+
+                {/* Contact method pills */}
+                <div
+                  className="in-up space-y-3"
+                  style={{ animationDelay: "1.5s" }}
+                >
+                  {contactMethods.map(({ icon, label, href, ariaLabel }) => (
                     <a
-                      href="mailto:info@thebeardeddeveloper.co.uk"
-                      className="hover:text-brand-light-blue transition-all duration-300"
+                      key={href}
+                      href={href}
+                      aria-label={ariaLabel}
+                      className="flex items-center gap-3 group w-fit"
                     >
-                      <FontAwesomeIcon
-                        icon={faEnvelope}
-                        className="w-4 h-4 inline-block mr-2"
-                      />
-                      info@thebeardeddeveloper.co.uk
+                      <span className="flex items-center justify-center w-8 h-8 rounded-full bg-brand-teal/10 text-brand-teal group-hover:bg-brand-teal group-hover:text-white transition-all duration-200 shrink-0">
+                        <FontAwesomeIcon icon={icon} className="w-3.5 h-3.5" />
+                      </span>
+                      <span className="text-sm text-brand-black/70 group-hover:text-brand-teal transition-colors duration-200 group-hover:underline underline-offset-2">
+                        {label}
+                      </span>
                     </a>
-                  </div>
-                  <div className="py-1">
-                    <a
-                      href="tel:+44 (0) 330 043 5977"
-                      className="hover:text-brand-light-blue transition-all duration-300"
-                      aria-label="Call us on +44 (0) 330 043 5977"
-                    >
-                      <FontAwesomeIcon
-                        icon={faPhone}
-                        className="w-4 h-4 inline-block mr-2"
-                      />
-                      +44 (0) 330 043 5977
-                    </a>
-                  </div>
-                  <div className="py-1">
-                    <a
-                      href="https://wa.me/443300435977"
-                      className="hover:text-brand-light-blue transition-all duration-300"
-                      aria-label="Chat with us on WhatsApp"
-                    >
-                      <FontAwesomeIcon
-                        icon={faWhatsapp}
-                        className="w-4 h-4 inline-block mr-2"
-                      />
-                      +44 (0) 330 043 5977
-                    </a>
-                  </div>
+                  ))}
                 </div>
               </div>
-              <div>
-                <div
-                  className="p-5 py-8 mt-5 md:mt-10 md:p-10 bg-gradient-to-br from-brand-blue to-brand-light-blue text-white rounded-xl shadow-xl in-up"
-                  style={{ animationDelay: "0.25s" }}
-                >
+
+              {/* Right: dark card form */}
+              <div
+                className="in-up"
+                style={{ animationDelay: "0.25s" }}
+              >
+                <div className="bg-gradient-to-br from-brand-blue to-brand-light-blue rounded-2xl p-8 shadow-xl text-white">
                   {formData.status !== "success" &&
                     formData.status !== "error" && (
                       <>
-                        <p className="font-bold text-sm">Name</p>
+                        <label className={`${labelClass} ${lexend.className}`}>
+                          Name
+                        </label>
                         <input
                           type="text"
                           name="name"
-                          className="w-full rounded-sm mb-5 text-black p-2 bg-white"
+                          className={inputClass}
                           placeholder="Your name"
                           onChange={(e) =>
                             setFormData({ ...formData, name: e.target.value })
                           }
                           disabled={formData.status === "pending"}
                         />
-                        <p className="font-bold text-sm">Email Address</p>
+
+                        <label className={`${labelClass} ${lexend.className}`}>
+                          Email Address
+                        </label>
                         <input
                           type="email"
                           name="email"
-                          className="w-full rounded-sm mb-5 text-black p-2 bg-white"
+                          className={inputClass}
                           placeholder="Your email address"
                           onChange={(e) =>
                             setFormData({ ...formData, email: e.target.value })
                           }
+                          disabled={formData.status === "pending"}
                         />
-                        <p className="font-bold text-sm">Phone Number</p>
+
+                        <label className={`${labelClass} ${lexend.className}`}>
+                          Phone Number
+                        </label>
                         <input
                           type="tel"
                           name="phone"
-                          className="w-full rounded-sm mb-5 text-black p-2 bg-white"
+                          className={inputClass}
                           placeholder="Your phone number"
                           onChange={(e) =>
                             setFormData({ ...formData, phone: e.target.value })
                           }
+                          disabled={formData.status === "pending"}
                         />
-                        <p className="font-bold text-sm">
+
+                        <label className={`${labelClass} ${lexend.className}`}>
                           What would you like to talk about?
-                        </p>
+                        </label>
                         <textarea
                           name="message"
-                          className="w-full min-h-48 rounded-sm mb-5 text-black p-2 bg-white"
+                          className={`${inputClass} min-h-36 resize-none`}
                           placeholder="Write about your requirements, anything you might need help with or what your favourite sandwich filling is..."
                           onChange={(e) =>
                             setFormData({
@@ -167,35 +201,90 @@ export default function LetsTalk() {
                               message: e.target.value,
                             })
                           }
-                        ></textarea>
+                          disabled={formData.status === "pending"}
+                        />
+
                         {formData.status === "idle" && (
-                          <button
-                            className="outline outline-2 outline-white bg-transparent text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold block mx-auto"
-                            onClick={() => submitForm()}
-                          >
-                            Send Message
-                          </button>
+                          <div className="flex justify-center mt-2">
+                            <button
+                              onClick={() => submitForm()}
+                              className="outline outline-2 outline-white bg-transparent text-white hover:bg-white hover:text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold block mx-auto"
+                            >
+                              Send Message
+                            </button>
+                          </div>
                         )}
                         {formData.status === "pending" && (
-                          <button className="animate-pulse outline outline-2 outline-white bg-white text-brand-blue px-6 py-2 rounded-full transition-colors duration-500 uppercase font-semibold block mx-auto cursor-default">
-                            Sending Message...
-                          </button>
+                          <div className="flex justify-center mt-2">
+                            <button
+                              disabled
+                              className="animate-pulse outline outline-2 outline-white bg-white text-brand-blue px-6 py-2 rounded-full uppercase font-semibold block mx-auto cursor-default"
+                            >
+                              Sending Message...
+                            </button>
+                          </div>
                         )}
                       </>
                     )}
+
                   {formData.status === "success" && (
-                    <p className="text-center font-semibold text-lg my-20">
-                      Thanks, your message has been sent, we will get back to
-                      you as soon as possible.
-                    </p>
+                    <div className="py-16 text-center">
+                      <div className="w-12 h-12 rounded-full bg-brand-teal/20 flex items-center justify-center mx-auto mb-4">
+                        <svg
+                          className="w-6 h-6 text-brand-light-blue"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </div>
+                      <p
+                        className={`text-lg font-semibold text-white ${lexend.className}`}
+                      >
+                        Message sent
+                      </p>
+                      <p className="mt-2 text-sm text-white/70">
+                        We&apos;ll get back to you as soon as possible.
+                      </p>
+                    </div>
                   )}
+
                   {formData.status === "error" && (
-                    <p className="text-center font-semibold text-lg my-20">
-                      Oops! Something went wrong. Please try again later.
-                    </p>
+                    <div className="py-16 text-center">
+                      <div className="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center mx-auto mb-4">
+                        <svg
+                          className="w-6 h-6 text-red-400"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </div>
+                      <p
+                        className={`text-lg font-semibold text-white ${lexend.className}`}
+                      >
+                        Something went wrong
+                      </p>
+                      <p className="mt-2 text-sm text-white/70">
+                        Please try again or contact us directly.
+                      </p>
+                    </div>
                   )}
                 </div>
               </div>
+
             </div>
           </InView>
         </div>

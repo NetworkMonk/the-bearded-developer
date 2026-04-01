@@ -68,22 +68,23 @@ export default async function Achievements() {
                 Proudly Working With These Clients
               </h2>
               <p
-                className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up max-w-xl`}
+                className="text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up max-w-xl"
                 style={{ animationDelay: ".5s" }}
               >
                 A selection of some of our clients who we are proud to have
                 worked with.
               </p>
               <p
-                className={`mt-5 in-up max-w-xl`}
+                className="mt-5 in-up max-w-xl"
                 style={{ animationDelay: ".75s" }}
               >
                 Want to get on this list? Get in touch with us today to discuss
                 your project.
               </p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14 mt-10">
+
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
                 {clients.map((client, cIndex) => {
-                  const background = client.background || "transparent";
+                  const hasBackground = !!client.background;
                   return (
                     <div
                       key={cIndex}
@@ -91,19 +92,21 @@ export default async function Achievements() {
                       style={{ animationDelay: `${cIndex / 9 + 1}s` }}
                     >
                       <div
-                        className="max-w-80 sm:max-w-none mx-auto sm:mx-0 h-full p-10 opacity-60 hover:opacity-100 transition-all duration-300 flex justify-center items-center"
-                        style={{ backgroundColor: background }}
+                        className="h-full rounded-xl border border-gray-200 p-8 flex justify-center items-center opacity-60 hover:opacity-100 transition-all duration-300"
+                        style={{
+                          backgroundColor: hasBackground
+                            ? client.background
+                            : "#ffffff",
+                        }}
                       >
-                        <div>
-                          <Image
-                            src={client.logo}
-                            alt={client.name}
-                            title={client.name}
-                            className="max-h-full w-auto mx-auto"
-                            width={500}
-                            height={500}
-                          />
-                        </div>
+                        <Image
+                          src={client.logo}
+                          alt={client.name}
+                          title={client.name}
+                          className="w-auto max-h-16 mx-auto object-contain"
+                          width={200}
+                          height={80}
+                        />
                       </div>
                     </div>
                   );

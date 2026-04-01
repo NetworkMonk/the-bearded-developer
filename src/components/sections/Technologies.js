@@ -64,14 +64,14 @@ export default async function Technologies() {
                 We Love Technology
               </h2>
               <p
-                className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up max-w-xl`}
+                className="text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up max-w-xl"
                 style={{ animationDelay: ".5s" }}
               >
                 We&apos;ve completed projects using many of the latest
                 technologies.
               </p>
               <p
-                className={`mt-5 in-up max-w-xl`}
+                className="mt-5 in-up max-w-xl"
                 style={{ animationDelay: ".75s" }}
               >
                 We are always looking to expand our knowledge and experience
@@ -79,27 +79,35 @@ export default async function Technologies() {
                 technologies outside of this list as well. If you have any
                 specific requirements let&apos;s have a chat.
               </p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-10">
-                {technologies
-                  .sort((a, b) => a.displayOrder - b.displayOrder)
-                  .map((skill, index) => {
-                    return (
+
+              <div className="mt-10">
+                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                  {technologies
+                    .sort((a, b) => a.displayOrder - b.displayOrder)
+                    .map((skill, index) => (
                       <div
                         key={index}
-                        className="p-3 cursor-default transition-colors duration-300 in-up"
+                        className="in-up group"
                         style={{ animationDelay: `${index / 9 + 1}s` }}
                       >
-                        <Image
-                          src={skill.logo}
-                          alt={skill.name}
-                          title={skill.name}
-                          className="w-24 h-24 mx-auto mb-2 filter grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
-                          width={96}
-                          height={96}
-                        />
+                        <div className="bg-white border border-gray-200 rounded-xl p-4 flex flex-col items-center gap-3 cursor-default hover:border-brand-teal/40 hover:shadow-sm transition-all duration-300">
+                          <Image
+                            src={skill.logo}
+                            alt={skill.name}
+                            title={skill.name}
+                            className="w-12 h-12 object-contain filter grayscale group-hover:grayscale-0 opacity-50 group-hover:opacity-100 transition-all duration-300"
+                            width={48}
+                            height={48}
+                          />
+                          <span
+                            className={`text-xs font-medium text-center text-brand-black/50 group-hover:text-brand-teal transition-colors duration-300 leading-tight ${lexend.className}`}
+                          >
+                            {skill.name}
+                          </span>
+                        </div>
                       </div>
-                    );
-                  })}
+                    ))}
+                </div>
               </div>
             </div>
           </InView>

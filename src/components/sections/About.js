@@ -4,7 +4,6 @@ import { lexend } from "@/app/fonts";
 import InView from "../animated/InView";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default async function About() {
@@ -14,88 +13,117 @@ export default async function About() {
         <Container>
           <InView>
             <div className="md:p-10 relative z-20">
+
               <h2
                 className={`text-5xl md:text-6xl font-bold in-up ${lexend.className}`}
               >
                 Our Story
               </h2>
-              <div className="lg:flex gap-20 items-center">
+
+              {/* Two-column layout from lg */}
+              <div className="mt-10 lg:grid lg:grid-cols-[1fr_320px] lg:gap-16 items-start">
+
+                {/* Left: blockquote + portrait + CTA */}
                 <div>
-                  <p
-                    className="mt-8 mb-2 opacity-80 flex items-start font-medium in-up md:text-lg"
+                  {/* Pull quote */}
+                  <blockquote
+                    className="in-up border-l-4 border-brand-teal pl-6 md:pl-8"
                     style={{ animationDelay: ".5s" }}
                   >
-                    <FontAwesomeIcon
-                      icon={faQuoteLeft}
-                      className="opacity-50 mr-3 w-6 h-6 -mt-1.5"
-                    />
-                    Hi, I&apos;m James! I&apos;ve been building websites and
-                    solving tech problems for over 20 years from my base here in
-                    Braintree, Essex. I love helping businesses - whether
-                    you&apos;re down the road or across the country - create
-                    amazing online experiences that actually work for your
-                    customers. From Shopify stores to custom web apps, I&apos;m
-                    here to make your digital life easier. Let&apos;s chat about
-                    what you need!
-                  </p>
+                    <span
+                      className="block text-5xl leading-none text-brand-teal/25 select-none pointer-events-none font-serif mb-2"
+                      aria-hidden="true"
+                    >
+                      &ldquo;
+                    </span>
+                    <p className="text-lg md:text-xl leading-relaxed text-brand-black/80 font-medium">
+                      Hi, I&apos;m James! I&apos;ve been building websites and
+                      solving tech problems for over 20 years from my base here
+                      in Braintree, Essex. I love helping businesses - whether
+                      you&apos;re down the road or across the country - create
+                      amazing online experiences that actually work for your
+                      customers. From Shopify stores to custom web apps,
+                      I&apos;m here to make your digital life easier.
+                      Let&apos;s chat about what you need!
+                    </p>
+                  </blockquote>
 
+                  {/* Portrait + attribution */}
                   <div
-                    className="flex items-start gap-10 in-up"
+                    className="mt-8 flex items-center gap-5 in-up"
                     style={{ animationDelay: ".75s" }}
                   >
                     <Image
                       src="/img/james-plant-portrait.jpg"
                       alt="James Plant"
-                      width={80}
-                      height={80}
-                      className="rounded-full mt-10 w-20 h-20"
+                      width={64}
+                      height={64}
+                      className="rounded-full w-16 h-16 ring-2 ring-brand-teal/30 object-cover shrink-0"
                     />
                     <div>
-                      <p className="text-lg md:text-xl font-semibold mt-5 md:mt-10">
+                      <p
+                        className={`text-base font-semibold text-brand-black ${lexend.className}`}
+                      >
                         James Plant
-                        <br />
                       </p>
-                      <p className="text-sm">
-                        <span className="opacity-80 font-medium">
-                          Shopify & Celigo Certified
-                        </span>
-                        <br />
-                        <span className="opacity-80 font-medium">
+                      <div className="mt-1 space-y-0.5">
+                        <p
+                          className={`text-xs font-semibold uppercase tracking-[0.12em] text-brand-teal ${lexend.className}`}
+                        >
+                          Shopify &amp; Celigo Certified
+                        </p>
+                        <p className="text-xs text-brand-black/50 font-medium">
                           20+ Years Serving UK Businesses
-                        </span>
-                        <br />
-                        <span className="opacity-80 font-medium">
-                          <a
-                            href="https://www.linkedin.com/in/james-plant-7ab317b/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Visit our LinkedIn profile"
-                          >
-                            <FontAwesomeIcon
-                              icon={faLinkedin}
-                              className="w-6 h-6"
-                            />
-                          </a>
-                        </span>
-                      </p>
+                        </p>
+                      </div>
+                      <a
+                        href="https://www.linkedin.com/in/james-plant-7ab317b/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Visit our LinkedIn profile"
+                        className="mt-2 inline-flex text-brand-black/40 hover:text-brand-teal transition-colors duration-200"
+                      >
+                        <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5" />
+                      </a>
                     </div>
                   </div>
-                  <p className="mt-10 in-up" style={{ animationDelay: ".75s" }}>
+
+                  {/* CTA */}
+                  <p
+                    className="mt-10 in-up"
+                    style={{ animationDelay: "1s" }}
+                  >
                     <a
                       href="/contact"
-                      className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500 mx-0 md:ml-auto md:mr-0 text-center"
+                      className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500 mx-0 text-center"
                     >
                       Let&apos;s talk
                     </a>
                   </p>
                 </div>
-                <div>
-                  <img
-                    src="/img/partner-logos/celigo-authorized-partner.png"
-                    alt="Celigo Authorized Partner"
-                    className="mt-10 w-48 min-w-[100px]"
-                  />
+
+                {/* Right: Celigo partner badge panel */}
+                <div
+                  className="mt-12 lg:mt-0 in-up"
+                  style={{ animationDelay: ".6s" }}
+                >
+                  <div className="border border-gray-200 rounded-2xl p-8 bg-white flex flex-col items-center text-center shadow-sm">
+                    <p
+                      className={`text-xs font-semibold uppercase tracking-[0.15em] text-brand-teal mb-5 ${lexend.className}`}
+                    >
+                      Certified Partner
+                    </p>
+                    <img
+                      src="/img/partner-logos/celigo-authorized-partner.png"
+                      alt="Celigo Authorized Partner"
+                      className="w-44 mx-auto"
+                    />
+                    <p className="mt-5 text-xs text-brand-black/40 leading-relaxed">
+                      Authorised Celigo integration partner - architecture through to ongoing managed support.
+                    </p>
+                  </div>
                 </div>
+
               </div>
             </div>
           </InView>

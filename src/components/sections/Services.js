@@ -14,6 +14,7 @@ import {
   faGear,
   faDatabase,
   faDownLeftAndUpRightToCenter,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -31,6 +32,7 @@ const services = [
     logo: faShopify,
     link: "/services/shopify",
     bgColor: "bg-orange-100",
+    activeBadge: "bg-orange-200 text-orange-700",
   },
   {
     title: "Celigo Integration Services",
@@ -40,6 +42,7 @@ const services = [
     logo: faGear,
     link: "/services/celigo",
     bgColor: "bg-emerald-100",
+    activeBadge: "bg-emerald-200 text-emerald-700",
   },
   {
     title: "AI and Automation Solutions",
@@ -49,6 +52,7 @@ const services = [
     logo: faBrain,
     link: "/services/ai",
     bgColor: "bg-violet-100",
+    activeBadge: "bg-violet-200 text-violet-700",
   },
   {
     title: "BigCommerce Development and Ongoing Support",
@@ -63,6 +67,7 @@ const services = [
     logo: faCartShopping,
     link: "/services/bigcommerce",
     bgColor: "bg-amber-100",
+    activeBadge: "bg-amber-200 text-amber-700",
   },
   {
     title: "Integration Services",
@@ -72,6 +77,7 @@ const services = [
     logo: faDownLeftAndUpRightToCenter,
     link: "/services/integrations",
     bgColor: "bg-rose-100",
+    activeBadge: "bg-rose-200 text-rose-700",
   },
   {
     title: "NetSuite Customisation and Development",
@@ -81,6 +87,7 @@ const services = [
     logo: faDatabase,
     link: "/services/netsuite",
     bgColor: "bg-cyan-100",
+    activeBadge: "bg-cyan-200 text-cyan-700",
   },
   {
     title: "Bespoke Solutions",
@@ -90,6 +97,7 @@ const services = [
     logo: faCode,
     link: "/services/bespoke",
     bgColor: "bg-fuchsia-100",
+    activeBadge: "bg-fuchsia-200 text-fuchsia-700",
   },
 ];
 
@@ -106,10 +114,10 @@ export default function Services() {
                 className={`text-5xl md:text-6xl font-bold in-up ${lexend.className}`}
                 style={{ animationDelay: "0.25s" }}
               >
-                Our Web & E-commerce Development Services
+                Our Web &amp; E-commerce Development Services
               </h2>
               <p
-                className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up max-w-xl`}
+                className="text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up max-w-xl"
                 style={{ animationDelay: ".5s" }}
               >
                 So, what can we do for you? Here are some of the things we can
@@ -131,35 +139,56 @@ export default function Services() {
                         onFocus={() => setSelectedIndex(index)}
                         onMouseEnter={() => setSelectedIndex(index)}
                         onKeyDown={(event) => {
-                          if (event.key === "Enter" || event.key === " ") {
+                          if (
+                            event.key === "Enter" ||
+                            event.key === " "
+                          ) {
                             event.preventDefault();
                             setSelectedIndex(index);
                           }
                         }}
-                        className={`w-full text-left border-b border-brand-black/10 last:border-b-0 transition-colors duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal/70 ${
+                        className={`w-full text-left border-b border-brand-black/10 last:border-b-0 transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal/70 ${
                           isActive
-                            ? service.bgColor
-                            : "bg-white hover:bg-brand-platinum"
+                            ? `${service.bgColor} border-l-4 border-l-brand-teal`
+                            : "bg-white hover:bg-brand-platinum border-l-4 border-l-transparent"
                         }`}
                       >
                         <div className="px-6 md:px-10 py-7 md:py-10">
                           <div className="grid grid-cols-1 md:grid-cols-[70px_1fr] gap-4 md:gap-8 items-start">
-                            <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-brand-teal/40 bg-brand-teal/10 text-brand-teal">
+                            {/* Icon badge */}
+                            <span
+                              className={`inline-flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-300 ${
+                                isActive
+                                  ? service.activeBadge
+                                  : "border border-brand-teal/40 bg-brand-teal/10 text-brand-teal"
+                              }`}
+                            >
                               <FontAwesomeIcon
                                 icon={service.logo}
-                                className="text-xs"
+                                className="text-sm"
                                 aria-hidden="true"
                               />
                             </span>
 
                             <div>
-                              <h3
-                                className={`text-3xl md:text-3xl font-medium text-brand-black ${lexend.className}`}
-                              >
-                                {service.title}
-                              </h3>
+                              {/* Title row with arrow */}
+                              <div className="flex items-start justify-between gap-4">
+                                <h3
+                                  className={`text-2xl md:text-3xl font-medium text-brand-black ${lexend.className}`}
+                                >
+                                  {service.title}
+                                </h3>
+                                <FontAwesomeIcon
+                                  icon={faArrowRight}
+                                  className={`w-4 h-4 mt-2 shrink-0 text-brand-teal transition-transform duration-300 ${
+                                    isActive ? "rotate-90" : ""
+                                  }`}
+                                  aria-hidden="true"
+                                />
+                              </div>
 
-                              <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-brand-black/70">
+                              {/* Highlights */}
+                              <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-brand-black/60">
                                 {service.highlights.map(
                                   (highlight, highlightIndex) => (
                                     <span
@@ -169,13 +198,16 @@ export default function Services() {
                                       <span>{highlight}</span>
                                       {highlightIndex <
                                         service.highlights.length - 1 && (
-                                        <span>•</span>
+                                        <span className="text-brand-teal/50">
+                                          •
+                                        </span>
                                       )}
                                     </span>
-                                  ),
+                                  )
                                 )}
                               </div>
 
+                              {/* Expanded content */}
                               <div
                                 className={`grid transition-all duration-300 ease-out ${
                                   isActive
@@ -184,14 +216,13 @@ export default function Services() {
                                 }`}
                               >
                                 <div className="overflow-hidden">
-                                  <p className="text-base md:text-md max-w-3xl leading-relaxed text-brand-black/90">
+                                  <p className="text-base max-w-3xl leading-relaxed text-brand-black/80">
                                     {service.content}
                                   </p>
-
                                   <div className="mt-6">
                                     <Link
                                       href={service.link}
-                                      className="inline-flex items-center justify-center rounded-full border border-brand-black px-6 py-3 text-sm font-semibold uppercase tracking-wider text-brand-black whitespace-nowrap transition-colors duration-300 hover:bg-brand-black hover:text-brand-white"
+                                      className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500 inline-flex items-center justify-center"
                                       aria-label={`Find out more about ${service.title}`}
                                     >
                                       Find out more

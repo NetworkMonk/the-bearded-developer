@@ -55,33 +55,50 @@ export default async function Reviews() {
                 Kind Words From Our Clients
               </h2>
               <p
-                className={`text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up max-w-xl`}
+                className="text-lg md:text-xl font-semibold mt-5 md:mt-10 in-up max-w-xl"
                 style={{ animationDelay: ".5s" }}
               >
                 Some of our reviews and testimonials from our clients.
               </p>
-              <div
-                className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-14 mt-10 in-up"
-                style={{ animationDelay: "0.75s" }}
-              >
-                {reviews.map((review, rIndex) => {
-                  return (
-                    <div className="bg-gray-50 p-5 rounded-lg" key={rIndex}>
-                      <div className="my-2">
-                        {[...Array(review.rating)].map((_, index) => (
-                          <span key={index} className="text-yellow-500">
-                            ★
-                          </span>
-                        ))}
-                      </div>{" "}
-                      <p className="text-lg font-semibold">{review.author}</p>
-                      <p className="text-sm font-bold uppercase text-gray-500">
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+                {reviews.map((review, rIndex) => (
+                  <div
+                    key={rIndex}
+                    className="in-up relative flex flex-col bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-brand-teal/30 transition-all duration-300"
+                    style={{ animationDelay: `${0.5 + rIndex * 0.15}s` }}
+                  >
+                    {/* Decorative quotation mark */}
+                    <span
+                      className="block text-5xl leading-none text-brand-teal/25 select-none pointer-events-none font-serif mb-3"
+                      aria-hidden="true"
+                    >
+                      &ldquo;
+                    </span>
+
+                    {/* Stars */}
+                    <div className="flex gap-0.5 mb-3">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <span key={i} className="text-amber-400 text-sm">★</span>
+                      ))}
+                    </div>
+
+                    {/* Review text */}
+                    <p className="text-sm leading-relaxed text-brand-black/70 flex-1">
+                      {review.content}
+                    </p>
+
+                    {/* Author */}
+                    <div className="mt-5 pt-4 border-t border-gray-100">
+                      <p className={`text-sm font-semibold text-brand-black ${lexend.className}`}>
+                        {review.author}
+                      </p>
+                      <p className={`text-xs font-semibold uppercase tracking-[0.12em] text-brand-teal mt-0.5 ${lexend.className}`}>
                         {review.company}
                       </p>
-                      <p className="mt-2">{review.content}</p>
                     </div>
-                  );
-                })}
+                  </div>
+                ))}
               </div>
             </div>
           </InView>
