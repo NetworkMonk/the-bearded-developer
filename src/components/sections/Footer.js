@@ -40,10 +40,7 @@ const resources = [
 ];
 
 const social = [
-  { icon: faLinkedin, href: "https://www.linkedin.com/company/the-bearded-developer", label: "LinkedIn" },
-  { icon: faGithub, href: "https://github.com/thebeardeddeveloper", label: "GitHub" },
-  { icon: faFacebook, href: "https://www.facebook.com/thebeardeddeveloper", label: "Facebook" },
-  { icon: faInstagram, href: "https://www.instagram.com/thebeardeddeveloper", label: "Instagram" },
+  { icon: faLinkedin, href: "https://www.linkedin.com/company/the-bearded-developer-ltd", label: "LinkedIn" },
 ];
 
 const columnHeading = `text-xs font-semibold uppercase tracking-[0.15em] text-brand-light-blue mb-5 ${lexend.className}`;
