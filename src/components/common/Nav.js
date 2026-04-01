@@ -4,9 +4,6 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  Popover,
-  PopoverButton,
-  PopoverPanel,
 } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -105,45 +102,64 @@ function useScrollDirection() {
 
 const navLinkClass = `text-sm font-medium text-brand-black/70 hover:text-brand-teal transition-colors duration-200 ${lexend.className}`;
 
-// Simple popover dropdown (About Us, Resources)
+// Hover-triggered simple dropdown (About Us, Resources)
 function SimpleDropdown({ item }) {
+  const [open, setOpen] = useState(false);
   const { scrollingDown } = useScrollDirection();
+  const timeoutRef = useRef(null);
+
+  useEffect(() => {
+    if (scrollingDown) setOpen(false);
+  }, [scrollingDown]);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => setOpen(false), 120);
+  };
 
   return (
-    <Popover className="flex">
-      <PopoverButton
-        className={`outline-none inline-flex items-center gap-1.5 px-1 pt-1 ${navLinkClass} cursor-pointer`}
+    <div
+      className="relative flex items-center"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <button
+        className={`outline-none inline-flex items-center gap-1.5 px-1 pt-1 cursor-pointer transition-colors duration-200 text-sm font-medium ${lexend.className} ${
+          open ? "text-brand-teal" : "text-brand-black/70 hover:text-brand-teal"
+        }`}
       >
         {item.name}
         <FontAwesomeIcon
           icon={faChevronDown}
-          className="w-2.5 h-2.5 mt-0.5 transition-transform duration-200 ui-open:rotate-180"
+          className={`w-2.5 h-2.5 mt-0.5 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         />
-      </PopoverButton>
-      <PopoverPanel
-        transition
-        anchor="bottom"
-        className="mt-2 min-w-[180px] rounded-xl bg-white border border-gray-100 shadow-xl text-sm transition duration-200 ease-in-out [--anchor-gap:8px] data-[closed]:-translate-y-2 data-[closed]:opacity-0 z-50"
+      </button>
+
+      <div
+        className={`absolute top-full left-1/2 -translate-x-1/2 mt-4 min-w-[180px] rounded-xl bg-white border border-gray-100 shadow-xl z-50 transition-all duration-200 origin-top ${
+          open
+            ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 scale-[0.97] -translate-y-1 pointer-events-none"
+        }`}
       >
-        {({ close }) => {
-          if (scrollingDown) close();
-          return (
-            <div className="py-2">
-              {item.children.map((child) => (
-                <a
-                  key={child.name}
-                  href={child.href}
-                  onClick={close}
-                  className={`block px-4 py-2.5 text-sm text-brand-black/70 hover:text-brand-teal hover:bg-brand-platinum transition-colors duration-150 cursor-pointer ${lexend.className}`}
-                >
-                  {child.name}
-                </a>
-              ))}
-            </div>
-          );
-        }}
-      </PopoverPanel>
-    </Popover>
+        <div className="py-2">
+          {item.children.map((child) => (
+            <a
+              key={child.name}
+              href={child.href}
+              onClick={() => setOpen(false)}
+              className={`block px-4 py-2.5 text-sm text-brand-black/70 hover:text-brand-teal hover:bg-brand-platinum transition-colors duration-150 cursor-pointer ${lexend.className}`}
+            >
+              {child.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 
