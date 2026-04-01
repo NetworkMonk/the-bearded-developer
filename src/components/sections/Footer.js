@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { lexend } from "@/app/fonts";
 import Container from "../common/Container";
+import ZohoNewsletterForm from "../ZohoNewsletterForm";
 import {
   faFacebook,
   faGithub,
@@ -9,140 +10,203 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
+import Link from "next/link";
 import wave1 from "@/components/waves/wave1.svg";
 import blob1 from "@/components/blobs/blob1.svg";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
+const services = [
+  { name: "Shopify", href: "/services/shopify" },
+  { name: "BigCommerce", href: "/services/bigcommerce" },
+  { name: "NetSuite", href: "/services/netsuite" },
+  { name: "Celigo", href: "/services/celigo" },
+  { name: "Integrations", href: "/services/integrations" },
+  { name: "Bespoke Software", href: "/services/bespoke" },
+  { name: "AI", href: "/services/ai" },
+];
+
+const company = [
+  { name: "About", href: "/#about" },
+  { name: "Projects", href: "/projects" },
+  { name: "Apps", href: "/apps" },
+  { name: "Contact Us", href: "/contact" },
+];
+
+const resources = [
+  { name: "All Resources", href: "/resources" },
+  { name: "Articles", href: "/resources/articles" },
+  { name: "Components", href: "/resources/components" },
+];
+
+const social = [
+  { icon: faLinkedin, href: "https://www.linkedin.com/company/the-bearded-developer", label: "LinkedIn" },
+  { icon: faGithub, href: "https://github.com/thebeardeddeveloper", label: "GitHub" },
+  { icon: faFacebook, href: "https://www.facebook.com/thebeardeddeveloper", label: "Facebook" },
+  { icon: faInstagram, href: "https://www.instagram.com/thebeardeddeveloper", label: "Instagram" },
+];
+
+const columnHeading = `text-xs font-semibold uppercase tracking-[0.15em] text-brand-light-blue mb-5 ${lexend.className}`;
+const footerLink = "text-sm text-white/60 hover:text-white transition-colors duration-200";
+
 export default function Footer() {
   return (
     <div className="mt-10">
       <div className="pointer-events-none">
-        <Image priority src={wave1} alt="A Wave" className="w-full" />
+        <Image priority src={wave1} alt="" className="w-full" />
       </div>
+
       <section className="relative bg-brand-black">
+        {/* Teal accent rule */}
+        <div className="h-px bg-gradient-to-r from-transparent via-brand-teal to-transparent opacity-60" />
+
         <div className="text-white lg:-mt-10 xl:-mt-20 relative z-20">
           <Container>
-            <div className="grid md:grid-cols-2 gap-10 md:gap-5 md:px-10 z-20">
-              <div>
-                <h3
-                  className={`text-xl xl:text-3xl font-semibold mb-2 ${lexend.className}`}
-                >
+
+            {/* Main sitemap grid */}
+            <div className="pt-16 lg:pt-24 xl:pt-32 pb-12 md:px-10 grid grid-cols-2 md:grid-cols-[1.75fr_1fr_1fr_1fr] gap-10 md:gap-8">
+
+              {/* Brand column */}
+              <div className="col-span-2 md:col-span-1 pr-4">
+                <h3 className={`text-base font-semibold ${lexend.className} text-white leading-snug`}>
                   The Bearded Developer
                 </h3>
-                <h4
-                  className={`text-sm sm:text-base xl:text-lg text-brand-white mb-2`}
-                >
-                  Your Web Application Development and Technology Partner.
-                </h4>
-                <div className="mt-8">
-                  <p>
+                <p className="mt-3 text-sm text-white/50 leading-relaxed">
+                  Specialist digital services - Shopify, BigCommerce, NetSuite, Celigo, and bespoke web development.
+                </p>
+
+                {/* Social icons */}
+                <div className="mt-6 flex gap-3">
+                  {social.map(({ icon, href, label }) => (
                     <a
-                      href="/privacy"
-                      className="text-brand-light-blue hover:text-white transition-all duration-300 text-sm uppercase font-semibold"
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
+                      className="w-8 h-8 flex items-center justify-center rounded-full border border-white/20 text-white/50 hover:border-brand-teal hover:text-brand-light-blue transition-all duration-300"
                     >
-                      Privacy Policy
+                      <FontAwesomeIcon icon={icon} className="w-3.5 h-3.5" />
                     </a>
-                  </p>
-                  <p>
-                    <a
-                      href="/cookies"
-                      className="text-brand-light-blue hover:text-white transition-all duration-300 text-sm uppercase font-semibold"
-                    >
-                      Cookies
-                    </a>
-                  </p>
+                  ))}
                 </div>
-              </div>
-              <div className="md:text-right">
-                <h3 className={`text-xl font-semibold ${lexend.className}`}>
-                  Connect With Us
-                </h3>
-                <div className="py-2">
+
+                {/* Contact */}
+                <div className="mt-6 space-y-2.5">
                   <a
                     href="mailto:info@thebeardeddeveloper.co.uk"
-                    className="hover:text-brand-light-blue transition-all duration-300"
+                    className="flex items-center gap-2 text-sm text-white/50 hover:text-brand-light-blue transition-colors duration-200 min-w-0"
                   >
-                    <FontAwesomeIcon
-                      icon={faEnvelope}
-                      className="w-4 h-4 inline-block mr-2"
-                    />
-                    info@thebeardeddeveloper.co.uk
+                    <FontAwesomeIcon icon={faEnvelope} className="w-3.5 h-3.5 shrink-0" />
+                    <span className="break-all md:break-normal">info@thebeardeddeveloper.co.uk</span>
                   </a>
-                </div>
-                <div className="py-1">
                   <a
-                    href="tel:+44 (0) 330 043 5977"
-                    className="hover:text-brand-light-blue transition-all duration-300"
-                    aria-label="Call us on +44 (0) 330 043 5977"
+                    href="tel:+443300435977"
+                    className="flex items-center gap-2 text-sm text-white/50 hover:text-brand-light-blue transition-colors duration-200"
+                    aria-label="Call us"
                   >
-                    <FontAwesomeIcon
-                      icon={faPhone}
-                      className="w-4 h-4 inline-block mr-2"
-                    />
+                    <FontAwesomeIcon icon={faPhone} className="w-3.5 h-3.5 shrink-0" />
                     +44 (0) 330 043 5977
                   </a>
-                </div>
-                <div className="py-1">
                   <a
                     href="https://wa.me/443300435977"
-                    className="hover:text-brand-light-blue transition-all duration-300"
-                    aria-label="Chat with us on WhatsApp"
+                    className="flex items-center gap-2 text-sm text-white/50 hover:text-brand-light-blue transition-colors duration-200"
+                    aria-label="WhatsApp"
                   >
-                    <FontAwesomeIcon
-                      icon={faWhatsapp}
-                      className="w-4 h-4 inline-block mr-2"
-                    />
-                    +44 (0) 330 043 5977
+                    <FontAwesomeIcon icon={faWhatsapp} className="w-3.5 h-3.5 shrink-0" />
+                    WhatsApp
                   </a>
                 </div>
               </div>
-            </div>
-            <div className="mt-10 mb-20 md:mb-0">
-              <iframe
-                className="max-w-full border-0"
-                id="iframewin"
-                width="610px"
-                height="200px"
-                src="https://zcv2-zcmp.maillist-manage.eu/ua/Optin?od=12ba7f205d2b&zx=14aec52267&tD=13c03951893fe541&sD=13c03951893ff0f1"
-              ></iframe>
-            </div>
-            <div className="md:px-10 md:grid grid-cols-2 py-3 -mt-10 z-20 mb-10 md:mb-auto">
-              <div className="text-xs mt-auto">
-                © 2026 The Bearded Developer Ltd
+
+              {/* Services */}
+              <div>
+                <p className={columnHeading}>Services</p>
+                <ul className="space-y-2.5">
+                  {services.map(({ name, href }) => (
+                    <li key={name}>
+                      <Link href={href} className={footerLink}>{name}</Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="md:text-right mt-5 md:mt-0 text-xs">
-                <p>Company Registration No. 15975190</p>
-                <p>
-                  Registered Address: 47 York Gardens, Braintree, Essex, CM7 9NF
-                </p>
+
+              {/* Company */}
+              <div>
+                <p className={columnHeading}>Company</p>
+                <ul className="space-y-2.5">
+                  {company.map(({ name, href }) => (
+                    <li key={name}>
+                      <Link href={href} className={footerLink}>{name}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Resources */}
+              <div>
+                <p className={columnHeading}>Resources</p>
+                <ul className="space-y-2.5">
+                  {resources.map(({ name, href }) => (
+                    <li key={name}>
+                      <Link href={href} className={footerLink}>{name}</Link>
+                    </li>
+                  ))}
+                </ul>
+
+                <p className={`${columnHeading} mt-8`}>Legal</p>
+                <ul className="space-y-2.5">
+                  <li><Link href="/privacy" className={footerLink}>Privacy Policy</Link></li>
+                  <li><Link href="/cookies" className={footerLink}>Cookies</Link></li>
+                </ul>
               </div>
             </div>
+
+            {/* Divider */}
+            <div className="mx-4 md:mx-10 h-px bg-white/10" />
+
+            {/* Newsletter band */}
+            <div className="md:px-10 py-10">
+              <div className="bg-white/5 rounded-xl px-6 py-8 md:grid md:grid-cols-2 gap-10 items-center">
+                <div className="mb-6 md:mb-0">
+                  <h4 className={`text-base font-semibold ${lexend.className} text-white`}>
+                    Stay in the loop
+                  </h4>
+                  <p className="mt-2 text-sm text-white/50 leading-relaxed">
+                    Practical insights on integrations, e-commerce platforms, and bespoke development - no noise, no fluff.
+                  </p>
+                </div>
+                <div>
+                  <ZohoNewsletterForm />
+                </div>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="mx-4 md:mx-10 h-px bg-white/10" />
+
+            {/* Bottom bar */}
+            <div className="md:px-10 py-6 flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs text-white/35">
+              <div>© 2026 The Bearded Developer Ltd.</div>
+              <div className="text-white/30">
+                Company No. 15975190 &nbsp;·&nbsp; Braintree, Essex
+              </div>
+            </div>
+
           </Container>
         </div>
+
+        {/* Blob decoration */}
         <div className="absolute right-0 w-[300px] h-[300px] xl:w-[500px] xl:h-[500px] bottom-0 z-10 overflow-hidden pointer-events-none">
           <Image
             priority
             src={blob1}
-            alt="A Blob"
-            className="absolute min-h-[500px] min-w-[500px] xl:min-h-[800px] xl:min-w-[800px] transform rotate-180 opacity-60"
+            alt=""
+            className="absolute min-h-[500px] min-w-[500px] xl:min-h-[800px] xl:min-w-[800px] transform rotate-180 opacity-40"
           />
         </div>
       </section>
-      <a
-        href="https://wa.me/443300435977?text=Hi%2C%20I'm%20interested%20in%20discussing%20a%20project"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all z-50 flex items-center gap-2"
-        aria-label="Chat on WhatsApp"
-      >
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-        </svg>
-        <span className="text-sm font-semibold hidden sm:inline">
-          Chat on WhatsApp
-        </span>
-      </a>
+
     </div>
   );
 }
