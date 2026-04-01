@@ -108,7 +108,7 @@ export default function Footer() {
                     aria-label="WhatsApp"
                   >
                     <FontAwesomeIcon icon={faWhatsapp} className="w-3.5 h-3.5 shrink-0" />
-                    WhatsApp
+                    +44 (0) 330 043 5977
                   </a>
                 </div>
               </div>
