@@ -9,139 +9,132 @@ import {
   PopoverPanel,
 } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faChevronDown, faX } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faChevronDown,
+  faX,
+  faArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { lexend } from "@/app/fonts";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 
-const desktopMenu = [
-  { name: "Home", href: "/" },
+const services = [
   {
-    name: "About Us",
-    children: [
-      { name: "About", href: "/#about" },
-      { name: "Services", href: "/#services" },
-      { name: "Clients", href: "/#clients" },
-      { name: "Technology", href: "/#technology" },
-      { name: "Reviews", href: "/#reviews" },
-    ],
+    name: "Shopify",
+    href: "/services/shopify",
+    desc: "Custom storefronts, theme development & app integrations",
   },
   {
-    name: "Services",
-    children: [
-      { name: "Shopify", href: "/services/shopify" },
-      { name: "AI", href: "/services/ai" },
-      { name: "BigCommerce", href: "/services/bigcommerce" },
-      { name: "NetSuite", href: "/services/netsuite" },
-      { name: "Celigo", href: "/services/celigo" },
-      { name: "Integrations", href: "/services/integrations" },
-      { name: "Bespoke Software", href: "/services/bespoke" },
-    ],
+    name: "BigCommerce",
+    href: "/services/bigcommerce",
+    desc: "Enterprise e-commerce builds and platform migrations",
   },
-  { name: "Projects", href: "/projects" },
-  { name: "Apps", href: "/apps" },
   {
-    name: "Resources",
-    children: [
-      { name: "All Resources", href: "/resources" },
-      { name: "Components", href: "/resources/components" },
-      { name: "Articles", href: "/resources/articles" },
-    ],
+    name: "NetSuite",
+    href: "/services/netsuite",
+    desc: "ERP configuration, customisation and data sync",
   },
+  {
+    name: "Celigo",
+    href: "/services/celigo",
+    desc: "iPaaS integration flows between your business systems",
+  },
+  {
+    name: "Integrations",
+    href: "/services/integrations",
+    desc: "API-first connectors across platforms and ERPs",
+  },
+  {
+    name: "Bespoke Software",
+    href: "/services/bespoke",
+    desc: "Custom-built applications tailored to your operations",
+  },
+  {
+    name: "AI",
+    href: "/services/ai",
+    desc: "Practical AI tooling to automate and accelerate your business",
+  },
+];
+
+const aboutItems = [
+  { name: "About", href: "/#about" },
+  { name: "Services", href: "/#services" },
+  { name: "Clients", href: "/#clients" },
+  { name: "Technology", href: "/#technology" },
+  { name: "Reviews", href: "/#reviews" },
+];
+
+const resourceItems = [
+  { name: "All Resources", href: "/resources" },
+  { name: "Components", href: "/resources/components" },
+  { name: "Articles", href: "/resources/articles" },
 ];
 
 const mobileMenu = [
   { name: "Home", href: "/" },
-  {
-    name: "About Us",
-    children: [
-      { name: "About", href: "/#about" },
-      { name: "Services", href: "/#services" },
-      { name: "Clients", href: "/#clients" },
-      { name: "Technology", href: "/#technology" },
-      { name: "Reviews", href: "/#reviews" },
-    ],
-  },
-  {
-    name: "Services",
-    children: [
-      { name: "Shopify", href: "/services/shopify" },
-      { name: "AI", href: "/services/ai" },
-      { name: "BigCommerce", href: "/services/bigcommerce" },
-      { name: "NetSuite", href: "/services/netsuite" },
-      { name: "Celigo", href: "/services/celigo" },
-      { name: "Integrations", href: "/services/integrations" },
-      { name: "Bespoke Solutions", href: "/services/bespoke" },
-    ],
-  },
-
+  { name: "About Us", children: aboutItems },
+  { name: "Services", children: services },
   { name: "Projects", href: "/projects" },
   { name: "Apps", href: "/apps" },
-  {
-    name: "Resources",
-    children: [
-      { name: "All Resources", href: "/resources" },
-      { name: "Components", href: "/resources/components" },
-      { name: "Articles", href: "/resources/articles" },
-    ],
-  },
+  { name: "Resources", children: resourceItems },
   { name: "Contact Us", href: "/contact" },
 ];
 
-function DropDownMenu({ item }) {
+function useScrollDirection() {
   const [scrollingDown, setScrollingDown] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [scrolled, setScrolled] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY === lastScrollY) {
-        return;
-      }
-      if (currentScrollY >= lastScrollY && currentScrollY > 20) {
-        if (!scrollingDown) {
-          setScrollingDown(true);
-        }
-      } else {
-        if (scrollingDown) {
-          setScrollingDown(false);
-        }
-      }
-      setLastScrollY(currentScrollY);
+      if (currentScrollY === lastScrollY.current) return;
+      setScrolled(currentScrollY > 10);
+      setScrollingDown(
+        currentScrollY >= lastScrollY.current && currentScrollY > 20
+      );
+      lastScrollY.current = currentScrollY;
     };
-
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY, scrollingDown]);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return { scrollingDown, scrolled };
+}
+
+const navLinkClass = `text-sm font-medium text-brand-black/70 hover:text-brand-teal transition-colors duration-200 ${lexend.className}`;
+
+// Simple popover dropdown (About Us, Resources)
+function SimpleDropdown({ item }) {
+  const { scrollingDown } = useScrollDirection();
 
   return (
     <Popover className="flex">
-      <PopoverButton className="outline-0 text-base inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue transition-all duration-300 cursor-pointer">
+      <PopoverButton
+        className={`outline-none inline-flex items-center gap-1.5 px-1 pt-1 ${navLinkClass} cursor-pointer`}
+      >
         {item.name}
         <FontAwesomeIcon
           icon={faChevronDown}
-          className="w-3 h-3 ml-2 -mt-0.5"
+          className="w-2.5 h-2.5 mt-0.5 transition-transform duration-200 ui-open:rotate-180"
         />
       </PopoverButton>
       <PopoverPanel
         transition
         anchor="bottom"
-        className="mt-1 rounded-xl bg-white text-sm/6 transition duration-200 ease-in-out [--anchor-gap:var(--spacing-5)] data-[closed]:-translate-y-1 data-[closed]:opacity-0 z-50 shadow-lg"
+        className="mt-2 min-w-[180px] rounded-xl bg-white border border-gray-100 shadow-xl text-sm transition duration-200 ease-in-out [--anchor-gap:8px] data-[closed]:-translate-y-2 data-[closed]:opacity-0 z-50"
       >
         {({ close }) => {
-          if (scrollingDown && close) {
-            close();
-          }
+          if (scrollingDown) close();
           return (
-            <div className="p-3 flex flex-col">
+            <div className="py-2">
               {item.children.map((child) => (
                 <a
                   key={child.name}
-                  className={`text-base block my-2 mr-5 items-center border-b-2 border-transparent px-3 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue transition-all duration-300 cursor-pointer`}
                   href={child.href}
                   onClick={close}
+                  className={`block px-4 py-2.5 text-sm text-brand-black/70 hover:text-brand-teal hover:bg-brand-platinum transition-colors duration-150 cursor-pointer ${lexend.className}`}
                 >
                   {child.name}
                 </a>
@@ -154,52 +147,116 @@ function DropDownMenu({ item }) {
   );
 }
 
-function MobileDropDownMenu({ item }) {
-  const [scrollingDown, setScrollingDown] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+// Hover-triggered mega menu for Services
+function ServicesMegaMenu() {
+  const [open, setOpen] = useState(false);
+  const { scrollingDown } = useScrollDirection();
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY === lastScrollY) {
-        return;
-      }
-      if (currentScrollY >= lastScrollY && currentScrollY > 20) {
-        if (!scrollingDown) {
-          setScrollingDown(true);
-        }
-      } else {
-        if (scrollingDown) {
-          setScrollingDown(false);
-        }
-      }
-      setLastScrollY(currentScrollY);
-    };
+    if (scrollingDown) setOpen(false);
+  }, [scrollingDown]);
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY, scrollingDown]);
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => setOpen(false), 120);
+  };
 
   return (
-    <Disclosure as="div" className="px-3 pb-2">
-      <DisclosureButton className="flex w-full items-center justify-between outline-0 text-base border-b-2 border-transparent px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue transition-all duration-300 cursor-pointer">
-        <span className="flex items-center">
-          {item.name}
-          <FontAwesomeIcon
-            icon={faChevronDown}
-            className="w-3 h-3 ml-2 -mt-0.5"
-          />
-        </span>
+    <div
+      className="relative flex items-center"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <button
+        className={`outline-none inline-flex items-center gap-1.5 px-1 pt-1 cursor-pointer transition-colors duration-200 text-sm font-medium ${lexend.className} ${
+          open ? "text-brand-teal" : "text-brand-black/70 hover:text-brand-teal"
+        }`}
+      >
+        Services
+        <FontAwesomeIcon
+          icon={faChevronDown}
+          className={`w-2.5 h-2.5 mt-0.5 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      {/* Mega panel */}
+      <div
+        className={`absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[580px] rounded-2xl bg-white border border-gray-100 shadow-2xl z-50 transition-all duration-200 origin-top ${
+          open
+            ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 scale-[0.97] -translate-y-1 pointer-events-none"
+        }`}
+      >
+        {/* Panel header */}
+        <div className="px-5 pt-4 pb-3 border-b border-gray-100 flex items-center justify-between">
+          <p
+            className={`text-xs font-semibold uppercase tracking-[0.15em] text-brand-teal ${lexend.className}`}
+          >
+            What we do
+          </p>
+        </div>
+
+        {/* Service grid */}
+        <div className="p-3 grid grid-cols-2 gap-1">
+          {services.map((service) => (
+            <a
+              key={service.name}
+              href={service.href}
+              onClick={() => setOpen(false)}
+              className="group flex flex-col px-4 py-3.5 rounded-xl hover:bg-brand-platinum transition-colors duration-150"
+            >
+              <span
+                className={`text-sm font-semibold text-brand-black group-hover:text-brand-teal transition-colors duration-150 ${lexend.className}`}
+              >
+                {service.name}
+              </span>
+              <span className="text-xs text-brand-black/45 mt-1 leading-snug">
+                {service.desc}
+              </span>
+            </a>
+          ))}
+        </div>
+
+        {/* Panel footer CTA */}
+        <div className="px-5 py-3.5 border-t border-gray-100 bg-brand-platinum/40 rounded-b-2xl">
+          <a
+            href="/contact"
+            onClick={() => setOpen(false)}
+            className={`inline-flex items-center gap-2 text-xs font-semibold text-brand-teal hover:text-brand-blue transition-colors duration-150 ${lexend.className}`}
+          >
+            Free consultation - let&apos;s discuss your project
+            <FontAwesomeIcon icon={faArrowRight} className="w-3 h-3" />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Mobile accordion dropdown
+function MobileDropDownMenu({ item }) {
+  return (
+    <Disclosure as="div" className="px-3 pb-1">
+      <DisclosureButton
+        className={`flex w-full items-center justify-between outline-none py-2.5 text-sm font-medium text-brand-black/70 hover:text-brand-teal transition-colors duration-200 cursor-pointer ${lexend.className}`}
+      >
+        {item.name}
+        <FontAwesomeIcon
+          icon={faChevronDown}
+          className="w-3 h-3 transition-transform duration-200 ui-open:rotate-180"
+        />
       </DisclosureButton>
-      <DisclosurePanel className="mt-2 pl-3 py-1">
+      <DisclosurePanel className="pb-2 pl-3 space-y-0.5">
         {item.children.map((child) => (
           <a
             key={child.name}
-            className={`text-base block my-3 mr-5 items-center border-b-2 border-transparent px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue transition-all duration-300 cursor-pointer`}
             href={child.href}
-            onClick={close}
+            className={`block py-2 text-sm text-brand-black/55 hover:text-brand-teal transition-colors duration-150 ${lexend.className}`}
           >
             {child.name}
           </a>
@@ -210,131 +267,99 @@ function MobileDropDownMenu({ item }) {
 }
 
 export default function Nav() {
-  const [scrollingDown, setScrollingDown] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY === lastScrollY) {
-        return;
-      }
-      if (currentScrollY >= lastScrollY && currentScrollY > 20) {
-        if (!scrollingDown) {
-          setScrollingDown(true);
-        }
-      } else {
-        if (scrollingDown) {
-          setScrollingDown(false);
-        }
-      }
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY, scrollingDown]);
+  const { scrollingDown, scrolled } = useScrollDirection();
 
   return (
     <Disclosure
       as="nav"
-      className={`bg-white fixed w-screen top-0 backdrop-blur-lg z-50 shadow-md overflow-hidden ${
-        scrollingDown ? "-mt-32" : ""
-      }`}
-      style={{ transition: "margin-top 0.5s" }}
+      className={`bg-white fixed w-screen top-0 z-50 transition-all duration-500 ${
+        scrolled ? "shadow-md" : "border-b border-gray-100"
+      } ${scrollingDown ? "-mt-32" : "mt-0"}`}
     >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <div className="flex h-20 justify-between">
-              <div className="flex">
-                <div className="-ml-2 mr-2 flex items-center lg:hidden">
-                  {/* Mobile menu button */}
-                  <DisclosureButton className="relative inline-flex ml-2 items-center justify-center rounded-md p-2 mr-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-hidden transition-all duration-300">
-                    <span className="absolute -inset-0.5" />
-                    <span className="sr-only">Open main menu</span>
-                    {open ? (
-                      <FontAwesomeIcon
-                        icon={faX}
-                        className="block h-6 w-6"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <FontAwesomeIcon
-                        icon={faBars}
-                        className="block h-6 w-6"
-                        aria-hidden="true"
-                      />
-                    )}
-                  </DisclosureButton>
-                </div>
-                <div
-                  className={`hidden lg:flex shrink-0 text-xl mt-1 mr-5 items-center text-white ${lexend.className}`}
+            <div className="flex h-20 items-center justify-between">
+
+              {/* Mobile: hamburger + wordmark */}
+              <div className="flex items-center gap-3 lg:hidden">
+                <DisclosureButton className="p-2 rounded-lg text-brand-black/50 hover:text-brand-teal hover:bg-brand-platinum transition-all duration-200">
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <FontAwesomeIcon icon={faX} className="w-5 h-5" aria-hidden="true" />
+                  ) : (
+                    <FontAwesomeIcon icon={faBars} className="w-5 h-5" aria-hidden="true" />
+                  )}
+                </DisclosureButton>
+                <a
+                  href="/"
+                  className={`text-sm font-semibold text-brand-black ${lexend.className}`}
                 >
-                  <a className="cursor-pointer" href="/">
-                    <Image
-                      src="/img/beard-black.png"
-                      alt="The Bearded Developer"
-                      width={40}
-                      height={40}
-                      priority
-                    />
+                  The Bearded Developer
+                </a>
+              </div>
+
+              {/* Desktop: logo + nav links */}
+              <div className="hidden lg:flex items-center gap-8">
+                <a href="/" className="shrink-0">
+                  <Image
+                    src="/img/beard-black.png"
+                    alt="The Bearded Developer"
+                    width={36}
+                    height={36}
+                    priority
+                  />
+                </a>
+
+                <div className="flex items-center gap-6">
+                  <a href="/" className={`px-1 pt-1 ${navLinkClass}`}>
+                    Home
                   </a>
-                </div>
-                <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
-                  {desktopMenu.map((item) => {
-                    if (item.children) {
-                      return <DropDownMenu key={item.name} item={item} />;
-                    }
-                    return (
-                      <a
-                        key={item.name}
-                        className={`text-base inline-flex items-center border-b-2 border-transparent px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue transition-all duration-300 cursor-pointer`}
-                        href={item.href}
-                      >
-                        {item.name}
-                      </a>
-                    );
-                  })}
+                  <SimpleDropdown item={{ name: "About Us", children: aboutItems }} />
+                  <ServicesMegaMenu />
+                  <a href="/projects" className={`px-1 pt-1 ${navLinkClass}`}>
+                    Projects
+                  </a>
+                  <a href="/apps" className={`px-1 pt-1 ${navLinkClass}`}>
+                    Apps
+                  </a>
+                  <SimpleDropdown item={{ name: "Resources", children: resourceItems }} />
                 </div>
               </div>
-              <div className="flex items-center">
-                <div className="shrink-0">
-                  <a
-                    href="/contact"
-                    className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum font-semibold transition-all duration-500 flex items-center"
-                  >
-                    Let&apos;s talk
-                  </a>
-                </div>
+
+              {/* CTA — both breakpoints */}
+              <div className="shrink-0">
+                <a
+                  href="/contact"
+                  className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum font-semibold transition-all duration-500 flex items-center"
+                >
+                  Let&apos;s talk
+                </a>
               </div>
             </div>
           </div>
 
-          <DisclosurePanel className="lg:hidden">
+          {/* Mobile panel */}
+          <DisclosurePanel className="lg:hidden border-t border-gray-100">
             {({ close }) => {
-              if (scrollingDown && open) {
-                close();
-              }
+              if (scrollingDown && open) close();
               return (
-                <div className="space-y-1 pb-3 pt-2 mx-3">
-                  <DisclosureButton
-                    as="a"
-                    href="/"
-                    className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-bold text-band-black hover:text-brand-light-blue transition-all duration-300 cursor-pointer`}
-                  >
+                <div className="pb-4 pt-2 px-2">
+                  <div className="px-3 py-3 flex items-center gap-3 border-b border-gray-100 mb-2">
                     <Image
                       src="/img/beard-black.png"
                       alt="The Bearded Developer"
                       width={24}
                       height={24}
-                      className="inline-block mr-2"
                       priority
                     />
-                    The Bearded Developer
-                  </DisclosureButton>
+                    <span
+                      className={`text-sm font-semibold text-brand-black ${lexend.className}`}
+                    >
+                      The Bearded Developer
+                    </span>
+                  </div>
+
                   {mobileMenu.map((item) => {
                     if (item.children) {
                       return <MobileDropDownMenu key={item.name} item={item} />;
@@ -344,7 +369,7 @@ export default function Nav() {
                         key={item.name}
                         as="a"
                         href={item.href}
-                        className={`block border-l-4 border-transparent py-2 pl-3 pr-4 text-base items-center border-b-2 px-1 pt-1 font-medium text-band-black opacity-75 hover:opacity-100 hover:text-brand-light-blue transition-all duration-300 cursor-pointer`}
+                        className={`block px-3 py-2.5 text-sm font-medium text-brand-black/70 hover:text-brand-teal transition-colors duration-150 ${lexend.className}`}
                       >
                         {item.name}
                       </DisclosureButton>
