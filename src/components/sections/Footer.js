@@ -3,9 +3,6 @@ import { lexend } from "@/app/fonts";
 import Container from "../common/Container";
 import ZohoNewsletterForm from "../ZohoNewsletterForm";
 import {
-  faFacebook,
-  faGithub,
-  faInstagram,
   faLinkedin,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
