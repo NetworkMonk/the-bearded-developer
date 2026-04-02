@@ -9,9 +9,10 @@ import Link from "next/link";
 
 export default function Project({ project }) {
   const hasImages = project.images && project.images.length > 0;
+  const anchor = project.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-{2,}/g, '-');
 
   return (
-    <div className="py-16">
+    <div id={anchor} className="py-16">
 
       {/* Header */}
       <div className="flex items-center gap-5 mb-6">
