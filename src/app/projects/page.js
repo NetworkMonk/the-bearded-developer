@@ -88,6 +88,61 @@ const projects = [
   },
 
   {
+    title: "Love Leo",
+    subtitle: "Pro-Bono WordPress Site, Hosting & Ongoing Digital Support",
+    logo: "/img/client-logos/love-leo.jpeg",
+    url: "https://loveleo.org.uk/",
+    description: [
+      "Love Leo is a registered non-profit charity supporting families who have lost a baby. " +
+        "Founded by someone who has experienced that loss herself, the charity provides resources, community, " +
+        "and a support network for families going through one of the most devastating things that can happen. " +
+        "I build and maintain the site entirely pro-bono.",
+      "The brief was never just a website. Love Leo needed a complete digital foundation — " +
+        "hosting infrastructure with automated backups, a polished WordPress site built to a high standard, " +
+        "and the compliance groundwork a UK organisation requires: cookie policy, privacy policy, and the rest. " +
+        "The site was built using WordPress with custom CSS applied via WPCode, giving it a look and feel " +
+        "well beyond what a standard theme would deliver.",
+      "The relationship is genuinely ongoing. Love Leo have a dedicated Slack channel where they bring any issue, " +
+        "question, or change request directly to me. When they needed a newsletter system, I researched the options, " +
+        "got them set up on Zoho Campaigns, and recorded video tutorials so they could send campaigns themselves. " +
+        "I proactively monitor the site with uptime and log tooling — problems are caught before anyone has to report them. " +
+        "Content updates, new requirements, technical problems: all handled as they arise.",
+    ],
+    outcome:
+      "A charity that had no digital presence now has a stable, polished website, secure hosting infrastructure, " +
+      "and a trusted technical partner they can reach directly whenever they need anything. " +
+      "The site is maintained, monitored, and continuously improved — all provided pro-bono.",
+    images: [
+      "/img/projects/loveleo_01.png",
+      "/img/projects/loveleo_02.png",
+      "/img/projects/loveleo_03.png",
+      "/img/projects/loveleo_04.png",
+      "/img/projects/loveleo_05.png",
+    ],
+    imageAlts: [
+      "Love Leo homepage",
+      "Love Leo Our Story page",
+      "Love Leo Our Support page",
+      "Love Leo mobile homepage",
+      "Love Leo mobile navigation",
+    ],
+    facts: [
+      { label: "Platform", value: "WordPress" },
+      { label: "Engagement type", value: "Pro-bono" },
+      { label: "Ongoing support", value: "Hosting, maintenance & content" },
+      { label: "Communication", value: "Dedicated Slack channel" },
+    ],
+    serviceLinks: [
+      { label: "Support Retainer", href: "/services/bespoke" },
+    ],
+    review:
+      "James is a tech angel!! James has worked with me to create an amazing website for my registered non profit organisation. " +
+      "As someone that is not tech savvy at all I can honestly say James has been an absolute angel to work with. " +
+      "Thank you James, for everything — we love our new website!",
+    technologies: ["WordPress", "WPCode", "Contact Form 7", "Zoho Campaigns", "Infrastructure", "Uptime Monitoring"],
+  },
+
+  {
     title: "Coder Cave",
     subtitle: "Shopify Store for UK Retailer",
     logo: "/img/client-logos/coder-cave.png",
