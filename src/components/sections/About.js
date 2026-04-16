@@ -102,25 +102,55 @@ export default async function About() {
                   </p>
                 </div>
 
-                {/* Right: Celigo partner badge panel */}
+                {/* Right: Partner badges + platform logos */}
                 <div
-                  className="mt-12 lg:mt-0 in-up"
+                  className="mt-12 lg:mt-0 in-up max-w-sm mx-auto lg:max-w-none lg:mx-0"
                   style={{ animationDelay: ".6s" }}
                 >
-                  <div className="border border-gray-200 rounded-2xl p-8 bg-white flex flex-col items-center text-center shadow-sm">
-                    <p
-                      className={`text-xs font-semibold uppercase tracking-[0.15em] text-brand-teal mb-5 ${lexend.className}`}
-                    >
-                      Certified Partner
+                  <div className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm">
+
+                    <p className={`text-xs font-semibold uppercase tracking-[0.15em] text-brand-teal mb-5 text-center ${lexend.className}`}>
+                      Certified Partners
                     </p>
-                    <img
-                      src="/img/partner-logos/celigo-authorized-partner.png"
-                      alt="Celigo Authorized Partner"
-                      className="w-44 mx-auto"
-                    />
-                    <p className="mt-5 text-xs text-brand-black/40 leading-relaxed">
-                      Authorised Celigo integration partner - architecture through to ongoing managed support.
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="flex items-center justify-center p-3 rounded-xl bg-gray-50">
+                        <img
+                          src="/img/partner-logos/celigo-authorized-partner.png"
+                          alt="Celigo Authorised Partner"
+                          className="w-full object-contain"
+                        />
+                      </div>
+                      <div className="flex items-center justify-center p-3 rounded-xl bg-gray-50">
+                        <img
+                          src="/img/partner-logos/flowgear-partner.png"
+                          alt="Flow Gear Partner"
+                          className="w-full object-contain"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="my-6 border-t border-gray-100" />
+
+                    <p className={`text-xs font-semibold uppercase tracking-[0.15em] text-brand-teal mb-5 text-center ${lexend.className}`}>
+                      Platforms We Specialise In
                     </p>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="flex items-center justify-center p-3 rounded-xl bg-gray-50">
+                        <img
+                          src="/img/partner-logos/shopify.PNG"
+                          alt="Shopify"
+                          className="w-full object-contain"
+                        />
+                      </div>
+                      <div className="flex items-center justify-center p-3 rounded-xl bg-gray-50">
+                        <img
+                          src="/img/partner-logos/bigcommerce.png"
+                          alt="BigCommerce"
+                          className="w-full object-contain"
+                        />
+                      </div>
+                    </div>
+
                   </div>
                 </div>
 
