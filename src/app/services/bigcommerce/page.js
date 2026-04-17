@@ -34,16 +34,16 @@ import {
 
 export const metadata = {
   title:
-    "BigCommerce Development UK | Expert Developer Essex | Ongoing Support",
+    "BigCommerce Development Experts | Essex & UK-Wide | Free Consultation",
   description:
-    "Expert BigCommerce development and managed support services. Custom themes, app development, migrations & NetSuite integration. Essex-based, UK-wide. Free consultation.",
+    "Need a BigCommerce expert? We build, migrate and support BigCommerce stores for UK businesses — including NetSuite integration. Essex-based. Free consultation.",
   keywords:
     "bigcommerce developer uk, bigcommerce custom app, bigcommerce netsuite integration, bigcommerce migration, stencil theme development, bigcommerce api integration, bigcommerce support uk, bigcommerce maintenance service",
   openGraph: {
     title:
-      "BigCommerce Development UK | Expert Developer Essex | Ongoing Support",
+      "BigCommerce Development Experts | Essex & UK-Wide | Free Consultation",
     description:
-      "Expert BigCommerce development and managed support services. Custom themes, app development, migrations & NetSuite integration. Essex-based, UK-wide. Free consultation.",
+      "Need a BigCommerce expert? We build, migrate and support BigCommerce stores for UK businesses — including NetSuite integration. Essex-based. Free consultation.",
     type: "website",
     url: "https://www.thebeardeddeveloper.co.uk/services/bigcommerce",
     images: [
@@ -58,9 +58,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "BigCommerce Development UK | Expert Developer Essex | Ongoing Support",
+      "BigCommerce Development Experts | Essex & UK-Wide | Free Consultation",
     description:
-      "Expert BigCommerce development and managed support services. Custom themes, app development, migrations & NetSuite integration. Essex-based, UK-wide. Free consultation.",
+      "Need a BigCommerce expert? We build, migrate and support BigCommerce stores for UK businesses — including NetSuite integration. Essex-based. Free consultation.",
   },
 };
 

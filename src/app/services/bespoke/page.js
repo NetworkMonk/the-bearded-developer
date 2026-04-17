@@ -30,17 +30,16 @@ import {
   faBug,
 } from "@fortawesome/free-solid-svg-icons";
 
-// UPDATED METADATA - More compelling for position 9.3
 export const metadata = {
-  title: "Bespoke Software Essex | 15 Years | £100k+ Proven Savings",
+  title: "Bespoke Software Essex | 20 Years Experience | Free Consultation",
   description:
-    "Essex bespoke software developer. Custom Laravel & React apps for UK businesses. Replace spreadsheets, automate workflows. 15+ years proven ROI. Free consultation.",
+    "Essex bespoke software developer with 20+ years experience. We replace spreadsheets, automate workflows and build custom tools that save real money. Free consultation.",
   keywords:
     "bespoke software development essex, custom software essex, web app development essex, software developer essex, laravel developer essex, react developer essex",
   openGraph: {
-    title: "Bespoke Software Essex | 15 Years | £100k+ Proven Savings",
+    title: "Bespoke Software Essex | 20 Years Experience | Free Consultation",
     description:
-      "Custom software development in Essex. Replace spreadsheets, automate workflows. 15+ years proven experience with real ROI.",
+      "Essex bespoke software developer with 20+ years experience. We replace spreadsheets, automate workflows and build custom tools that save real money. Free consultation.",
     type: "website",
     url: "https://www.thebeardeddeveloper.co.uk/services/bespoke",
     images: [
@@ -54,9 +53,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bespoke Software Essex | 15 Years | £100k+ Proven Savings",
+    title: "Bespoke Software Essex | 20 Years Experience | Free Consultation",
     description:
-      "Custom software development in Essex. Replace spreadsheets, automate workflows. 15+ years proven ROI.",
+      "Essex bespoke software developer with 20+ years experience. We replace spreadsheets, automate workflows and build custom tools that save real money. Free consultation.",
   },
 };
 
