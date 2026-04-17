@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "gsc": {
+      "command": "mcp-gsc",
+      "args": [],
+      "env": {
+        "GOOGLE_GSC_CREDENTIALS_PATH": "/Users/jamesplant/.claude/gsc-credentials.json"
+      }
+    }
+  }
+}
