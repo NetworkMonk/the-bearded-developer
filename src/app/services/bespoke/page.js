@@ -16,30 +16,26 @@ import {
   faRocket,
   faChartLine,
   faCog,
-  faLightbulb,
   faShield,
   faUsers,
   faMapMarkerAlt,
   faDesktop,
-  faMobile,
   faDatabase,
-  faCloudUploadAlt,
   faPuzzlePiece,
   faGears,
   faLayerGroup,
-  faBug,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const metadata = {
-  title: "Bespoke Software Essex | 20 Years Experience | Free Consultation",
+  title: "Bespoke Software Essex | Custom Tools, Portals & Automation",
   description:
-    "Essex bespoke software developer with 20+ years experience. We replace spreadsheets, automate workflows and build custom tools that save real money. Free consultation.",
+    "We build custom software for Essex and UK businesses — internal tools, workflow automation, client portals and integrations. 20 years of development experience. No jargon.",
   keywords:
     "bespoke software development essex, custom software essex, web app development essex, software developer essex, laravel developer essex, react developer essex",
   openGraph: {
-    title: "Bespoke Software Essex | 20 Years Experience | Free Consultation",
+    title: "Bespoke Software Essex | Custom Tools, Portals & Automation",
     description:
-      "Essex bespoke software developer with 20+ years experience. We replace spreadsheets, automate workflows and build custom tools that save real money. Free consultation.",
+      "We build custom software for Essex and UK businesses — internal tools, workflow automation, client portals and integrations. 20 years of development experience. No jargon.",
     type: "website",
     url: "https://www.thebeardeddeveloper.co.uk/services/bespoke",
     images: [
@@ -53,9 +49,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bespoke Software Essex | 20 Years Experience | Free Consultation",
+    title: "Bespoke Software Essex | Custom Tools, Portals & Automation",
     description:
-      "Essex bespoke software developer with 20+ years experience. We replace spreadsheets, automate workflows and build custom tools that save real money. Free consultation.",
+      "We build custom software for Essex and UK businesses — internal tools, workflow automation, client portals and integrations. 20 years of development experience. No jargon.",
   },
 };
 
@@ -98,7 +94,6 @@ const serviceJsonLd = {
   },
 };
 
-// ENHANCED FAQ SCHEMA - Added 2 new Essex-specific questions
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -132,7 +127,7 @@ const faqJsonLd = {
       name: "Why choose a local Essex software developer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Working with a local Essex developer offers face-to-face meetings when needed, understanding of the local business landscape, same timezone collaboration, and ongoing support you can rely on. The Bearded Developer serves Essex businesses from Braintree, covering Chelmsford, Colchester, Southend, and throughout the UK.",
+        text: "Working with a local Essex developer offers face-to-face meetings when needed, understanding of the local business landscape, same timezone collaboration, and ongoing support you can rely on. We serve businesses throughout Essex from our Braintree base.",
       },
     },
     {
@@ -145,16 +140,15 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "What technologies do you use for bespoke software?",
+      name: "What technologies do you use for bespoke development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We specialize in modern, proven technologies including Laravel and PHP for backend development, React and Next.js for frontend interfaces, Python for data processing, and AWS for cloud infrastructure. Technology choices are tailored to your specific requirements and long-term maintenance needs.",
+        text: "We specialize in Laravel (PHP) for robust backend systems, React and Next.js for modern user interfaces, Python for data processing and automation, and AWS for scalable cloud infrastructure. Technology choices are always tailored to your specific needs and long-term goals.",
       },
     },
   ],
 };
 
-// OPTIONAL: Add this if you have actual reviews
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -188,117 +182,72 @@ const localBusinessSchema = {
     "https://www.linkedin.com/in/james-plant-7ab317b/",
     "https://github.com/NetworkMonk/",
   ],
-  // ONLY include this if you have actual reviews
-  // aggregateRating: {
-  //   "@type": "AggregateRating",
-  //   ratingValue: "5.0",
-  //   reviewCount: "12"
-  // }
 };
 
 const services = [
   {
-    title: "Custom Web Applications",
+    title: "Internal Business Systems & Dashboards",
     icon: faDesktop,
     description:
-      "Fully bespoke web applications built from the ground up to meet your exact business requirements. Scalable, secure, and user-friendly solutions.",
+      "Custom dashboards and internal tools built around how your business actually works. Whether you need a live view of operations, role-based access to business data, or a replacement for a tangle of spreadsheets, we build it to your exact requirements.",
     features: [
-      "Custom UI/UX design",
-      "Full-stack development",
-      "Database design & optimization",
-      "API development & integration",
-      "Responsive & mobile-friendly",
+      "Custom data dashboards",
+      "Role-based access and user management",
+      "Reporting and analytics",
+      "Spreadsheet replacement systems",
+      "Integration with existing data sources",
     ],
   },
   {
-    title: "Enterprise Software Solutions",
-    icon: faLayerGroup,
-    description:
-      "Large-scale enterprise applications designed to handle complex business processes, high user loads, and mission-critical operations.",
-    features: [
-      "Scalable architecture design",
-      "Multi-user role management",
-      "Advanced security features",
-      "Integration capabilities",
-      "Performance optimization",
-    ],
-  },
-  {
-    title: "Business Process Automation",
+    title: "Shipping & Logistics Applications",
     icon: faGears,
     description:
-      "Custom software to automate your unique business processes, reduce manual work, and improve efficiency across your organization.",
+      "Custom shipping tools and calculators for businesses with complex fulfilment requirements. We have built bespoke shipping applications for e-commerce and wholesale businesses that go well beyond what standard platforms offer out of the box.",
     features: [
-      "Workflow automation",
-      "Document management systems",
-      "Approval process automation",
-      "Reporting & analytics",
-      "Integration with existing tools",
+      "Custom shipping calculators and rate logic",
+      "Carrier and fulfilment integrations",
+      "Dispatch and picking workflows",
+      "Order management automation",
+      "Multi-warehouse and multi-carrier support",
     ],
   },
   {
-    title: "Data Management Systems",
-    icon: faDatabase,
-    description:
-      "Sophisticated data management and analytics platforms tailored to your specific data requirements and reporting needs.",
-    features: [
-      "Custom database design",
-      "Data migration services",
-      "Advanced reporting dashboards",
-      "Real-time analytics",
-      "Data visualization tools",
-    ],
-  },
-  {
-    title: "API Development & Integration",
+    title: "ERP Integrations & Custom Portals",
     icon: faPuzzlePiece,
     description:
-      "Custom APIs and integration solutions to connect your systems, third-party services, and create seamless data flow across platforms.",
+      "Custom portals and internal tools that connect to your ERP, CRM, or support platform. We have built integrations with NetSuite, Zendesk, and other business systems, giving your team the data they need without switching between tools.",
     features: [
-      "RESTful API development",
-      "Third-party integrations",
-      "Microservices architecture",
-      "API documentation",
-      "Security & authentication",
+      "NetSuite and ERP-connected portals",
+      "Zendesk and CRM integrations",
+      "Custom data views from multiple systems",
+      "Staff-facing internal portals",
+      "API development and data bridging",
     ],
   },
   {
-    title: "Mobile-First Solutions",
-    icon: faMobile,
+    title: "Booking & Calendar Systems",
+    icon: faCog,
     description:
-      "Progressive web applications and mobile-responsive solutions that work perfectly across all devices and platforms.",
+      "Custom booking views and scheduling tools built on top of your existing data. Useful for businesses whose booking data lives in an ERP or external platform but needs a cleaner interface for staff or customers to work with.",
     features: [
-      "Progressive Web Apps (PWA)",
-      "Mobile-responsive design",
-      "Offline functionality",
-      "Push notifications",
-      "App store deployment",
+      "Custom booking and calendar views",
+      "ERP-sourced scheduling data",
+      "Staff and customer-facing interfaces",
+      "Availability and capacity management",
+      "Integration with existing booking platforms",
     ],
   },
   {
-    title: "Cloud-Native Development",
-    icon: faCloudUploadAlt,
+    title: "Custom Intranets & Internal Portals",
+    icon: faLayerGroup,
     description:
-      "Modern cloud-native applications built for scalability, reliability, and cost-effectiveness using leading cloud platforms.",
+      "Bespoke intranet platforms that bring together data from multiple systems in one place. Built for businesses that have outgrown generic tools or need an internal portal that genuinely reflects how their teams work.",
     features: [
-      "AWS/Azure cloud deployment",
-      "Serverless architecture",
-      "Auto-scaling capabilities",
-      "High availability design",
-      "Cost optimization",
-    ],
-  },
-  {
-    title: "Legacy System Modernization",
-    icon: faRocket,
-    description:
-      "Transform outdated systems into modern, efficient applications while preserving your valuable business logic and data.",
-    features: [
-      "Legacy system analysis",
-      "Gradual migration strategies",
-      "Data preservation",
-      "Modern technology stack",
-      "Training & support",
+      "Multi-system data consolidation",
+      "Team and department-specific views",
+      "Document and resource management",
+      "Integration with NetSuite, Zendesk and others",
+      "Custom access controls and permissions",
     ],
   },
 ];
@@ -313,28 +262,28 @@ const technologies = [
 
 const industries = [
   {
-    title: "Healthcare & Medical",
+    title: "D2C Retail",
     description:
-      "HIPAA-compliant systems, patient management, appointment booking, and medical record systems.",
-    icon: faShield,
+      "Custom tools for direct-to-consumer brands: order management, fulfilment workflows, and customer portals built around your specific operations.",
+    icon: faRocket,
   },
   {
-    title: "Financial Services",
+    title: "B2B Wholesale",
     description:
-      "Secure financial applications, payment processing, compliance reporting, and risk management systems.",
+      "Bespoke portals and order management tools for wholesale businesses, including trade customer access, pricing rules, and ERP-connected ordering workflows.",
+    icon: faUsers,
+  },
+  {
+    title: "E-commerce Operations",
+    description:
+      "Internal tooling for e-commerce teams: shipping calculators, warehouse dashboards, returns management, and custom integrations between your platforms.",
     icon: faChartLine,
   },
   {
-    title: "Manufacturing & Logistics",
+    title: "Multi-channel Retail",
     description:
-      "Inventory management, supply chain optimization, quality control, and production planning systems.",
-    icon: faGears,
-  },
-  {
-    title: "Education & Training",
-    description:
-      "Learning management systems, student portals, assessment tools, and educational resource platforms.",
-    icon: faUsers,
+      "Custom systems that bring inventory, order, and fulfilment data together across multiple sales channels in one place.",
+    icon: faLayerGroup,
   },
 ];
 
@@ -343,81 +292,64 @@ const developmentProcess = [
     step: 1,
     title: "Discovery & Analysis",
     description:
-      "Deep dive into your business requirements, existing systems, and objectives to create a comprehensive project roadmap.",
+      "We work through your requirements, existing systems, and goals before writing a line of code. The result is a clear project plan both sides can work from.",
     color: "bg-blue-100 text-blue-600",
   },
   {
     step: 2,
     title: "Design & Architecture",
     description:
-      "Create detailed system architecture, user interface designs, and technical specifications before development begins.",
+      "We design the system architecture, interfaces, and technical specifications before development begins. Decisions made here save time later.",
     color: "bg-purple-100 text-purple-600",
   },
   {
     step: 3,
     title: "Agile Development",
     description:
-      "Iterative development with regular check-ins, demonstrations, and feedback incorporation throughout the build process.",
+      "We build in iterations with regular check-ins and demos. You see progress throughout and can shape what comes next.",
     color: "bg-green-100 text-green-600",
   },
   {
     step: 4,
     title: "Testing & Quality Assurance",
     description:
-      "Comprehensive testing including unit tests, integration tests, security testing, and user acceptance testing.",
+      "Before anything goes live, we run unit tests, integration tests, security checks, and user acceptance testing.",
     color: "bg-orange-100 text-orange-600",
   },
   {
     step: 5,
     title: "Deployment & Launch",
     description:
-      "Secure deployment to production environments with monitoring, documentation, and team training.",
+      "We handle deployment to production, set up monitoring, write documentation, and train your team on the new system.",
     color: "bg-red-100 text-red-600",
   },
   {
     step: 6,
     title: "Support & Maintenance",
     description:
-      "Ongoing support, updates, monitoring, and enhancements to ensure your system continues to deliver value.",
+      "After launch, we stay involved. That means bug fixes, updates, monitoring, and changes as your business grows.",
     color: "bg-indigo-100 text-indigo-600",
   },
 ];
 
 const useCases = [
   {
-    title: "E-commerce merchants needing custom workflows",
+    title: "Replacing spreadsheet-based operations",
     description:
-      "Build bespoke order, fulfilment, and customer service workflows that go beyond standard platform features and reduce manual intervention.",
-    icon: faPuzzlePiece,
-  },
-  {
-    title: "SMEs replacing manual spreadsheet processes",
-    description:
-      "Replace fragile spreadsheet-heavy operations with secure, role-based systems that centralize data and automate repetitive admin tasks.",
+      "Many businesses we work with are running on spreadsheets that have grown beyond what spreadsheets should do. We build secure, role-based systems that centralise the data and remove the manual work.",
     icon: faDatabase,
   },
   {
-    title: "Businesses automating back-office operations",
+    title: "Custom tools for e-commerce fulfilment",
     description:
-      "Automate approvals, reporting, invoicing, and internal handoffs to improve speed, accuracy, and visibility across teams.",
+      "Shipping calculators, dispatch workflows, and fulfilment tooling built for the specific carriers, rules, and edge cases your business runs on, not the ones a standard platform assumes.",
     icon: faGears,
   },
-];
-
-const bespokeSocialProof = [
   {
-    quote:
-      "We replaced three disconnected spreadsheets with one bespoke operations portal. The team now tracks jobs, approvals, and reporting in one place.",
-    company: "Essex Operations SME",
-    outcome:
-      "Reduced manual admin time and improved reporting reliability across departments.",
-  },
-  {
-    quote:
-      "The custom Laravel and React platform gave us workflows that actually match how our business runs, not how off-the-shelf software expects us to work.",
-    company: "UK Service Business",
-    outcome:
-      "Streamlined back-office handoffs and delivered faster turnaround for customer requests.",
+    title: "ERP data surfaced in a better interface",
+    description:
+      "When the data is in NetSuite or another ERP but the interface is not working for your team, we build the portal or dashboard that makes it usable day to day.",
+    icon: faPuzzlePiece,
   },
 ];
 
@@ -427,18 +359,17 @@ export default function BespokeServicesPage() {
       <Section>
         <Container>
           <section className="md:p-10 relative">
-            {/* Hero Section - ENHANCED */}
+            {/* Hero Section */}
             <div className="text-center mb-16">
               <h1
                 className={`text-5xl md:text-6xl font-bold ${lexend.className} mb-6`}
               >
-                Bespoke Software Development Essex | 15+ Years Proven Experience
+                Bespoke Software Development, Essex
               </h1>
               <p className="text-xl md:text-2xl font-semibold mb-8 max-w-4xl mx-auto">
-                Custom-built software for Essex businesses. Replace manual
-                spreadsheets, automate workflows, and scale efficiently. 15+
-                years building Laravel & React applications that deliver
-                measurable ROI across Essex and the UK.
+                Custom business applications for e-commerce and retail. Internal
+                tools, shipping systems, ERP integrations, bespoke portals.
+                20 years of development experience.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-semibold">
@@ -464,17 +395,14 @@ export default function BespokeServicesPage() {
                 </span>
               </div>
 
-              {/* NEW: Trust Signals Above the Fold */}
               <div className="flex flex-wrap justify-center gap-6 mb-12 text-sm">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl text-green-600">✓</span>
-                  <span className="font-semibold">15+ Years Experience</span>
+                  <span className="font-semibold">20 Years Experience</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-2xl text-green-600">✓</span>
-                  <span className="font-semibold">
-                    £100k+ Client Savings Proven
-                  </span>
+                  <span className="font-semibold">E-commerce & Retail Specialists</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-2xl text-green-600">✓</span>
@@ -489,19 +417,8 @@ export default function BespokeServicesPage() {
               </div>
             </div>
 
-            {/* Why Choose Bespoke - ENHANCED WITH CONCRETE EXAMPLE */}
+            {/* Why Choose Bespoke */}
             <div className="mb-20">
-              {/* NEW: Concrete Example Callout */}
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8 rounded-r-lg">
-                <p className="text-lg">
-                  <strong>Real Example:</strong> We recently helped an Essex
-                  operations business replace three disconnected spreadsheets
-                  with one unified bespoke portal. The result: 15+ hours saved
-                  per week in manual admin, zero data entry errors, and complete
-                  visibility across departments.
-                </p>
-              </div>
-
               <h2
                 className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-8 text-center`}
               >
@@ -513,47 +430,49 @@ export default function BespokeServicesPage() {
                     <div className="flex items-start space-x-4">
                       <FontAwesomeIcon
                         icon={faCode}
-                        className="text-blue-600 text-2xl mt-1"
+                        className="text-blue-600 text-2xl mt-1 shrink-0"
                       />
                       <div>
                         <h3 className="text-xl font-bold mb-2">
-                          Perfect Fit Solution
+                          Built around your processes
                         </h3>
                         <p>
-                          Unlike off-the-shelf software, bespoke solutions are
-                          built exactly to your requirements with no unnecessary
-                          features or limitations.
+                          Off-the-shelf software makes you adapt to it. Bespoke
+                          software works the other way. Built to your
+                          requirements, without features you do not need or
+                          limitations you did not agree to.
                         </p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
                       <FontAwesomeIcon
                         icon={faRocket}
-                        className="text-green-600 text-2xl mt-1"
+                        className="text-green-600 text-2xl mt-1 shrink-0"
                       />
                       <div>
                         <h3 className="text-xl font-bold mb-2">
-                          Competitive Advantage
+                          Grows with your business
                         </h3>
                         <p>
-                          Custom software gives you unique capabilities that
-                          your competitors don&apos;t have, helping you stand
-                          out in your market.
+                          Your software should change as your business changes.
+                          Bespoke systems can be extended and adapted without
+                          the constraints of a third-party platform.
                         </p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
                       <FontAwesomeIcon
                         icon={faChartLine}
-                        className="text-purple-600 text-2xl mt-1"
+                        className="text-purple-600 text-2xl mt-1 shrink-0"
                       />
                       <div>
                         <h3 className="text-xl font-bold mb-2">
-                          Scalable Investment
+                          20 years of experience behind it
                         </h3>
                         <p>
-                          Bespoke software grows with your business, adapting to
-                          new requirements without costly platform changes.
+                          We have been building custom software for businesses
+                          since before most current platforms existed. That
+                          experience informs every recommendation we make.
                         </p>
                       </div>
                     </div>
@@ -562,24 +481,26 @@ export default function BespokeServicesPage() {
                 <div className="relative">
                   <div className="bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg p-8 text-white">
                     <h3 className="text-2xl font-bold mb-4">
-                      Ready to Build Something Amazing?
+                      Not Sure if Bespoke is Right for You?
                     </h3>
                     <p className="mb-6">
-                      Let&apos;s discuss your unique requirements and create a
-                      solution that&apos;s perfectly tailored to your business.
+                      A free consultation is where most projects start. We ask
+                      about your current setup, what is not working, and give
+                      you an honest view on whether bespoke is the right answer.
+                      Sometimes it is not, and we will tell you that.
                     </p>
                     <Link
                       href="/contact"
                       className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-block"
                     >
-                      Start Your Project
+                      Book a Free Consultation
                     </Link>
                     <div className="mt-4">
                       <Link
                         href="/projects"
                         className="text-white font-semibold underline hover:text-blue-100 transition-colors"
                       >
-                        Read how we&apos;ve helped businesses like yours
+                        See how we have helped businesses like yours
                       </Link>
                     </div>
                   </div>
@@ -587,7 +508,7 @@ export default function BespokeServicesPage() {
               </div>
             </div>
 
-            {/* MOVED UP: Local Coverage */}
+            {/* Local Coverage */}
             <div className="mb-20 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-8">
               <h2
                 className={`text-3xl md:text-4xl font-bold ${lexend.className} mb-6 text-center`}
@@ -599,23 +520,24 @@ export default function BespokeServicesPage() {
                 Serving Essex & The UK
               </h2>
               <p className="text-center text-lg mb-6 max-w-3xl mx-auto">
-                Based in <strong>Braintree, Essex</strong>, we provide bespoke
-                software development throughout{" "}
+                Based in <strong>Braintree, Essex</strong>, we work with
+                businesses throughout{" "}
                 <strong>Chelmsford, Colchester, Basildon, Southend</strong>, and
-                across the UK. Specializing in Laravel and React development for
-                businesses ready to automate operations and scale efficiently.
+                across the UK. Most of our bespoke work is with e-commerce and
+                retail businesses: D2C brands and B2B wholesalers who need
+                software that fits how they work, not the other way round.
               </p>
               <div className="text-center">
                 <Link
                   href="/contact"
                   className="inline-block bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition-colors"
                 >
-                  Free Consultation - No Obligation
+                  Free Consultation — No Obligation
                 </Link>
               </div>
             </div>
 
-            {/* MOVED UP & ENHANCED: FAQ Section */}
+            {/* FAQ Section */}
             <div className="mb-20 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8 md:p-12">
               <h2
                 className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-4 text-center`}
@@ -634,11 +556,10 @@ export default function BespokeServicesPage() {
                   </h3>
                   <p className="text-gray-600 pl-8">
                     <span className="text-green-600 font-bold mr-2">A:</span>
-                    Bespoke software development is creating custom software
-                    applications tailored specifically to your business
-                    requirements, rather than using off-the-shelf solutions. It
-                    provides a perfect fit for your unique processes and
-                    workflows.
+                    Bespoke software development means building software
+                    specifically for your business, rather than adapting to an
+                    off-the-shelf product. The result is something that fits how
+                    your business actually works.
                   </p>
                 </div>
 
@@ -651,10 +572,10 @@ export default function BespokeServicesPage() {
                     <span className="text-green-600 font-bold mr-2">A:</span>
                     Bespoke software development in Essex typically ranges from
                     £5,000 for simple applications to £50,000+ for complex
-                    enterprise systems. Projects are quoted based on specific
-                    requirements, timeline, and technical complexity. Free
-                    initial consultation available to discuss your needs and
-                    provide accurate estimates.
+                    systems. Most projects fall in the £10,000–£30,000 range.
+                    We quote based on your specific requirements, timeline, and
+                    technical complexity. A free initial consultation is the
+                    right starting point for an accurate estimate.
                   </p>
                 </div>
 
@@ -665,15 +586,13 @@ export default function BespokeServicesPage() {
                   </h3>
                   <p className="text-gray-600 pl-8">
                     <span className="text-green-600 font-bold mr-2">A:</span>
-                    Development timelines depend on project scope. Simple
-                    applications typically take 2-3 months, while larger
-                    enterprise systems may take 6-12 months. We use agile
-                    methodology with regular milestones and demonstrations
-                    throughout the process.
+                    Timelines depend on scope. Simpler tools take 2-3 months;
+                    larger systems take 6-12 months. We work in iterations with
+                    regular check-ins and demos throughout, so you can see
+                    progress and adjust as we go.
                   </p>
                 </div>
 
-                {/* NEW FAQ: Local Essex */}
                 <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                   <h3 className="text-xl font-bold mb-3 flex items-start">
                     <span className="text-blue-600 mr-3">Q:</span>
@@ -681,11 +600,10 @@ export default function BespokeServicesPage() {
                   </h3>
                   <p className="text-gray-600 pl-8">
                     <span className="text-green-600 font-bold mr-2">A:</span>
-                    Working with a local Essex developer offers face-to-face
-                    meetings when needed, understanding of the local business
-                    landscape, same timezone collaboration, and ongoing support
-                    you can rely on. We serve businesses throughout Essex from
-                    our Braintree base.
+                    Working locally means face-to-face meetings when they are
+                    useful, the same timezone, and a real ongoing relationship
+                    rather than a support ticket queue. We are based in
+                    Braintree and work with businesses across Essex.
                   </p>
                 </div>
 
@@ -696,15 +614,12 @@ export default function BespokeServicesPage() {
                   </h3>
                   <p className="text-gray-600 pl-8">
                     <span className="text-green-600 font-bold mr-2">A:</span>
-                    Yes, we provide ongoing support and maintenance packages to
-                    ensure your software continues to run smoothly, stays
-                    secure, and evolves with your business needs. Support
-                    includes bug fixes, updates, enhancements, and technical
-                    assistance.
+                    Yes. We offer ongoing support and maintenance including bug
+                    fixes, updates, and enhancements. Good software needs
+                    attention over time, and we stay involved after launch.
                   </p>
                 </div>
 
-                {/* NEW FAQ: Technologies */}
                 <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                   <h3 className="text-xl font-bold mb-3 flex items-start">
                     <span className="text-blue-600 mr-3">Q:</span>
@@ -712,11 +627,10 @@ export default function BespokeServicesPage() {
                   </h3>
                   <p className="text-gray-600 pl-8">
                     <span className="text-green-600 font-bold mr-2">A:</span>
-                    We specialize in Laravel (PHP) for robust backend systems,
-                    React and Next.js for modern user interfaces, Python for
-                    data processing and automation, and AWS for scalable cloud
-                    infrastructure. Technology choices are always tailored to
-                    your specific needs and long-term goals.
+                    We work primarily in Laravel (PHP) for backend systems,
+                    React and Next.js for interfaces, Python for data and
+                    automation, and AWS for hosting. The right choice depends on
+                    what you are building and how it needs to be maintained.
                   </p>
                 </div>
               </div>
@@ -727,9 +641,9 @@ export default function BespokeServicesPage() {
               <h2
                 className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-12 text-center`}
               >
-                Our Bespoke Development Services
+                What We Build
               </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-8">
                 {services.map((service, index) => (
                   <div
                     key={index}
@@ -756,42 +670,24 @@ export default function BespokeServicesPage() {
                   </div>
                 ))}
               </div>
-            </div>
-
-            {/* Industries We Serve */}
-            <div className="mb-20">
-              <h2
-                className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-12 text-center`}
-              >
-                Industries We Serve
-              </h2>
-              <p className="text-center text-lg mb-8 max-w-3xl mx-auto">
-                Alongside industry expertise, we build around real-world
-                operational problems that teams face every day.
+              <p className="text-center text-gray-600 mt-8">
+                Need standalone integration work?{" "}
+                <Link
+                  href="/services/integrations"
+                  className="text-blue-600 hover:underline font-semibold"
+                >
+                  See our integrations service
+                </Link>
+                .
               </p>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {industries.map((industry, index) => (
-                  <div
-                    key={index}
-                    className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
-                  >
-                    <FontAwesomeIcon
-                      icon={industry.icon}
-                      className="text-4xl text-blue-600 mb-4"
-                    />
-                    <h3 className="text-xl font-bold mb-3">{industry.title}</h3>
-                    <p className="text-gray-600">{industry.description}</p>
-                  </div>
-                ))}
-              </div>
             </div>
 
-            {/* Common Bespoke Software Use Cases */}
+            {/* Common Use Cases */}
             <div className="mb-20">
               <h2
                 className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-12 text-center`}
               >
-                Common Bespoke Software Use Cases
+                Common Starting Points
               </h2>
               <div className="grid md:grid-cols-3 gap-8">
                 {useCases.map((useCase, index) => (
@@ -810,12 +706,41 @@ export default function BespokeServicesPage() {
               </div>
             </div>
 
+            {/* Industries */}
+            <div className="mb-20">
+              <h2
+                className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-12 text-center`}
+              >
+                Who We Work With
+              </h2>
+              <p className="text-center text-lg mb-8 max-w-3xl mx-auto">
+                Most of our bespoke work is with e-commerce and retail
+                businesses. The problems vary, but the pattern is usually the
+                same: standard platforms have taken them as far as they can go.
+              </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {industries.map((industry, index) => (
+                  <div
+                    key={index}
+                    className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
+                  >
+                    <FontAwesomeIcon
+                      icon={industry.icon}
+                      className="text-4xl text-blue-600 mb-4"
+                    />
+                    <h3 className="text-xl font-bold mb-3">{industry.title}</h3>
+                    <p className="text-gray-600">{industry.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Development Process */}
             <div className="mb-20">
               <h2
                 className={`text-4xl md:text-5xl font-bold ${lexend.className} mb-12 text-center`}
               >
-                Our Development Process
+                How It Works
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {developmentProcess.map((phase, index) => (
@@ -854,39 +779,11 @@ export default function BespokeServicesPage() {
                 ))}
               </div>
             </div>
-
-            {/* Social Proof */}
-            <div className="mb-20">
-              <h2
-                className={`text-3xl md:text-4xl font-bold ${lexend.className} mb-6 text-center`}
-              >
-                Bespoke Project Outcomes
-              </h2>
-              <p className="text-center text-lg mb-10 max-w-3xl mx-auto">
-                These examples show how bespoke software projects translate into
-                practical operational improvements for UK businesses.
-              </p>
-              <div className="grid md:grid-cols-2 gap-8">
-                {bespokeSocialProof.map((item, index) => (
-                  <div
-                    key={index}
-                    className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
-                  >
-                    <p className="text-lg italic mb-6">
-                      &ldquo;{item.quote}&rdquo;
-                    </p>
-                    <p className="font-bold mb-2">{item.company}</p>
-                    <p className="text-gray-600 text-sm">{item.outcome}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </section>
-          <SecondaryCTA title="Ready to Build Your Perfect Solution?" />
+          <SecondaryCTA title="Ready to Discuss Your Project?" />
         </Container>
       </Section>
 
-      {/* Schema Markup - ALL THREE SCHEMAS */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
