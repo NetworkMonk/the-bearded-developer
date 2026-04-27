@@ -53,7 +53,7 @@ export default function Title() {
                 <div className="w-full lg:grid lg:grid-cols-[1fr_auto] lg:gap-12 xl:gap-20 lg:items-center">
 
                   {/* Left: headline, trust, body, CTA */}
-                  <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+                  <div className="flex flex-col items-center lg:items-start text-center lg:text-left pt-8 md:pt-32 pb-8 md:pb-20">
 
                     <h1
                       className={`text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-[1.06] tracking-tight in-up ${lexend.className}`}
