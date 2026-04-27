@@ -139,10 +139,7 @@ export default function Services() {
                         onFocus={() => setSelectedIndex(index)}
                         onMouseEnter={() => setSelectedIndex(index)}
                         onKeyDown={(event) => {
-                          if (
-                            event.key === "Enter" ||
-                            event.key === " "
-                          ) {
+                          if (event.key === "Enter" || event.key === " ") {
                             event.preventDefault();
                             setSelectedIndex(index);
                           }
@@ -203,7 +200,7 @@ export default function Services() {
                                         </span>
                                       )}
                                     </span>
-                                  )
+                                  ),
                                 )}
                               </div>
 
@@ -222,7 +219,7 @@ export default function Services() {
                                   <div className="mt-6">
                                     <Link
                                       href={service.link}
-                                      className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500 inline-flex items-center justify-center"
+                                      className="animated-button animated-button-fill animated-button-small min-w-36 text-brand-black hover:text-brand-platinum uppercase font-semibold transition-all duration-500 inline-flex items-center justify-center min-w-[180px]"
                                       aria-label={`Find out more about ${service.title}`}
                                     >
                                       Find out more
