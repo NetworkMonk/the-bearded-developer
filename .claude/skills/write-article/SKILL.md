@@ -1,6 +1,7 @@
 ---
 name: write-article
 description: This skill is used when we want to create a new article for the bearded developer website. This skill details the location and method for creating the article.
+model: sonnet
 ---
 
 When the user requests to create a new article, we should follow these steps.
