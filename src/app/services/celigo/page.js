@@ -813,28 +813,29 @@ export default function CeligoServicesPage() {
                   </p>
                 </Link>
                 <Link
-                  href="/resources/articles/shopify-netsuite-integration-guide"
+                  href="/resources/articles/celigo-monitoring-best-practices"
                   className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
                 >
                   <h3 className={`text-xl font-bold ${lexend.className} mb-2`}>
-                    Shopify NetSuite Integration Guide
+                    Celigo Monitoring Best Practices
                   </h3>
                   <p className="text-gray-600">
-                    Complete guide to integrating Shopify with NetSuite using
-                    Celigo, including implementation timeline and cost
-                    estimates.
+                    How to catch integration issues before they impact your
+                    business. Covers alerting, health checks, credential
+                    management, and proactive maintenance.
                   </p>
                 </Link>
                 <Link
-                  href="/resources/articles/netsuite-suitescript-custom-vs-native"
+                  href="/resources/articles/celigo-vs-mulesoft-comparison"
                   className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
                 >
                   <h3 className={`text-xl font-bold ${lexend.className} mb-2`}>
-                    NetSuite Custom vs Native Features
+                    Celigo vs MuleSoft: Which Is Right for Your Business?
                   </h3>
                   <p className="text-gray-600">
-                    Understand when to use Celigo vs SuiteScript customization
-                    vs NetSuite native features for your integration needs.
+                    Plain-English comparison of Celigo and MuleSoft on cost,
+                    complexity, and use cases — to help you choose the right
+                    platform.
                   </p>
                 </Link>
               </div>

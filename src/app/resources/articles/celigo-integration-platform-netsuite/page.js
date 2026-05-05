@@ -500,12 +500,52 @@ export default function ArticlePage() {
               </div>
             </div>
           </div>
+          <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+            <h4 className={`font-semibold ${lexend.className}`}>Related Articles</h4>
+            <ul className="text-sm mt-2 space-y-2">
+              <li>
+                <Link href="/resources/articles/celigo-error-troubleshooting-guide" className="text-blue-600 hover:underline">
+                  Celigo Error Troubleshooting Guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/articles/celigo-monitoring-best-practices" className="text-blue-600 hover:underline">
+                  Celigo Monitoring Best Practices
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/articles/celigo-vs-mulesoft-comparison" className="text-blue-600 hover:underline">
+                  Celigo vs MuleSoft: Which Is Right for You?
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="mt-6 p-4 bg-green-50 rounded-lg">
+            <h4 className={`font-semibold ${lexend.className}`}>Our Services</h4>
+            <ul className="text-sm mt-2 space-y-2">
+              <li>
+                <Link href="/services/celigo" className="text-blue-600 hover:underline">
+                  Celigo Integration & Managed Support
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/netsuite" className="text-blue-600 hover:underline">
+                  NetSuite Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/integrations" className="text-blue-600 hover:underline">
+                  Integration Services
+                </Link>
+              </li>
+            </ul>
+          </div>
           <p className="mt-4 text-sm">
             Need Celigo implementation help?{" "}
-            <a href="/contact" className="text-blue-600 hover:underline">
-              Contact us
-            </a>{" "}
-            for expert NetSuite integration planning and deployment services.
+            <Link href="/contact" className="text-blue-600 hover:underline font-semibold">
+              Get in touch
+            </Link>
+            .
           </p>
         </aside>
       </section>
