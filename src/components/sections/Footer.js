@@ -34,6 +34,7 @@ const resources = [
   { name: "All Resources", href: "/resources" },
   { name: "Articles", href: "/resources/articles" },
   { name: "Components", href: "/resources/components" },
+  { name: "Design System", href: "/resources/design-system" },
 ];
 
 const social = [

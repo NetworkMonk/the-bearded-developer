@@ -14,6 +14,13 @@ export const metadata = {
 
 const links = [
   {
+    title: "Design System",
+    href: "/resources/design-system",
+    description:
+      "The complete design system behind this site - colour tokens, typography, components, layouts and motion, each one documented with a live example and the code that produces it.",
+    buttonTitle: "Explore The Design System",
+  },
+  {
     title: "Components",
     href: "/resources/components",
     description:

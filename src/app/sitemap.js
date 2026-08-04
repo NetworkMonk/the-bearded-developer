@@ -23,6 +23,7 @@ export default async function Sitemap() {
     "/resources": 0.7,
     "/resources/components": 0.7,
     "/resources/articles": 0.7,
+    "/resources/design-system": 0.7,
     "/privacy": 0.3,
     "/cookies": 0.3,
   };
@@ -47,6 +48,7 @@ export default async function Sitemap() {
     "/resources",
     "/resources/components",
     "/resources/articles",
+    "/resources/design-system",
   ];
 
   // Transform static routes with lastmod and priority

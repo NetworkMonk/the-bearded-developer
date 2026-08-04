@@ -64,6 +64,7 @@ const aboutItems = [
 
 const resourceItems = [
   { name: "All Resources", href: "/resources" },
+  { name: "Design System", href: "/resources/design-system" },
   { name: "Components", href: "/resources/components" },
   { name: "Articles", href: "/resources/articles" },
 ];
